@@ -1,0 +1,83 @@
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 2.4rem;
+}
+
+// HEADER
+header {
+  width: 100%;
+  height: 12rem;
+  @include flex(flex, row, space-between, center);
+  nav {
+    @include flex(flex, row, space-between, center);
+    position: relative;
+    width: 100%;
+    padding: 7%;
+  }
+  ul.navbar {
+    position: absolute;
+    width: 100%;
+    right: -100%;
+    top: 8.8rem;
+    transition: all 0.5s;
+    background-color: $secondaryText;
+  }
+  ul.navbar a{
+    width: 100%;
+  }
+  input[type="checkbox"]:checked + ul.navbar {
+    right: 0;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  h1 {
+    @include headers($primaryText, 2.2rem, uppercase);
+  }
+  i {
+    font-size: 2.2rem;
+  }
+  ul li a {
+    @include headers($primaryText, 1.8rem, uppercase);
+    display: inline-block;
+    padding: 1.5rem;
+    border-top: 1px solid $tertiary;
+  }
+  ul li {
+    width: 100%;
+    text-align: center;
+
+  }
+}
+
+.photoBackground {
+  @include altColorTheme();
+  .photo {
+    max-width: 37rem;
+    position: relative;
+    top: 18rem;
+  }
+  .photo img {
+    width: 100%;
+  }
+}
+
+.bio {
+  background-color: $tertiary;
+  padding: 20rem 1rem 5rem;
+  h2 {
+    @include headers(inherit, 2.2rem, uppercase);
+  }
+  h3 {
+    @include headers(inherit, 1.6rem, uppercase);
+  }
+  p {
+    @include headers(inherit, 1.6rem, none);
+    margin-top: 2rem;
+  }
+}
