@@ -1,11 +1,45 @@
 .wrapper {
   max-width: 1200px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
+body {
+  background-color: $tertiary;
+}
+
+h3,
+.bio h2{
+  @include headers(inherit, 2.2rem, uppercase);
+
+}
+
+h3 {
+  letter-spacing: 0.08rem;
+  padding: 0.4rem 0;
+}
 p {
+  @include text($primaryText, 1.6rem, none);
   line-height: 2.4rem;
+  letter-spacing: 0.02rem;
+  font-weight: 400;
+}
+
+button {
+  font-size: 2.2rem;
+  width: 16rem;
+  padding: 1rem;
+  background-color: transparent;
+  border: 3px solid $highlight;
+  @include headers($primaryText, 1.4rem, uppercase);
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+
+.underlines {
+  border-bottom: 3px solid $highlight;
+  transform: rotate(-90deg);
+  position: absolute;
 }
 
 // HEADER
@@ -13,6 +47,10 @@ header {
   width: 100%;
   height: 12rem;
   @include flex(flex, row, space-between, center);
+  h2 {
+    @include headers(inherit, 1.5rem, uppercase);
+    letter-spacing: 0.2rem;
+  }
   nav {
     @include flex(flex, row, space-between, center);
     position: relative;
@@ -23,35 +61,44 @@ header {
     position: absolute;
     width: 100%;
     right: -100%;
-    top: 8.8rem;
+    top: 10.4rem;
     transition: all 0.5s;
     background-color: $secondaryText;
   }
-  ul.navbar a{
+  ul.navbar a {
     width: 100%;
   }
   input[type="checkbox"]:checked + ul.navbar {
     right: 0;
   }
-  input[type="checkbox"]{
+  input[type="checkbox"] {
     display: none;
   }
   h1 {
     @include headers($primaryText, 2.2rem, uppercase);
   }
+  .projectUnderline {
+    border: 1px solid $highlight;
+    width: 83%;
+    margin: 0.5rem 0;
+  }
   i {
     font-size: 2.2rem;
   }
+  ul li {
+    border: 1px solid transparent;
+  }
   ul li a {
+    padding: 1.5rem;
     @include headers($primaryText, 1.8rem, uppercase);
     display: inline-block;
-    padding: 1.5rem;
-    border-top: 1px solid $tertiary;
+  }
+  ul li:hover {
+    border: 1px solid $highlight;
   }
   ul li {
     width: 100%;
     text-align: center;
-
   }
 }
 
@@ -68,16 +115,239 @@ header {
 }
 
 .bio {
-  background-color: $tertiary;
-  padding: 20rem 1rem 5rem;
+  background: linear-gradient(to bottom, $tertiary, #747272, $tertiary);
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  h3 {
+    @include headers(inherit, 1.6rem, uppercase);
+    letter-spacing: 0.08rem;
+    padding: 0.4rem 0;
+    font-weight: 600;
+  }
   h2 {
     @include headers(inherit, 2.2rem, uppercase);
   }
-  h3 {
-    @include headers(inherit, 1.6rem, uppercase);
+  p {
+    margin-top: 2rem;
+  }
+  .projectUnderline {
+    border: 1px solid $secondaryText;
+    margin-top: 2rem;
+    opacity: 0.2;
+  }
+}
+
+.projects,
+.skillsSection {
+  position: relative;
+  h2 {
+    @include headers(inherit, 1.4rem, uppercase);
+    padding: 0.5rem 0 0;
+    letter-spacing: 0.4rem;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -3rem;
+  }
+}
+
+.skillsSection {
+  margin: 8rem 0;
+  background-color: $secondaryText;
+  h2 {
+    top: -2rem;
+    padding-top: 3rem;
+  }
+  ul {
+    @include flex(flex, column, center, center);
+    margin: 3rem 0;
   }
   p {
-    @include headers(inherit, 1.6rem, none);
+    text-align: center;
+    margin: 0;
+  }
+  i {
+    font-size: 3rem;
+  }
+  .underlines {
+    top: -2.4rem;
+    left: -2.5rem;
+    width: 30%;
+    height: 3rem;
+  }
+  .logos {
+    @include flex(flex, row, center, center);
+    margin-bottom: 0;
+    li {
+      margin: 2rem;
+    }
+  }
+  .lastChild {
+    margin-bottom: 5rem;
+  }
+}
+
+.projects {
+  position: relative;
+  .card {
+    @include flex(flex, column, auto, auto);
+    background: linear-gradient(to bottom, $tertiary, #bdbaba, $tertiary);
+    padding: 1rem;
+    margin-bottom: 5rem;
+    h3 {
+      margin-top: 1rem;
+      letter-spacing: 0.2rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
+  div.colorBanner {
+    background-color: $secondary;
+    height: 10rem;
+    margin-bottom: 5rem;
+  }
+  h2 {
+    top: 7.5rem;
+  }
+  .underlines {
+    top: 6rem;
+    left: -3.8rem;
+    width: 40%;
+    height: 3rem;
+  }
+  .projectUnderline {
+    border: 1px solid $highlight;
+    border-radius: 1rem;
+    width: 80%;
+    margin: 0 auto 2rem 0;
+    opacity: 0.4;
+  }
+  ul {
+    @include flex(flex, row, center, center);
+    flex-wrap: wrap;
     margin-top: 2rem;
+  }
+  li {
+    padding: 1rem;
+    @include flex(flex, column, center, center);
+    i {
+      font-size: 2rem;
+    }
+  }
+  .image {
+    max-width: 40rem;
+    width: 90%;
+    position: relative;
+    p {
+      position: absolute;
+      transform: rotate(-90deg);
+      right: -7.2rem;
+      top: 10rem;
+      @include headers($primaryText, 1.8rem, uppercase);
+      letter-spacing: 0.4rem;
+    }
+    button {
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      right: -2rem;
+      background-color: $highlight;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  h3 {
+    margin: 1rem 0;
+  }
+  li p {
+    margin: 0.2rem;
+    font-size: 1.6rem;
+  }
+
+  button {
+    margin: 1rem 0;
+    align-self: center;
+  }
+  .techUsed {
+    background-color: $secondaryText;
+    color: $primaryText;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+  }
+}
+
+form {
+  @include flex(flex, column, auto, auto);
+  width: 100%;
+  margin-top: 4.5rem;
+  input,
+  textarea {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  input:hover,
+  input:focus-within,
+  textarea:hover,
+  textarea:focus-within {
+    border: 1px solid $highlight;
+  }
+  input {
+    height: 4rem;
+  }
+  textarea {
+    height: 8rem;
+    resize: none;
+  }
+  button {
+    color: $secondaryText;
+    align-self: center;
+    margin-top: 2rem;
+  }
+}
+
+footer {
+  position: relative;
+  h2 {
+    @include headers($primaryText, 1.4rem, uppercase);
+    // padding: 0.5rem 0 0;
+    letter-spacing: 0.4rem;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -2.5rem;
+    top: 1rem;
+  }
+  .underlines {
+    top: -0.9rem;
+    left: -3.8rem;
+    width: 33%;
+    height: 4.2rem;
+  }
+  @include altColorTheme();
+  padding: 3rem 0;
+  a,
+  p {
+    @include text($secondaryText, auto, auto);
+  }
+  label {
+    @include headers($secondaryText, 1.4rem, uppercase);
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    margin: 0.5rem 0;
+  }
+  ul {
+    margin: 2rem 0 6rem;
+    @include flex(flex, column, auto, center);
+  }
+  li {
+    @include flex(flex, row, auto, center);
+    margin: 0.7rem 0;
+  }
+  i {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  .copy {
+    text-align: center;
   }
 }

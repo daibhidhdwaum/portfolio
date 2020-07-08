@@ -265,12 +265,56 @@ img {
 
 .wrapper {
   max-width: 1200px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
+body {
+  background-color: #E6E6E6;
+}
+
+h3,
+.bio h2 {
+  font-family: "Monserrat", sans-serif;
+  color: inherit;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  letter-spacing: 0.08rem;
+  padding: 0.4rem 0;
+}
+
 p {
+  font-family: "Playfair Display", serif;
+  color: #0f0f0f;
+  font-size: 1.6rem;
+  text-transform: none;
   line-height: 2.4rem;
+  letter-spacing: 0.02rem;
+  font-weight: 400;
+}
+
+button {
+  font-size: 2.2rem;
+  width: 16rem;
+  padding: 1rem;
+  background-color: transparent;
+  border: 3px solid #C1666B;
+  font-family: "Monserrat", sans-serif;
+  color: #0f0f0f;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+
+.underlines {
+  border-bottom: 3px solid #C1666B;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
 }
 
 header {
@@ -289,6 +333,14 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header h2 {
+  font-family: "Monserrat", sans-serif;
+  color: inherit;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 header nav {
@@ -314,7 +366,7 @@ header ul.navbar {
   position: absolute;
   width: 100%;
   right: -100%;
-  top: 8.8rem;
+  top: 10.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   background-color: #FFFFFF;
@@ -339,18 +391,31 @@ header h1 {
   text-transform: uppercase;
 }
 
+header .projectUnderline {
+  border: 1px solid #C1666B;
+  width: 83%;
+  margin: 0.5rem 0;
+}
+
 header i {
   font-size: 2.2rem;
 }
 
+header ul li {
+  border: 1px solid transparent;
+}
+
 header ul li a {
+  padding: 1.5rem;
   font-family: "Monserrat", sans-serif;
   color: #0f0f0f;
   font-size: 1.8rem;
   text-transform: uppercase;
   display: inline-block;
-  padding: 1.5rem;
-  border-top: 1px solid #E6E6E6;
+}
+
+header ul li:hover {
+  border: 1px solid #C1666B;
 }
 
 header ul li {
@@ -374,8 +439,20 @@ header ul li {
 }
 
 .bio {
-  background-color: #E6E6E6;
-  padding: 20rem 1rem 5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), color-stop(#747272), to(#E6E6E6));
+  background: linear-gradient(to bottom, #E6E6E6, #747272, #E6E6E6);
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+}
+
+.bio h3 {
+  font-family: "Monserrat", sans-serif;
+  color: inherit;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  padding: 0.4rem 0;
+  font-weight: 600;
 }
 
 .bio h2 {
@@ -385,17 +462,386 @@ header ul li {
   text-transform: uppercase;
 }
 
-.bio h3 {
-  font-family: "Monserrat", sans-serif;
-  color: inherit;
-  font-size: 1.6rem;
-  text-transform: uppercase;
+.bio p {
+  margin-top: 2rem;
 }
 
-.bio p {
+.bio .projectUnderline {
+  border: 1px solid #FFFFFF;
+  margin-top: 2rem;
+  opacity: 0.2;
+}
+
+.projects,
+.skillsSection {
+  position: relative;
+}
+
+.projects h2,
+.skillsSection h2 {
   font-family: "Monserrat", sans-serif;
   color: inherit;
-  font-size: 1.6rem;
-  text-transform: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0 0;
+  letter-spacing: 0.4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  left: -3rem;
+}
+
+.skillsSection {
+  margin: 8rem 0;
+  background-color: #FFFFFF;
+}
+
+.skillsSection h2 {
+  top: -2rem;
+  padding-top: 3rem;
+}
+
+.skillsSection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0;
+}
+
+.skillsSection p {
+  text-align: center;
+  margin: 0;
+}
+
+.skillsSection i {
+  font-size: 3rem;
+}
+
+.skillsSection .underlines {
+  top: -2.4rem;
+  left: -2.5rem;
+  width: 30%;
+  height: 3rem;
+}
+
+.skillsSection .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+
+.skillsSection .logos li {
+  margin: 2rem;
+}
+
+.skillsSection .lastChild {
+  margin-bottom: 5rem;
+}
+
+.projects {
+  position: relative;
+}
+
+.projects .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: auto;
+      -ms-flex-pack: auto;
+          justify-content: auto;
+  -webkit-box-align: auto;
+      -ms-flex-align: auto;
+          align-items: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), color-stop(#bdbaba), to(#E6E6E6));
+  background: linear-gradient(to bottom, #E6E6E6, #bdbaba, #E6E6E6);
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+
+.projects .card h3 {
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.projects div.colorBanner {
+  background-color: #405E8E;
+  height: 10rem;
+  margin-bottom: 5rem;
+}
+
+.projects h2 {
+  top: 7.5rem;
+}
+
+.projects .underlines {
+  top: 6rem;
+  left: -3.8rem;
+  width: 40%;
+  height: 3rem;
+}
+
+.projects .projectUnderline {
+  border: 1px solid #C1666B;
+  border-radius: 1rem;
+  width: 80%;
+  margin: 0 auto 2rem 0;
+  opacity: 0.4;
+}
+
+.projects ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 2rem;
+}
+
+.projects li {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects li i {
+  font-size: 2rem;
+}
+
+.projects .image {
+  max-width: 40rem;
+  width: 90%;
+  position: relative;
+}
+
+.projects .image p {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  right: -7.2rem;
+  top: 10rem;
+  font-family: "Monserrat", sans-serif;
+  color: #0f0f0f;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.projects .image button {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  right: -2rem;
+  background-color: #C1666B;
+}
+
+.projects .image img {
+  width: 100%;
+}
+
+.projects h3 {
+  margin: 1rem 0;
+}
+
+.projects li p {
+  margin: 0.2rem;
+  font-size: 1.6rem;
+}
+
+.projects button {
+  margin: 1rem 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.projects .techUsed {
+  background-color: #FFFFFF;
+  color: #0f0f0f;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: auto;
+      -ms-flex-pack: auto;
+          justify-content: auto;
+  -webkit-box-align: auto;
+      -ms-flex-align: auto;
+          align-items: auto;
+  width: 100%;
+  margin-top: 4.5rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+form input:hover,
+form input:focus-within,
+form textarea:hover,
+form textarea:focus-within {
+  border: 1px solid #C1666B;
+}
+
+form input {
+  height: 4rem;
+}
+
+form textarea {
+  height: 8rem;
+  resize: none;
+}
+
+form button {
+  color: #FFFFFF;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 2rem;
+}
+
+footer {
+  position: relative;
+  background-color: #405E8E;
+  color: #FFFFFF;
+  padding: 3rem 0;
+}
+
+footer h2 {
+  font-family: "Monserrat", sans-serif;
+  color: #0f0f0f;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  left: -2.5rem;
+  top: 1rem;
+}
+
+footer .underlines {
+  top: -0.9rem;
+  left: -3.8rem;
+  width: 33%;
+  height: 4.2rem;
+}
+
+footer a,
+footer p {
+  font-family: "Playfair Display", serif;
+  color: #FFFFFF;
+  font-size: auto;
+  text-transform: auto;
+}
+
+footer label {
+  font-family: "Monserrat", sans-serif;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  margin: 0.5rem 0;
+}
+
+footer ul {
+  margin: 2rem 0 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: auto;
+      -ms-flex-pack: auto;
+          justify-content: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: auto;
+      -ms-flex-pack: auto;
+          justify-content: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.7rem 0;
+}
+
+footer i {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+footer .copy {
+  text-align: center;
 }

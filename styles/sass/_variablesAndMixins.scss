@@ -18,6 +18,14 @@
         text-transform: $textTransform;
     }
 
+    @mixin text($color, $fontSize, $textTransform){
+        font-family: "Playfair Display", serif;
+          color: $color;
+        font-size: $fontSize;
+        text-transform: $textTransform;
+
+    }
+
     @mixin altColorTheme {
         background-color: $secondary;
         color: $secondaryText;
