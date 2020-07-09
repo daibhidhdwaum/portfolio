@@ -58,14 +58,10 @@ button,
 
 .vertical,
 .image p,
-.image button,
-ul.navbar {
+.image button
+{
   position: absolute;
 }
-
-// ul.navbar {
-//   position: fixed;
-// }
 
 .vertical {
   left: -4.5rem;
@@ -95,9 +91,6 @@ button {
   border-bottom: 3px solid $highlight;
 }
 
-nav,
-ul.navbar,
-ul.navbar a,
 .photo img,
 .image img,
 form,
@@ -106,8 +99,8 @@ textarea {
   width: 100%;
 }
 
-header,
-nav {
+header
+ {
   @include flex(flex, row, space-between, center);
 }
 
@@ -116,7 +109,6 @@ header h2,
   letter-spacing: 0.2rem;
 }
 
-nav,
 .bioContent,
 .image,
 .projects,
@@ -125,7 +117,6 @@ footer {
   position: relative;
 }
 
-header ul li:hover,
 .projectUnderline,
 input:hover,
 input:focus-within,
@@ -153,43 +144,6 @@ a {
   width: 110%;
 }
 
-// HEADER
-header {
-  height: 12rem;
-  h2 {
-    @include headers(inherit, 1.5rem, uppercase);
-  }
-  nav {
-    padding: 7%;
-  }
-  ul.navbar {
-    right: -100%;
-    top: 12rem;
-    transition: 0.5s;
-  }
-  input[type="checkbox"]:checked + ul.navbar {
-    right: 0;
-  }
-  input[type="checkbox"] {
-    display: none;
-  }
-  h1 {
-    @include headers($primaryText, 2.2rem, uppercase);
-  }
-  .projectUnderline {
-    width: 83%;
-    max-height: 4px;
-    margin: 0.5rem 0;
-  }
-  ul li{
-    border: 1px solid transparent;
-  }
-  ul li a {
-    padding: 1.5rem;
-    display: inline-block;
-  }
-}
-
 .photo {
   max-width: 31.5rem;
   width: 100%;
@@ -200,7 +154,7 @@ header {
   bottom: 18rem;
 }
 
-ul.navbar li,
+// ul.navbar li,
 .skillsSection,
 .techUsed {
   background-color: $secondaryText;

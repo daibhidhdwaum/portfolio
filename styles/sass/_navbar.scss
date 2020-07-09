@@ -1,0 +1,82 @@
+header {
+  nav {
+    width: 100%;
+    @include flex(flex, row, space-between, center);
+  }
+  h1,
+  h2 {
+    @include headers(inherit, 1.5rem, uppercase);
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .projectUnderline {
+    margin: 0.5rem 0;
+  }
+  .upperNav {
+    @include flex(flex, row, space-between, center);
+    z-index: 10;
+    background-color: $tertiary;
+    width: 100%;
+    padding: 0 8%;
+    height: 12rem;
+  }
+  ul.navbar {
+    
+    left: 0;
+    top: -26rem;
+    transition: 0.5s;
+    width: 100%;
+  }
+  ul.navbar {
+    position: fixed;
+  }
+    ul li a {
+    width: 100%;
+    display: inline-block;
+    padding: 1.5rem;
+    background-color: $secondaryText;
+  }
+
+  input[type="checkbox"]:checked + ul.navbar {
+    top: 12rem;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  ul li {
+    border: 1px solid $secondaryText;
+    width: 100%;
+  }
+  ul li:hover {
+    border: 1px solid $highlight;
+  }
+}
+
+@media (min-width: 940px) {
+  header {
+    ul.navbar {
+      width: 100%;
+      position: static;
+      transition: none;
+      @include flex(flex, auto, space-between, center);
+      margin: 0 6%;
+
+    }
+    ul.navbar a {
+      width: 25%;
+      background-color: $tertiary;
+      padding: .5rem;
+    }
+    ul li {
+        border: 1px solid $tertiary;
+        padding: 1rem;
+    }
+    ul li a{
+        display: inline;
+    }
+    .fa-bars {
+      display: none;
+    }
+  }
+}

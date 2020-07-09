@@ -263,6 +263,134 @@ img {
   display: block;
 }
 
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1,
+header h2 {
+  font-family: "Monserrat", sans-serif;
+  color: inherit;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+header .projectUnderline {
+  margin: 0.5rem 0;
+}
+
+header .upperNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  background-color: #E6E6E6;
+  width: 100%;
+  padding: 0 8%;
+  height: 12rem;
+}
+
+header ul.navbar {
+  left: 0;
+  top: -26rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+header ul.navbar {
+  position: fixed;
+}
+
+header ul li a {
+  width: 100%;
+  display: inline-block;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+}
+
+header input[type="checkbox"]:checked + ul.navbar {
+  top: 12rem;
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+header ul li {
+  border: 1px solid #FFFFFF;
+  width: 100%;
+}
+
+header ul li:hover {
+  border: 1px solid #C1666B;
+}
+
+@media (min-width: 940px) {
+  header ul.navbar {
+    width: 100%;
+    position: static;
+    -webkit-transition: none;
+    transition: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: auto;
+            flex-direction: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 6%;
+  }
+  header ul.navbar a {
+    width: 25%;
+    background-color: #E6E6E6;
+    padding: .5rem;
+  }
+  header ul li {
+    border: 1px solid #E6E6E6;
+    padding: 1rem;
+  }
+  header ul li a {
+    display: inline;
+  }
+  header .fa-bars {
+    display: none;
+  }
+}
+
 .wrapper {
   max-width: 1100px;
   width: 90%;
@@ -330,8 +458,7 @@ button,
 
 .vertical,
 .image p,
-.image button,
-ul.navbar {
+.image button {
   position: absolute;
 }
 
@@ -366,9 +493,6 @@ button {
   border-bottom: 3px solid #C1666B;
 }
 
-nav,
-ul.navbar,
-ul.navbar a,
 .photo img,
 .image img,
 form,
@@ -377,8 +501,7 @@ textarea {
   width: 100%;
 }
 
-header,
-nav {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,7 +522,6 @@ header h2,
   letter-spacing: 0.2rem;
 }
 
-nav,
 .bioContent,
 .image,
 .projects,
@@ -408,7 +530,6 @@ footer {
   position: relative;
 }
 
-header ul li:hover,
 .projectUnderline,
 input:hover,
 input:focus-within,
@@ -439,58 +560,6 @@ a {
   width: 110%;
 }
 
-header {
-  height: 12rem;
-}
-
-header h2 {
-  font-family: "Monserrat", sans-serif;
-  color: inherit;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-
-header nav {
-  padding: 7%;
-}
-
-header ul.navbar {
-  right: -100%;
-  top: 12rem;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-header input[type="checkbox"]:checked + ul.navbar {
-  right: 0;
-}
-
-header input[type="checkbox"] {
-  display: none;
-}
-
-header h1 {
-  font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
-  font-size: 2.2rem;
-  text-transform: uppercase;
-}
-
-header .projectUnderline {
-  width: 83%;
-  max-height: 4px;
-  margin: 0.5rem 0;
-}
-
-header ul li {
-  border: 1px solid transparent;
-}
-
-header ul li a {
-  padding: 1.5rem;
-  display: inline-block;
-}
-
 .photo {
   max-width: 31.5rem;
   width: 100%;
@@ -501,7 +570,6 @@ header ul li a {
   bottom: 18rem;
 }
 
-ul.navbar li,
 .skillsSection,
 .techUsed {
   background-color: #FFFFFF;
@@ -1040,35 +1108,6 @@ footer .copy {
 }
 
 @media (min-width: 940px) {
-  ul.navbar {
-    width: 50%;
-    position: static;
-    -webkit-transition: none;
-    transition: none;
-    margin: 0 2rem;
-  }
-  ul.navbar a {
-    width: 15rem;
-    background-color: #E6E6E6;
-  }
-  .fa-bars {
-    display: none;
-  }
-  ul.navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: auto;
-            flex-direction: auto;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .projects .card .innerCard {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
