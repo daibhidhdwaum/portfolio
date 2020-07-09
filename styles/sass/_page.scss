@@ -63,9 +63,9 @@ ul.navbar {
   position: absolute;
 }
 
-ul.navbar {
-  position: fixed;
-}
+// ul.navbar {
+//   position: fixed;
+// }
 
 .vertical {
   left: -4.5rem;
@@ -80,7 +80,7 @@ ul.navbar {
 }
 
 footer .vertical {
-  top: -8rem;
+  top: -3.5rem;
 }
 
 button {
@@ -165,7 +165,7 @@ header {
   ul.navbar {
     right: -100%;
     top: 12rem;
-    transition: all 0.5s;
+    transition: 0.5s;
   }
   input[type="checkbox"]:checked + ul.navbar {
     right: 0;
@@ -181,7 +181,7 @@ header {
     max-height: 4px;
     margin: 0.5rem 0;
   }
-  ul li {
+  ul li{
     border: 1px solid transparent;
   }
   ul li a {
@@ -200,7 +200,7 @@ header {
   bottom: 18rem;
 }
 
-ul.navbar,
+ul.navbar li,
 .skillsSection,
 .techUsed {
   background-color: $secondaryText;
@@ -287,7 +287,7 @@ footer {
       min-width: 8rem;
     }
     .logoContainer {
-      max-width: 5.5rem;
+      width: 3rem;
       min-height: 3rem;
     }
     svg {
@@ -321,16 +321,35 @@ input {
   height: 4rem;
 }
 
+.cardWrittenContent {
+  @include flex(flex, column, flex-end, center);
+  h3 {
+    align-self: start;
+  }
+}
+
 .projects {
-  .innerCardEven{
-    align-self: flex-end;
+  .cards {
+    @include flex(flex, column, center, center);
+  }
+  .image,
+  .cardWrittenContent {
+    flex-basis: 50%;
+    .projectUnderline {
+      border-radius: 1rem;
+      max-width: 30rem;
+      width: 80%;
+      margin: 0 auto 2rem 0;
+      opacity: 0.4;
+    }
   }
   .card {
     background: linear-gradient(to bottom, $tertiary, #d3d6d6, $tertiary);
-    .innerCard{
-    @include flex(flex, column, auto, auto);
+    margin: 6rem auto;
+    .innerCard {
+      @include flex(flex, column, auto, auto);
 
-      max-width: 70rem;
+      max-width: 60rem;
     }
     h3 {
       font-size: 1.8rem;
@@ -343,26 +362,20 @@ input {
   h2 {
     top: 7.5rem;
   }
-  .projectUnderline {
-    border-radius: 1rem;
-    width: 80%;
-    margin: 0 auto 2rem 0;
-    opacity: 0.4;
-  }
+
   ul {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-    li{
+    li {
       min-width: 7.5rem;
     }
-  li p{
-    font-size: 1.6rem;
-  }
+    li p {
+      font-size: 1.6rem;
+    }
   }
 
   .image {
-    max-width: 90rem;
     width: 90%;
     p {
       right: -7.2rem;
@@ -372,6 +385,9 @@ input {
       width: 4rem;
       right: -2rem;
       background-color: $highlight;
+    }
+    img {
+      border-radius: 0.4rem;
     }
   }
 
@@ -400,6 +416,7 @@ button {
 }
 
 form {
+  // max-width: 60rem;
   margin-top: 4.5rem;
   textarea {
     height: 8rem;
@@ -410,7 +427,16 @@ form {
   }
 }
 
+form,
+footer ul {
+  max-width: 60rem;
+}
+
 footer {
+  margin-top: 15rem;
+  .footerContainer {
+    @include flex(flex, column, center, center);
+  }
   h2 {
     @include headers($primaryText, 1.4rem, uppercase);
     padding: 0.5rem 0 0;
@@ -430,7 +456,7 @@ footer {
     margin: 0.5rem 0;
   }
   ul {
-    margin: 2rem 0 6rem;
+    margin-top: 4rem;
     @include flex(flex, column, auto, center);
   }
   li {
@@ -439,10 +465,10 @@ footer {
   }
   i {
     margin-right: 1rem;
-    // font-size: 2rem;
   }
   .copy {
     text-align: center;
+    margin-top: 6rem;
   }
 }
 

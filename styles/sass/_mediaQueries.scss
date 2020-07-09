@@ -1,6 +1,5 @@
 @media (min-width: 650px) {
-
-// BIO SECTION
+  // BIO SECTION
   .bioContent {
     display: flex;
     justify-content: space-between;
@@ -27,30 +26,91 @@
     align-self: start;
   }
 
-// SKILLS SECTION
+  // SKILLS SECTION
   .skillsSection {
     .skills {
       li {
         margin: 2rem;
         width: calc(50% - 4rem);
       }
-      i{
-          font-size: 6rem;
+      i {
+        font-size: 6rem;
       }
     }
-    .logos{
-        svg{
-
-            width: 6rem;
-        }
-        .logoContainer{
-            width: 6rem;
-        }
+    .logos {
+      svg {
+        width: 6rem;
+      }
+      .logoContainer {
+        width: 6rem;
+      }
     }
     p {
       font-size: 2rem;
     }
   }
 
-//   PROJECTS SECTION
+  //   PROJECTS SECTION
+
+
+  // FOOTER
+  form input {
+    min-width: 22rem;
+  }
+  .inputs {
+    @include flex(flex, auto, space-between, center);
+  }
+}
+
+@media (min-width: 940px) {
+  ul.navbar {
+    width: 50%;
+    position: static;
+    transition: none;
+    margin: 0 2rem;
+
+  }
+  ul.navbar a {
+    width: 15rem;
+    background-color: $tertiary;
+  }
+  .fa-bars {
+    display: none;
+  }
+  ul.navbar {
+    @include flex(flex, auto, space-evenly, center);
+  }
+
+  .projects .card .innerCard {
+    flex-direction: row;
+    max-width: 90rem;
+  }
+
+  .image {
+      margin-right: 4rem;
+  }
+
+  .innerCardEven .image {
+    order: 1;
+  }
+  .innerCardEven .cardWrittenContent {
+    order: 0;
+  }
+
+.cardWrittenContent{
+      margin: 0 2rem;
+}
+
+.projects .card h3{
+    font-size: 2.2rem;
+}
+
+
+
+  footer .footerContainer {
+    @include flex(flex, row, space-between, center);
+  }
+  footer ul {
+    margin: 0;
+  }
 }

@@ -335,10 +335,6 @@ ul.navbar {
   position: absolute;
 }
 
-ul.navbar {
-  position: fixed;
-}
-
 .vertical {
   left: -4.5rem;
 }
@@ -352,7 +348,7 @@ ul.navbar {
 }
 
 footer .vertical {
-  top: -8rem;
+  top: -3.5rem;
 }
 
 button {
@@ -461,8 +457,8 @@ header nav {
 header ul.navbar {
   right: -100%;
   top: 12rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header input[type="checkbox"]:checked + ul.navbar {
@@ -505,7 +501,7 @@ header ul li a {
   bottom: 18rem;
 }
 
-ul.navbar,
+ul.navbar li,
 .skillsSection,
 .techUsed {
   background-color: #FFFFFF;
@@ -648,7 +644,7 @@ footer h2 {
 }
 
 .skillsSection .logos .logoContainer {
-  max-width: 5.5rem;
+  width: 3rem;
   min-height: 3rem;
 }
 
@@ -694,14 +690,63 @@ input {
   height: 4rem;
 }
 
-.projects .innerCardEven {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.cardWrittenContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardWrittenContent h3 {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.projects .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .image,
+.projects .cardWrittenContent {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.projects .image .projectUnderline,
+.projects .cardWrittenContent .projectUnderline {
+  border-radius: 1rem;
+  max-width: 30rem;
+  width: 80%;
+  margin: 0 auto 2rem 0;
+  opacity: 0.4;
 }
 
 .projects .card {
   background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), color-stop(#d3d6d6), to(#E6E6E6));
   background: linear-gradient(to bottom, #E6E6E6, #d3d6d6, #E6E6E6);
+  margin: 6rem auto;
 }
 
 .projects .card .innerCard {
@@ -718,7 +763,7 @@ input {
   -webkit-box-align: auto;
       -ms-flex-align: auto;
           align-items: auto;
-  max-width: 70rem;
+  max-width: 60rem;
 }
 
 .projects .card h3 {
@@ -732,13 +777,6 @@ input {
 
 .projects h2 {
   top: 7.5rem;
-}
-
-.projects .projectUnderline {
-  border-radius: 1rem;
-  width: 80%;
-  margin: 0 auto 2rem 0;
-  opacity: 0.4;
 }
 
 .projects ul {
@@ -759,7 +797,6 @@ input {
 }
 
 .projects .image {
-  max-width: 90rem;
   width: 90%;
 }
 
@@ -772,6 +809,10 @@ input {
   width: 4rem;
   right: -2rem;
   background-color: #C1666B;
+}
+
+.projects .image img {
+  border-radius: 0.4rem;
 }
 
 .projects h3,
@@ -814,10 +855,32 @@ form button {
   color: #FFFFFF;
 }
 
+form,
+footer ul {
+  max-width: 60rem;
+}
+
 footer {
+  margin-top: 15rem;
   background-color: #405E8E;
   color: #FFFFFF;
   padding: 3rem 0;
+}
+
+footer .footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer h2 {
@@ -849,7 +912,7 @@ footer label {
 }
 
 footer ul {
-  margin: 2rem 0 6rem;
+  margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,6 +951,7 @@ footer i {
 
 footer .copy {
   text-align: center;
+  margin-top: 6rem;
 }
 
 .code {
@@ -954,5 +1018,99 @@ footer .copy {
   }
   .skillsSection p {
     font-size: 2rem;
+  }
+  form input {
+    min-width: 22rem;
+  }
+  .inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: auto;
+            flex-direction: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 940px) {
+  ul.navbar {
+    width: 50%;
+    position: static;
+    -webkit-transition: none;
+    transition: none;
+    margin: 0 2rem;
+  }
+  ul.navbar a {
+    width: 15rem;
+    background-color: #E6E6E6;
+  }
+  .fa-bars {
+    display: none;
+  }
+  ul.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: auto;
+            flex-direction: auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .card .innerCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 90rem;
+  }
+  .image {
+    margin-right: 4rem;
+  }
+  .innerCardEven .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .innerCardEven .cardWrittenContent {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .cardWrittenContent {
+    margin: 0 2rem;
+  }
+  .projects .card h3 {
+    font-size: 2.2rem;
+  }
+  footer .footerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer ul {
+    margin: 0;
   }
 }
