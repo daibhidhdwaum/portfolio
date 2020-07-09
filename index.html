@@ -22,289 +22,373 @@
         <input type="checkbox" id="toggle" name="toggle" />
         <ul class="navbar">
             <li><a href="#bioSection">Bio</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
+<!-- END OF HEADER -->
 <main>
-    <section class="bioSection">
-        <div class="photoBackground">
-            <div class="photo">
-                <img src="./images/placeholder.jpg" alt="">
-            </div>
-        </div>
+    <section class="bioSection" id="bioSection">
         <div class="bio">
+            <div class="photoBackground"></div>
             <div class="wrapper">
-                <h2>David Downie</h2>
-                <h3>Front End Developer</h3>
-                <div class="projectUnderline"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora est dignissimos hic
-                    temporibus quam quibusdam animi magni blanditiis atque ipsam provident incidunt deserunt vitae et
-                    magnam quos deleniti repudiandae veniam, laboriosam modi molestiae reprehenderit explicabo! Amet
-                    aspernatur aliquam itaque, ipsum architecto vitae maxime quaerat totam harum dolor quo sequi! </p>
+                <div class="bioContent">
+                    <div class="photo">
+                        <img src="./images/placeholder.jpg" alt="">
+                    </div>
+                    <div class="writtenContentTitles">
+                        <h2>David Downie</h2>
+                        <h3>Front End Developer</h3>
+                        <div class="projectUnderline"></div>
+                    </div>
+
+                    <div class="blurb">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora est dignissimos
+                            hic
+                            temporibus quam quibusdam animi magni blanditiis atque ipsam provident incidunt deserunt
+                            vitae
+                            et
+                            magnam quos deleniti repudiandae veniam, laboriosam modi molestiae reprehenderit explicabo!
+                            Amet
+                            aspernatur aliquam itaque, ipsum architecto vitae maxime quaerat totam harum dolor quo
+                            sequi!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section class="skillsSection">
+    <!-- END OF BIO SECTION -->
+    <section class="skillsSection" id="skills">
         <div class="wrapper">
-            <h2>Skills</h2>
-            <div class="underlines"></div>
-            <ul class="skills">
-                <li>
-                    <ul class="logos">
-                        <li><i class="fab fa-html5"></i></li>
-                        <li><i class="fab fa-css3-alt"></i></li>
-                        <li><i class="fab fa-sass"></i></li>
-                    </ul>
-                    <p>HTML 5, CSS 3 and Sass</p>
-                </li>
-                <li>
-                    <ul class="logos">
-                        <li><i class="fab fa-js"></i></li>
-                        <li><img src="https://img.icons8.com/ios-filled/30/000000/jquery.png" /></li>
-                        <li><i class="fab fa-react"></i></li>
-                    </ul>
-                    <p>JavaScript, jQuery and React</p>
-                </li>
-                <li>
-                    <ul class="logos">
-                        <li><img src="https://img.icons8.com/material-sharp/30/000000/api.png" /></li>
-                    </ul>
+            <div class="relativeContainer">
+                <div class="vertical">
+                    <h2>Skills</h2>
+                    <div class="underlines"></div>
+                </div>
+                <ul class="skills">
+                    <li>
+                        <ul class="logos">
+                            <li>
+                                <i class="fab fa-html5"></i>
+                                <p>HTML 5</p>
+                            </li>
+                            <li>
+                                <i class="fab fa-css3-alt"></i>
+                                <p>CSS 3</p>
+                            </li>
+                            <li>
+                                <i class="fab fa-sass"></i>
+                                <p>Sass</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="logos">
+                            <li>
+                                <div class="logoContainer">
+                                    <img src="https://img.icons8.com/material-sharp/000000/api.png" class="logoImage" />
+                                </div>
+                                <p>Rest API's</p>
 
-                    <p>Rest API's</p>
-                </li>
-                <li>
-                    <ul class="logos">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                viewBox="0 0 172 172" style=" fill:#000000;">
-                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
-                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
-                                    text-anchor="none" style="mix-blend-mode: normal">
-                                    <path d="M0,172v-172h172v172z" fill="none"></path>
-                                    <path d="M0,172v-172h172v172z" fill="#0d0d0d"></path>
-                                    <g>
-                                        <path
-                                            d="M40.13333,123.26678l43.6708,-81.88347c0.9202,-1.72573 3.40847,-1.6942 4.2828,0.05733l15.11307,30.22613z"
-                                            fill="#cccccc"></path>
-                                        <path
-                                            d="M40.13333,123.24385l15.89853,-98.03713c0.41567,-2.56567 3.8614,-3.1218 5.0654,-0.817l30.63607,58.7208z"
-                                            fill="#cccccc"></path>
-                                        <path
-                                            d="M40.15627,123.22665l0.57333,-0.45007l50.2498,-41.11087l-14.1728,-27.16453z"
-                                            fill="#95a5a6"></path>
-                                        <path
-                                            d="M40.13333,123.26678l76.44253,-73.7106c1.60247,-1.54513 4.27707,-0.63353 4.60387,1.56807l10.68693,72.14253l-43,25.06327c-1.7458,0.9804 -3.87573,0.9804 -5.62153,0z"
-                                            fill="#ecf0f1"></path>
-                                    </g>
-                                    <path d="M0,172v-172h172v172z" fill="none"></path>
-                                    <path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path>
-                                </g>
-                            </svg></li>
-                        <li><img src="https://img.icons8.com/material-sharp/34/000000/mysql.png" /></li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="38" height="38"
-                                viewBox="0 0 172 172" style=" fill:#000000;">
-                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
-                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
-                                    text-anchor="none" style="mix-blend-mode: normal">
-                                    <path d="M0,172v-172h172v172z" fill="none"></path>
-                                    <g>
-                                        <path
-                                            d="M150.5,61.99167c0,73.45833 -64.5,95.675 -64.5,95.675c0,0 -64.5,-22.21667 -64.5,-95.675c0,-8.95833 0.71667,-16.48333 1.43333,-22.575c1.075,-8.95833 7.16667,-16.125 15.76667,-18.275c11.10833,-3.225 28.66667,-6.80833 47.3,-6.80833c18.63333,0 36.19167,3.58333 47.65833,6.80833c8.6,2.15 14.69167,9.675 15.76667,18.275c0.35833,6.09167 1.075,13.975 1.075,22.575z"
-                                            fill="#000000"></path>
-                                        <path
-                                            d="M86,25.08333c17.55833,0 34.04167,3.58333 44.79167,6.45c4.3,1.075 7.16667,4.65833 7.88333,9.31667c0.71667,6.80833 1.075,13.975 1.075,21.14167c0,55.9 -41.20833,78.475 -53.75,83.85c-12.54167,-5.73333 -53.75,-28.30833 -53.75,-83.85c0,-7.16667 0.35833,-14.33333 1.075,-21.14167c0.35833,-4.65833 3.58333,-8.24167 7.88333,-9.31667c10.75,-2.86667 27.23333,-6.45 44.79167,-6.45M86,14.33333c-18.63333,0 -36.19167,3.58333 -47.65833,6.80833c-8.24167,2.15 -14.69167,9.675 -15.40833,18.275c-0.71667,6.09167 -1.43333,13.975 -1.43333,22.575c0,73.45833 64.5,95.675 64.5,95.675c0,0 64.5,-22.21667 64.5,-95.675c0,-8.95833 -0.71667,-16.48333 -1.43333,-22.575c-1.075,-8.95833 -7.16667,-16.125 -15.76667,-18.275c-11.10833,-3.225 -28.66667,-6.80833 -47.3,-6.80833z"
-                                            fill="#cccccc"></path>
-                                        <path d="M82.41667,100.33333h7.16667v28.66667h-7.16667z" fill="#dcedc8"></path>
-                                        <path
-                                            d="M86,35.83333c0,0 -21.5,17.91667 -21.5,46.58333c0,18.63333 11.825,30.45833 17.91667,35.83333l3.58333,-10.75l3.58333,10.75c6.09167,-5.375 17.91667,-17.2 17.91667,-35.83333c0,-28.66667 -21.5,-46.58333 -21.5,-46.58333z"
-                                            fill="#cccccc"></path>
-                                        <path
-                                            d="M86,35.83333c0,0 -21.5,17.91667 -21.5,46.58333c0,18.63333 11.825,30.45833 17.91667,35.83333l3.58333,-10.75z"
-                                            fill="#ecf0f1"></path>
-                                    </g>
-                                </g>
-                            </svg></li>
-                    </ul>
-                    <p>Firebase, SQL and MongoDb</p>
-                </li>
+                            </li>
+                        </ul>
 
-                <li>
-                    <ul class="logos">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="38" height="38"
-                                viewBox="0 0 172 172" style=" fill:#000000;">
-                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
-                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
-                                    text-anchor="none" style="mix-blend-mode: normal">
-                                    <path d="M0,172v-172h172v172z" fill="none"></path>
-                                    <g>
-                                        <path d="M21.5,28.66667h129v93.16667h-129z" fill="#000000"></path>
-                                        <path d="M28.66667,35.83333h114.66667v75.25h-114.66667z" fill="#ecf0f1"></path>
-                                        <path
-                                            d="M64.5,100.33333h-21.5c-3.95958,0 -7.16667,-3.20708 -7.16667,-7.16667v-39.41667c0,-3.95958 3.20708,-7.16667 7.16667,-7.16667h21.5c3.95958,0 7.16667,3.20708 7.16667,7.16667v39.41667c0,3.95958 -3.20708,7.16667 -7.16667,7.16667z"
-                                            fill="#333333"></path>
-                                        <path
-                                            d="M75.25,121.83333h21.5v10.75h-21.5zM118.25,132.58333c-7.16667,0 -57.33333,0 -64.5,0c-7.16667,0 -7.16667,7.16667 -7.16667,7.16667v3.58333h78.83333v-3.58333c0,0 0,-7.16667 -7.16667,-7.16667z"
-                                            fill="#000000"></path>
-                                        <path
-                                            d="M57.33333,93.16667c0,1.978 -1.60533,3.58333 -3.58333,3.58333c-1.978,0 -3.58333,-1.60533 -3.58333,-3.58333c0,-1.978 1.60533,-3.58333 3.58333,-3.58333c1.978,0 3.58333,1.60533 3.58333,3.58333"
-                                            fill="#ffffff"></path>
-                                        <path d="M43,53.75h21.5v35.83333h-21.5z" fill="#ffffff"></path>
-                                        <path
-                                            d="M129,100.33333h-43c-3.95958,0 -7.16667,-3.20708 -7.16667,-7.16667v-39.41667c0,-3.95958 3.20708,-7.16667 7.16667,-7.16667h43c3.95958,0 7.16667,3.20708 7.16667,7.16667v39.41667c0,3.95958 -3.20708,7.16667 -7.16667,7.16667z"
-                                            fill="#333333"></path>
-                                        <path
-                                            d="M111.08333,93.16667c0,1.978 -1.60533,3.58333 -3.58333,3.58333c-1.978,0 -3.58333,-1.60533 -3.58333,-3.58333c0,-1.978 1.60533,-3.58333 3.58333,-3.58333c1.978,0 3.58333,1.60533 3.58333,3.58333"
-                                            fill="#ffffff"></path>
-                                        <path d="M86,53.75h43v35.83333h-43z" fill="#ffffff"></path>
-                                    </g>
-                                </g>
-                            </svg></li>
-                    </ul>
+                    </li>
+                    <li>
+                        <ul class="logos">
+                            <li><i class="fab fa-js"></i>
+                                <p>JavaScript</p>
+                            </li>
+                            <li>
+                                <div class="logoContainer">
+                                    <img src="https://img.icons8.com/ios-filled/000000/jquery.png" class="logoImage" />
+                                </div>
+                                <p>jQuery</p>
+                            </li>
+                            <li><i class="fab fa-react"></i>
+                                <p> React</p>
+                            </li>
+                        </ul>
+                    </li>
 
-                    <p>Responsive Design</p>
-                </li>
-                <li class="lastChild">
-                    <ul class="logos">
-                        <li><img src="https://img.icons8.com/wired/30/000000/compare-git.png" /></li>
-                        <li><img src="https://img.icons8.com/fluent/30/000000/github.png" /></li>
-                    </ul>
-                    <p>Git and Github</p>
-                </li>
-            </ul>
+
+
+                    <li>
+                        <ul class="logos">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172"
+                                    style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g>
+                                            <path d="M21.5,28.66667h129v93.16667h-129z" fill="#000000"></path>
+                                            <path d="M28.66667,35.83333h114.66667v75.25h-114.66667z" fill="#ecf0f1">
+                                            </path>
+                                            <path
+                                                d="M64.5,100.33333h-21.5c-3.95958,0 -7.16667,-3.20708 -7.16667,-7.16667v-39.41667c0,-3.95958 3.20708,-7.16667 7.16667,-7.16667h21.5c3.95958,0 7.16667,3.20708 7.16667,7.16667v39.41667c0,3.95958 -3.20708,7.16667 -7.16667,7.16667z"
+                                                fill="#333333"></path>
+                                            <path
+                                                d="M75.25,121.83333h21.5v10.75h-21.5zM118.25,132.58333c-7.16667,0 -57.33333,0 -64.5,0c-7.16667,0 -7.16667,7.16667 -7.16667,7.16667v3.58333h78.83333v-3.58333c0,0 0,-7.16667 -7.16667,-7.16667z"
+                                                fill="#000000"></path>
+                                            <path
+                                                d="M57.33333,93.16667c0,1.978 -1.60533,3.58333 -3.58333,3.58333c-1.978,0 -3.58333,-1.60533 -3.58333,-3.58333c0,-1.978 1.60533,-3.58333 3.58333,-3.58333c1.978,0 3.58333,1.60533 3.58333,3.58333"
+                                                fill="#ffffff"></path>
+                                            <path d="M43,53.75h21.5v35.83333h-21.5z" fill="#ffffff"></path>
+                                            <path
+                                                d="M129,100.33333h-43c-3.95958,0 -7.16667,-3.20708 -7.16667,-7.16667v-39.41667c0,-3.95958 3.20708,-7.16667 7.16667,-7.16667h43c3.95958,0 7.16667,3.20708 7.16667,7.16667v39.41667c0,3.95958 -3.20708,7.16667 -7.16667,7.16667z"
+                                                fill="#333333"></path>
+                                            <path
+                                                d="M111.08333,93.16667c0,1.978 -1.60533,3.58333 -3.58333,3.58333c-1.978,0 -3.58333,-1.60533 -3.58333,-3.58333c0,-1.978 1.60533,-3.58333 3.58333,-3.58333c1.978,0 3.58333,1.60533 3.58333,3.58333"
+                                                fill="#ffffff"></path>
+                                            <path d="M86,53.75h43v35.83333h-43z" fill="#ffffff"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <p>Responsive Design</p>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <ul class="logos">
+                            <li>
+                                <i class="fas fa-code-branch"></i>
+                                <p>Git</p>
+                            </li>
+                            <li>
+                                <i class="fab fa-github"></i>
+                                <p>Github</p>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li class="lastChild">
+                        <ul class="logos">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172"
+                                    style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <path d="M0,172v-172h172v172z" fill="#0d0d0d"></path>
+                                        <g>
+                                            <path
+                                                d="M40.13333,123.26678l43.6708,-81.88347c0.9202,-1.72573 3.40847,-1.6942 4.2828,0.05733l15.11307,30.22613z"
+                                                fill="#cccccc"></path>
+                                            <path
+                                                d="M40.13333,123.24385l15.89853,-98.03713c0.41567,-2.56567 3.8614,-3.1218 5.0654,-0.817l30.63607,58.7208z"
+                                                fill="#cccccc"></path>
+                                            <path
+                                                d="M40.15627,123.22665l0.57333,-0.45007l50.2498,-41.11087l-14.1728,-27.16453z"
+                                                fill="#95a5a6"></path>
+                                            <path
+                                                d="M40.13333,123.26678l76.44253,-73.7106c1.60247,-1.54513 4.27707,-0.63353 4.60387,1.56807l10.68693,72.14253l-43,25.06327c-1.7458,0.9804 -3.87573,0.9804 -5.62153,0z"
+                                                fill="#ecf0f1"></path>
+                                        </g>
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path>
+                                    </g>
+                                </svg>
+                                <p>Firebase</p>
+                            </li>
+                            <li>
+                                <div class="logoContainer">
+                                    <img src="https://img.icons8.com/material-sharp/34/000000/mysql.png"
+                                        class="logoImage" />
+                                </div>
+                                <p>SQL</p>
+                            </li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172"
+                                    style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g>
+                                            <path
+                                                d="M150.5,61.99167c0,73.45833 -64.5,95.675 -64.5,95.675c0,0 -64.5,-22.21667 -64.5,-95.675c0,-8.95833 0.71667,-16.48333 1.43333,-22.575c1.075,-8.95833 7.16667,-16.125 15.76667,-18.275c11.10833,-3.225 28.66667,-6.80833 47.3,-6.80833c18.63333,0 36.19167,3.58333 47.65833,6.80833c8.6,2.15 14.69167,9.675 15.76667,18.275c0.35833,6.09167 1.075,13.975 1.075,22.575z"
+                                                fill="#000000"></path>
+                                            <path
+                                                d="M86,25.08333c17.55833,0 34.04167,3.58333 44.79167,6.45c4.3,1.075 7.16667,4.65833 7.88333,9.31667c0.71667,6.80833 1.075,13.975 1.075,21.14167c0,55.9 -41.20833,78.475 -53.75,83.85c-12.54167,-5.73333 -53.75,-28.30833 -53.75,-83.85c0,-7.16667 0.35833,-14.33333 1.075,-21.14167c0.35833,-4.65833 3.58333,-8.24167 7.88333,-9.31667c10.75,-2.86667 27.23333,-6.45 44.79167,-6.45M86,14.33333c-18.63333,0 -36.19167,3.58333 -47.65833,6.80833c-8.24167,2.15 -14.69167,9.675 -15.40833,18.275c-0.71667,6.09167 -1.43333,13.975 -1.43333,22.575c0,73.45833 64.5,95.675 64.5,95.675c0,0 64.5,-22.21667 64.5,-95.675c0,-8.95833 -0.71667,-16.48333 -1.43333,-22.575c-1.075,-8.95833 -7.16667,-16.125 -15.76667,-18.275c-11.10833,-3.225 -28.66667,-6.80833 -47.3,-6.80833z"
+                                                fill="#cccccc"></path>
+                                            <path d="M82.41667,100.33333h7.16667v28.66667h-7.16667z" fill="#dcedc8">
+                                            </path>
+                                            <path
+                                                d="M86,35.83333c0,0 -21.5,17.91667 -21.5,46.58333c0,18.63333 11.825,30.45833 17.91667,35.83333l3.58333,-10.75l3.58333,10.75c6.09167,-5.375 17.91667,-17.2 17.91667,-35.83333c0,-28.66667 -21.5,-46.58333 -21.5,-46.58333z"
+                                                fill="#cccccc"></path>
+                                            <path
+                                                d="M86,35.83333c0,0 -21.5,17.91667 -21.5,46.58333c0,18.63333 11.825,30.45833 17.91667,35.83333l3.58333,-10.75z"
+                                                fill="#ecf0f1"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <p>MongoDb</p>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="colorBanner"></div>
         <div class="wrapper">
-            <h2>Projects</h2>
-            <div class="underlines"></div>
-            <div class="card">
-                <div class="image">
-                    <p>Live Site</p>
-                    <button><img
-                            src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" /></button>
-                    <a href="https://daibhidhdwaum.github.io/davidDownieProjectThree/">
-                        <img src="./images/LilDrum.png" alt="Li'l Drum inteface"></a>
+            <div class="relativeContainer">
+                <div class="vertical">
+                    <h2>Projects</h2>
+                    <div class="underlines"></div>
                 </div>
-                <h3>Li'l Drum</h3>
-                <div class="projectUnderline"></div>
-                <p>Li'l Drum is a finger drum machine inspired by both classic hardware drum machines lik Linn Drum and
-                    Roland 808 and their sofware equivalent found on many modern digital audio workstations.</p>
-                <ul>
-                    <li>
-                        <i class="fab fa-html5"></i>
-                        <p>HTML 5</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-css3-alt"></i>
-                        <p>CSS 3</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-js"></i>
-                        <p>JavaScript</p>
-                    </li>
-                    <li>
-                        <img src="https://img.icons8.com/ios-filled/20/000000/jquery.png" />
-                        <p>jQuery</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-sass"></i>
-                        <p>Sass</p>
-                    </li>
-                </ul>
+                <div class="cards">
+                    <div class="card">
+                        <div class="innerCard">
+                            <div class="image">
+                                <p>Live Site</p>
+                                <button>
+                                    <a href="https://daibhidhdwaum.github.io/davidDownieProjectThree/">
+                                        <img
+                                            src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" />
+                                    </a>
+                                </button>
+                                <a href="https://daibhidhdwaum.github.io/davidDownieProjectThree/">
+                                    <img src="./images/LilDrum.png" alt="Li'l Drum inteface">
+                                </a>
+                            </div>
+                            <h3>Li'l Drum</h3>
+                            <div class="projectUnderline"></div>
+                            <p>Li'l Drum is a finger drum machine inspired by both classic hardware drum machines lik
+                                Linn
+                                Drum
+                                and
+                                Roland 808 and their sofware equivalent found on many modern digital audio workstations.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fab fa-html5"></i>
+                                    <p>HTML 5</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-css3-alt"></i>
+                                    <p>CSS 3</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-js"></i>
+                                    <p>JavaScript</p>
+                                </li>
+                                <li>
+                                    <img src="https://img.icons8.com/ios-filled/20/000000/jquery.png" />
+                                    <p>jQuery</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-sass"></i>
+                                    <p>Sass</p>
+                                </li>
+                            </ul>
 
 
-                <button>Code</button>
-            </div>
+                            <a class="code" href="https://github.com/daibhidhdwaum/davidDownieProjectThree">Code</a>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <div class="image">
-                    <p>Live Site</p>
-                    <button><img
-                            src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" /></button>
-                    <a href="">
-                        <img src="./images/tvShowDepot.jpg" alt="Tv Show Depot landing page">
-                    </a>
+                    <div class="card">
+                        <div class="innerCardEven">
+                            <div class="image">
+                                <p>Live Site</p>
+                                <button>
+                                    <img
+                                        src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" />
+                                </button>
+                                <a href="https://tv-show-depot.github.io/tvShowDepot/">
+                                    <img src="./images/tvShowDepot.jpg" alt="Tv Show Depot landing page">
+                                </a>
+                            </div>
+                            <h3>TV Show Depot</a></h3>
+                            <div class="projectUnderline"></div>
+                            <p>TV Show Depot allows the user to search for their next favourite tv show.</p>
+                            <ul>
+                                <li>
+                                    <i class="fab fa-html5"></i>
+                                    <p>HTML 5</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-css3-alt"></i>
+                                    <p>CSS 3</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-js"></i>
+                                    <p>JavaScript</p>
+                                </li>
+                                <li>
+                                    <img src="https://img.icons8.com/ios-filled/20/000000/jquery.png" />
+                                    <p>jQuery</p>
+                                </li>
+                                <li>
+                                    <i class="fab fa-sass"></i>
+                                    <p>Sass</p>
+                                </li>
+                            </ul>
+                            <a class="code" href="https://tv-show-depot.github.io/tvShowDepot/">Code</a>
+                        </div>
+                    </div>
                 </div>
-                <h3>TV Show Depot</a></h3>
-                    <div class="projectUnderline"></div>
-                <p>TV Show Depot allows the user to search for their next favourite tv show.</p>
-                <ul>
-                    <li>
-                        <i class="fab fa-html5"></i>
-                        <p>HTML 5</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-css3-alt"></i>
-                        <p>CSS 3</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-js"></i>
-                        <p>JavaScript</p>
-                    </li>
-                    <li>
-                        <img src="https://img.icons8.com/ios-filled/20/000000/jquery.png" />
-                        <p>jQuery</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-sass"></i>
-                        <p>Sass</p>
-                    </li>
-                </ul>
-                <button>Code</button>
             </div>
     </section>
-    <section>
-        <div class="wrapper">
-
-        </div>
-        </div>
-    </section>
-
-
 </main>
-<footer>
+<footer id="contact">
     <div class="wrapper">
-        <h2>Contact</h2>
-        <div class="underlines"></div>
-        <form action="https://formspree.io/xeqrrpzl" method="POST">
-            <label>
-                Name
-                <input type="text" placeholder="Name" required/>
-            </label>
-            <label>
-                Email
-                <input type="text" name="_replyto" placeholder="Email" required/>
-            </label>
-            <label>
-                Message
-                <textarea name="message" placeholder="Tell me a thing..." required></textarea>
-            </label>
-            <button type="submit">Send</button>
-        </form>
-        <ul class="social">
-            
-            <li><i class="fab fa-github"></i>
-                <p><a href="https://github.com/daibhidhdwaum">GitHub</a></p>
-            </li>
-            <li><i class="fab fa-linkedin-in"></i>
-                <p><a href="https://www.linkedin.com/in/davidjdownie/">LinkedIn</a></p>
-            </li>
-            <li><i class="fab fa-twitter"></i>
-                <p><a href="https://twitter.com/davidjdownie">Twitter</a></p>
-            </li>
-            <li><i class="fas fa-envelope"></i>
-                <p><a href="">daviddownie@gmail.com</a></p>
-            </li>
-        </ul>
-        <a href="https://icons8.com/icon/74402/mongodb"></a>
+        <div class="relativeContainer">
+            <div class="vertical">
+                <h2>Contact</h2>
+                <div class="underlines"></div>
+            </div>
+            <form action="https://formspree.io/xeqrrpzl" method="POST">
+                <label>
+                    Name
+                    <input type="text" placeholder="Name" required />
+                </label>
+                <label>
+                    Email
+                    <input type="text" name="_replyto" placeholder="Email" required />
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" placeholder="Tell me a thing..." required></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
+            <ul class="social">
 
-        <p class="copy">&copy;copyright 2020</p>
+                <li>
+                    <i class="fab fa-github"></i>
+                    <p><a href="https://github.com/daibhidhdwaum">GitHub</a></p>
+                </li>
+                <li>
+                    <i class="fab fa-linkedin-in"></i>
+                    <p><a href="https://www.linkedin.com/in/davidjdownie/">LinkedIn</a></p>
+                </li>
+                <li>
+                    <i class="fab fa-twitter"></i>
+                    <p><a href="https://twitter.com/davidjdownie">Twitter</a></p>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="">daviddownie@gmail.com</a></p>
+                </li>
+            </ul>
+            <a href="https://icons8.com/icon/74402/mongodb"></a>
+
+            <p class="copy">&copy;copyright 2020</p>
+        </div>
     </div>
 </footer>
 </body>

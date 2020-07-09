@@ -1,0 +1,56 @@
+@media (min-width: 650px) {
+
+// BIO SECTION
+  .bioContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  .photo {
+    width: 50%;
+  }
+
+  .writtenContentTitles {
+    width: calc(50% - 8rem);
+    margin: 0 4rem;
+    align-self: center;
+    position: relative;
+    top: 8.5rem;
+  }
+
+  .blurb {
+    max-width: 100%;
+    margin: 0;
+    align-self: start;
+  }
+
+// SKILLS SECTION
+  .skillsSection {
+    .skills {
+      li {
+        margin: 2rem;
+        width: calc(50% - 4rem);
+      }
+      i{
+          font-size: 6rem;
+      }
+    }
+    .logos{
+        svg{
+
+            width: 6rem;
+        }
+        .logoContainer{
+            width: 6rem;
+        }
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+
+//   PROJECTS SECTION
+}

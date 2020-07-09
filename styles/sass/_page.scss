@@ -1,7 +1,11 @@
 .wrapper {
-  max-width: 1200px;
+  max-width: 1100px;
   width: 90%;
   margin: 0 auto;
+}
+
+.relativeContainer {
+  position: relative;
 }
 
 body {
@@ -9,64 +13,159 @@ body {
 }
 
 h3,
-.bio h2{
+.bio h2 {
   @include headers(inherit, 2.2rem, uppercase);
+}
 
+button,
+header i {
+  font-size: 2.2rem;
 }
 
 h3 {
   letter-spacing: 0.08rem;
   padding: 0.4rem 0;
 }
+
+p,
+.card h3 {
+  font-weight: 400;
+}
+
 p {
   @include text($primaryText, 1.6rem, none);
   line-height: 2.4rem;
   letter-spacing: 0.02rem;
-  font-weight: 400;
+}
+
+button,
+.card,
+.projects li,
+textarea,
+input {
+  padding: 1rem;
+}
+
+button,
+.bio h3 {
+  font-weight: 600;
+}
+
+.vertical,
+.image p {
+  transform: rotate(-90deg);
+}
+
+.vertical,
+.image p,
+.image button,
+ul.navbar {
+  position: absolute;
+}
+
+ul.navbar {
+  position: fixed;
+}
+
+.vertical {
+  left: -4.5rem;
+}
+
+.skillsSection .vertical {
+  top: -2rem;
+}
+
+.projects .vertical {
+  top: -8rem;
+}
+
+footer .vertical {
+  top: -8rem;
 }
 
 button {
-  font-size: 2.2rem;
   width: 16rem;
-  padding: 1rem;
   background-color: transparent;
   border: 3px solid $highlight;
   @include headers($primaryText, 1.4rem, uppercase);
-  font-weight: 600;
   letter-spacing: 0.3rem;
 }
 
 .underlines {
   border-bottom: 3px solid $highlight;
-  transform: rotate(-90deg);
-  position: absolute;
+}
+
+nav,
+ul.navbar,
+ul.navbar a,
+.photo img,
+.image img,
+form,
+input,
+textarea {
+  width: 100%;
+}
+
+header,
+nav {
+  @include flex(flex, row, space-between, center);
+}
+
+header h2,
+.card h3 {
+  letter-spacing: 0.2rem;
+}
+
+nav,
+.bioContent,
+.image,
+.projects,
+.skillsSection,
+footer {
+  position: relative;
+}
+
+header ul li:hover,
+.projectUnderline,
+input:hover,
+input:focus-within,
+textarea:hover,
+textarea:focus-within {
+  border: 1px solid $highlight;
+}
+
+header ul li a,
+.image p {
+  @include headers($primaryText, 1.8rem, uppercase);
+}
+
+header ul li,
+.skillsSection p {
+  text-align: center;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.underlines {
+  width: 110%;
 }
 
 // HEADER
 header {
-  width: 100%;
   height: 12rem;
-  @include flex(flex, row, space-between, center);
   h2 {
     @include headers(inherit, 1.5rem, uppercase);
-    letter-spacing: 0.2rem;
   }
   nav {
-    @include flex(flex, row, space-between, center);
-    position: relative;
-    width: 100%;
     padding: 7%;
   }
   ul.navbar {
-    position: absolute;
-    width: 100%;
     right: -100%;
-    top: 10.4rem;
+    top: 12rem;
     transition: all 0.5s;
-    background-color: $secondaryText;
-  }
-  ul.navbar a {
-    width: 100%;
   }
   input[type="checkbox"]:checked + ul.navbar {
     right: 0;
@@ -78,250 +177,245 @@ header {
     @include headers($primaryText, 2.2rem, uppercase);
   }
   .projectUnderline {
-    border: 1px solid $highlight;
     width: 83%;
+    max-height: 4px;
     margin: 0.5rem 0;
-  }
-  i {
-    font-size: 2.2rem;
   }
   ul li {
     border: 1px solid transparent;
   }
   ul li a {
     padding: 1.5rem;
-    @include headers($primaryText, 1.8rem, uppercase);
     display: inline-block;
   }
-  ul li:hover {
-    border: 1px solid $highlight;
-  }
-  ul li {
-    width: 100%;
-    text-align: center;
-  }
+}
+
+.photo {
+  max-width: 31.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.bioContent {
+  bottom: 18rem;
+}
+
+ul.navbar,
+.skillsSection,
+.techUsed {
+  background-color: $secondaryText;
 }
 
 .photoBackground {
   @include altColorTheme();
-  .photo {
-    max-width: 37rem;
-    position: relative;
-    top: 18rem;
-  }
-  .photo img {
-    width: 100%;
-  }
+  height: 40rem;
+  padding: 0;
+}
+
+.bio p,
+.projectUnderline,
+.projects ul,
+form button {
+  margin-top: 2rem;
+}
+
+.projects h2,
+.skillsSection h2,
+.image p,
+footer h2 {
+  letter-spacing: 0.4rem;
 }
 
 .bio {
   background: linear-gradient(to bottom, $tertiary, #747272, $tertiary);
-  padding-top: 20rem;
-  padding-bottom: 5rem;
+  max-height: 100rem;
   h3 {
     @include headers(inherit, 1.6rem, uppercase);
-    letter-spacing: 0.08rem;
-    padding: 0.4rem 0;
-    font-weight: 600;
-  }
-  h2 {
-    @include headers(inherit, 2.2rem, uppercase);
-  }
-  p {
-    margin-top: 2rem;
   }
   .projectUnderline {
     border: 1px solid $secondaryText;
-    margin-top: 2rem;
     opacity: 0.2;
   }
 }
 
+button:hover,
+button:focus-within {
+  border: 3px solid $primaryText;
+  transition: 0.5s;
+}
+
+.skillsSection ul,
+.projects li {
+  @include flex(flex, column, center, center);
+}
+
 .projects,
-.skillsSection {
-  position: relative;
+.skillsSection,
+footer {
   h2 {
     @include headers(inherit, 1.4rem, uppercase);
     padding: 0.5rem 0 0;
-    letter-spacing: 0.4rem;
-    transform: rotate(-90deg);
-    position: absolute;
-    left: -3rem;
   }
+}
+
+.skillsSection .logos,
+.projects ul {
+  @include flex(flex, row, center, center);
 }
 
 .skillsSection {
   margin: 8rem 0;
-  background-color: $secondaryText;
   h2 {
     top: -2rem;
     padding-top: 3rem;
   }
   ul {
-    @include flex(flex, column, center, center);
     margin: 3rem 0;
   }
   p {
-    text-align: center;
-    margin: 0;
+    margin-top: 1rem;
+    align-items: center;
   }
   i {
     font-size: 3rem;
   }
-  .underlines {
-    top: -2.4rem;
-    left: -2.5rem;
-    width: 30%;
-    height: 3rem;
-  }
   .logos {
-    @include flex(flex, row, center, center);
     margin-bottom: 0;
     li {
-      margin: 2rem;
+      margin: 1rem;
+      @include flex(flex, column, space-between, center);
+      min-width: 8rem;
     }
-  }
-  .lastChild {
-    margin-bottom: 5rem;
+    .logoContainer {
+      max-width: 5.5rem;
+      min-height: 3rem;
+    }
+    svg {
+      width: 3rem;
+    }
+    .logoContainer img {
+      width: 100%;
+    }
   }
 }
 
+.lastChild,
+.card,
+.colorBanner {
+  margin-bottom: 5rem;
+}
+
+.card,
+form {
+  @include flex(flex, column, auto, auto);
+}
+
+.card h3,
+input,
+textarea {
+  margin-top: 1rem;
+}
+
+.image button,
+input {
+  height: 4rem;
+}
+
 .projects {
-  position: relative;
+  .innerCardEven{
+    align-self: flex-end;
+  }
   .card {
+    background: linear-gradient(to bottom, $tertiary, #d3d6d6, $tertiary);
+    .innerCard{
     @include flex(flex, column, auto, auto);
-    background: linear-gradient(to bottom, $tertiary, #bdbaba, $tertiary);
-    padding: 1rem;
-    margin-bottom: 5rem;
+
+      max-width: 70rem;
+    }
     h3 {
-      margin-top: 1rem;
-      letter-spacing: 0.2rem;
       font-size: 1.8rem;
-      font-weight: 400;
     }
   }
   div.colorBanner {
     background-color: $secondary;
     height: 10rem;
-    margin-bottom: 5rem;
   }
   h2 {
     top: 7.5rem;
   }
-  .underlines {
-    top: 6rem;
-    left: -3.8rem;
-    width: 40%;
-    height: 3rem;
-  }
   .projectUnderline {
-    border: 1px solid $highlight;
     border-radius: 1rem;
     width: 80%;
     margin: 0 auto 2rem 0;
     opacity: 0.4;
   }
   ul {
-    @include flex(flex, row, center, center);
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 2rem;
-  }
-  li {
-    padding: 1rem;
-    @include flex(flex, column, center, center);
-    i {
-      font-size: 2rem;
+    margin-bottom: 2rem;
+    li{
+      min-width: 7.5rem;
     }
+  li p{
+    font-size: 1.6rem;
   }
+  }
+
   .image {
-    max-width: 40rem;
+    max-width: 90rem;
     width: 90%;
-    position: relative;
     p {
-      position: absolute;
-      transform: rotate(-90deg);
       right: -7.2rem;
       top: 10rem;
-      @include headers($primaryText, 1.8rem, uppercase);
-      letter-spacing: 0.4rem;
     }
     button {
-      position: absolute;
       width: 4rem;
-      height: 4rem;
       right: -2rem;
       background-color: $highlight;
     }
-    img {
-      width: 100%;
-    }
   }
-  h3 {
+
+  h3,
+  button,
+  .techUsed {
     margin: 1rem 0;
   }
   li p {
     margin: 0.2rem;
     font-size: 1.6rem;
   }
-
-  button {
-    margin: 1rem 0;
-    align-self: center;
-  }
   .techUsed {
-    background-color: $secondaryText;
     color: $primaryText;
     border-radius: 0.3rem;
-    margin: 1rem 0;
   }
 }
 
+.card i,
+footer i {
+  font-size: 2rem;
+}
+
+button {
+  align-self: center;
+}
+
 form {
-  @include flex(flex, column, auto, auto);
-  width: 100%;
   margin-top: 4.5rem;
-  input,
-  textarea {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 1rem;
-  }
-  input:hover,
-  input:focus-within,
-  textarea:hover,
-  textarea:focus-within {
-    border: 1px solid $highlight;
-  }
-  input {
-    height: 4rem;
-  }
   textarea {
     height: 8rem;
     resize: none;
   }
   button {
     color: $secondaryText;
-    align-self: center;
-    margin-top: 2rem;
   }
 }
 
 footer {
-  position: relative;
   h2 {
     @include headers($primaryText, 1.4rem, uppercase);
-    // padding: 0.5rem 0 0;
-    letter-spacing: 0.4rem;
-    transform: rotate(-90deg);
-    position: absolute;
+    padding: 0.5rem 0 0;
     left: -2.5rem;
-    top: 1rem;
-  }
-  .underlines {
-    top: -0.9rem;
-    left: -3.8rem;
-    width: 33%;
-    height: 4.2rem;
+    top: 0.5rem;
   }
   @include altColorTheme();
   padding: 3rem 0;
@@ -344,10 +438,22 @@ footer {
     margin: 0.7rem 0;
   }
   i {
-    font-size: 2rem;
     margin-right: 1rem;
+    // font-size: 2rem;
   }
   .copy {
     text-align: center;
   }
+}
+
+.code {
+  align-self: center;
+  background-color: transparent;
+  @include headers($primaryText, 1.4rem, uppercase);
+  border: 3px solid $highlight;
+  width: 16rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  padding: 1rem;
 }
