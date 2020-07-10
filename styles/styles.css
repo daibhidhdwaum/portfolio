@@ -561,13 +561,13 @@ a {
 }
 
 .photo {
-  max-width: 31.5rem;
+  max-width: 34rem;
   width: 100%;
   margin-bottom: 2rem;
 }
 
 .bioContent {
-  bottom: 18rem;
+  bottom: 16rem;
 }
 
 .skillsSection,
@@ -689,11 +689,11 @@ footer h2 {
   font-size: 3rem;
 }
 
-.skillsSection .logos {
+.logos {
   margin-bottom: 0;
 }
 
-.skillsSection .logos li {
+.logos li {
   margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -711,16 +711,12 @@ footer h2 {
   min-width: 8rem;
 }
 
-.skillsSection .logos .logoContainer {
+.logoContainer {
   width: 3rem;
   min-height: 3rem;
 }
 
-.skillsSection .logos svg {
-  width: 3rem;
-}
-
-.skillsSection .logos .logoContainer img {
+.logoContainer img {
   width: 100%;
 }
 
@@ -766,9 +762,9 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: auto;
+      -ms-flex-pack: auto;
+          justify-content: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -836,6 +832,7 @@ input {
 
 .projects .card h3 {
   font-size: 1.8rem;
+  max-width: 80%;
 }
 
 .projects div.colorBanner {
@@ -848,6 +845,9 @@ input {
 }
 
 .projects ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -892,11 +892,6 @@ input {
 .projects li p {
   margin: 0.2rem;
   font-size: 1.6rem;
-}
-
-.projects .techUsed {
-  color: #0f0f0f;
-  border-radius: 0.3rem;
 }
 
 .card i,

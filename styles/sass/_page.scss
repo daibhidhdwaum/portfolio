@@ -58,8 +58,7 @@ button,
 
 .vertical,
 .image p,
-.image button
-{
+.image button {
   position: absolute;
 }
 
@@ -99,8 +98,7 @@ textarea {
   width: 100%;
 }
 
-header
- {
+header {
   @include flex(flex, row, space-between, center);
 }
 
@@ -145,13 +143,13 @@ a {
 }
 
 .photo {
-  max-width: 31.5rem;
+  max-width: 34rem;
   width: 100%;
   margin-bottom: 2rem;
 }
 
 .bioContent {
-  bottom: 18rem;
+  bottom: 16rem;
 }
 
 // ul.navbar li,
@@ -233,24 +231,24 @@ footer {
   i {
     font-size: 3rem;
   }
-  .logos {
-    margin-bottom: 0;
-    li {
-      margin: 1rem;
-      @include flex(flex, column, space-between, center);
-      min-width: 8rem;
-    }
-    .logoContainer {
-      width: 3rem;
-      min-height: 3rem;
-    }
-    svg {
-      width: 3rem;
-    }
-    .logoContainer img {
-      width: 100%;
-    }
+}
+
+.logos {
+  margin-bottom: 0;
+  li {
+    margin: 1rem;
+    @include flex(flex, column, space-between, center);
+    min-width: 8rem;
   }
+}
+
+.logoContainer {
+  width: 3rem;
+  min-height: 3rem;
+}
+
+.logoContainer img {
+  width: 100%;
 }
 
 .lastChild,
@@ -276,7 +274,7 @@ input {
 }
 
 .cardWrittenContent {
-  @include flex(flex, column, flex-end, center);
+  @include flex(flex, column, auto, center);
   h3 {
     align-self: start;
   }
@@ -307,6 +305,7 @@ input {
     }
     h3 {
       font-size: 1.8rem;
+      max-width: 80%;
     }
   }
   div.colorBanner {
@@ -318,6 +317,7 @@ input {
   }
 
   ul {
+    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: 2rem;
@@ -354,10 +354,10 @@ input {
     margin: 0.2rem;
     font-size: 1.6rem;
   }
-  .techUsed {
-    color: $primaryText;
-    border-radius: 0.3rem;
-  }
+  // .techUsed {
+  //   color: $primaryText;
+  //   border-radius: 0.3rem;
+  // }
 }
 
 .card i,
