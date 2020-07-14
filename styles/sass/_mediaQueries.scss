@@ -37,7 +37,7 @@
         font-size: 6rem;
       }
     }
-    .logos {
+    li {
       svg {
         width: 6rem;
       }
@@ -47,6 +47,9 @@
     }
     p {
       font-size: 2rem;
+    }
+    ul.skills {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -62,6 +65,9 @@
 }
 
 @media (min-width: 940px) {
+.skillsSection ul.skills{
+  grid-template-columns: repeat(4, 1fr);
+}
 
   .projects .card .innerCard {
     flex-direction: row;

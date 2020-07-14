@@ -210,19 +210,26 @@ footer {
   }
 }
 
-.skillsSection .logos,
 .projects ul {
   @include flex(flex, row, center, center);
 }
 
 .skillsSection {
-  margin: 8rem 0;
   h2 {
     top: -2rem;
     padding-top: 3rem;
   }
-  ul {
-    margin: 3rem 0;
+  ul.skills {
+    padding: 3rem 0;
+    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    justify-items: center;
+  }
+  li {
+    @include flex(flex, column, center, center);
+    margin-top: 5rem auto;
   }
   p {
     margin-top: 1rem;
@@ -230,15 +237,6 @@ footer {
   }
   i {
     font-size: 3rem;
-  }
-}
-
-.logos {
-  margin-bottom: 0;
-  li {
-    margin: 1rem;
-    @include flex(flex, column, space-between, center);
-    min-width: 8rem;
   }
 }
 

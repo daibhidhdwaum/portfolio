@@ -648,7 +648,6 @@ footer h2 {
   padding: 0.5rem 0 0;
 }
 
-.skillsSection .logos,
 .projects ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,17 +664,37 @@ footer h2 {
           align-items: center;
 }
 
-.skillsSection {
-  margin: 8rem 0;
-}
-
 .skillsSection h2 {
   top: -2rem;
   padding-top: 3rem;
 }
 
-.skillsSection ul {
-  margin: 3rem 0;
+.skillsSection ul.skills {
+  padding: 3rem 0;
+  gap: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.skillsSection li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem auto;
 }
 
 .skillsSection p {
@@ -687,28 +706,6 @@ footer h2 {
 
 .skillsSection i {
   font-size: 3rem;
-}
-
-.logos {
-  margin-bottom: 0;
-}
-
-.logos li {
-  margin: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 8rem;
 }
 
 .logoContainer {
@@ -1073,14 +1070,18 @@ footer .copy {
   .skillsSection .skills i {
     font-size: 6rem;
   }
-  .skillsSection .logos svg {
+  .skillsSection li svg {
     width: 6rem;
   }
-  .skillsSection .logos .logoContainer {
+  .skillsSection li .logoContainer {
     width: 6rem;
   }
   .skillsSection p {
     font-size: 2rem;
+  }
+  .skillsSection ul.skills {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
   form input {
     min-width: 22rem;
@@ -1103,6 +1104,10 @@ footer .copy {
 }
 
 @media (min-width: 940px) {
+  .skillsSection ul.skills {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
   .projects .card .innerCard {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
