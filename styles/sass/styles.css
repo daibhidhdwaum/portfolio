@@ -393,6 +393,19 @@ header ul li:hover {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 17rem;
+}
+
+.projects {
+  scroll-margin-top: -6rem;
+}
+
+footer {
+  scroll-margin-top: 0;
+}
+
+.bioSection {
+  scroll-margin-top: 30rem;
 }
 
 .wrapper {
@@ -462,7 +475,7 @@ button,
 
 .vertical,
 .image p,
-.image button {
+.image .arrow {
   position: absolute;
 }
 
@@ -519,6 +532,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #e6e6e6;
 }
 
 header h2,
@@ -750,7 +767,7 @@ textarea {
   margin-top: 1rem;
 }
 
-.image button,
+.image .arrow,
 input {
   height: 4rem;
 }
@@ -874,10 +891,12 @@ input {
   top: 10rem;
 }
 
-.projects .image button {
+.projects .image .arrow {
   width: 4rem;
   right: -2rem;
+  top: 1rem;
   background-color: #C1666B;
+  padding: 0.5rem;
 }
 
 .projects .image img {
@@ -1033,6 +1052,14 @@ footer .copy {
   letter-spacing: 0.3rem;
   font-weight: 600;
   padding: 1rem;
+}
+
+.code:hover {
+  background-color: #C1666B;
+  opacity: 0.9;
+  border: 3px solid #0f0f0f;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
 }
 
 @media (min-width: 650px) {

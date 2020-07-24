@@ -1,30 +1,27 @@
 const portfolio = {};
 
 portfolio.hoverMenu = () => {
-    $(document).on("scroll", () => {
-        $("#toggle").prop("checked", false);
-    })
-}
+  $(document).on("scroll", () => {
+    $("#toggle").prop("checked", false);
+  });
+};
 
 // portfolio.smoothScroll = () => {
-//     $("a").on("click", (e) => {
-//         if(this.hash !== ""){
-//             e.preventDefault();
-
-//             const hash = this.hash;
-
-//             $("html, body").stop().animate({
-//                 scrollTop: $(hash).ofset().top - 75
-//             }, 800);
-//         }
-//     })
-// }
+//   window.scroll({
+//     top: 2500,
+//     left: 0,
+//     behavior: "smooth",
+//   });
+//   document.querySelector("skillsSection").scrollIntoView({
+//     behavior: "smooth",
+//   });
+// };
 
 portfolio.init = () => {
-    portfolio.hoverMenu();
-    portfolio.smoothScroll();
-}
+  portfolio.hoverMenu();
+  //   portfolio.smoothScroll();
+};
 
 $(() => {
-    portfolio.init();
-})
+  portfolio.init();
+});

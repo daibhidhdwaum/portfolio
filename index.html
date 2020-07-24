@@ -9,7 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="icon" href="./images/favicon-16x16.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/sass/styles.css">
     <title>David Downie</title>
 </head>
 <header>
@@ -28,8 +28,8 @@
         <ul class="navbar">
             <li><a href="#bioSection">Bio</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects" class="projectsAnchor">Projects</a></li>
+            <li><a href="#contact" class="contactAnchor">Contact</a></li>
         </ul>
         <!-- </div> -->
 </header>
@@ -61,7 +61,7 @@
         </div>
     </section>
     <!-- END OF BIO SECTION -->
-    <section class="skillsSection" id="skills">
+    <section class="skillsSection skillsAnchor" id="skills">
         <div class="wrapper">
             <div class="relativeContainer">
                 <div class="vertical">
@@ -152,13 +152,11 @@
                         <div class="innerCard">
                             <div class="image">
                                 <p>Live Site</p>
-                                <button>
-                                    <a href="https://daibhidhdwaum.github.io/davidDownieProjectThree/">
-                                        <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
-                                            alt="Arrow pointing to project image" />
-                                    </a>
-                                </button>
-                                <a href="https://daibhidhdwaum.github.io/LilDrum/">
+                                <a href="https://daibhidhdwaum.github.io/LilDrum/" class="arrow" target="_blank">
+                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
+                                        alt="Arrow pointing to project image" />
+                                </a>
+                                <a href="https://daibhidhdwaum.github.io/LilDrum/" target="_blank">
                                     <img src="./images/LilDrum.png" alt="Li'l Drum inteface">
                                 </a>
                             </div>
@@ -197,18 +195,19 @@
                                 <p>Sass</p>
                             </li>
                         </ul>
-                        <a class="code" href="https://github.com/daibhidhdwaum/davidDownieProjectThree">Code</a>
+                        <a class="code" href="https://github.com/daibhidhdwaum/davidDownieProjectThree"
+                            target="_blank">Code</a>
                     </div>
 
                     <div class="card">
                         <div class="innerCard innerCardEven">
                             <div class="image">
                                 <p>Live Site</p>
-                                <button>
+                                <a href="https://tv-show-depot.github.io/tvShowDepot/" class="arrow" target="_blank">
                                     <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
                                         alt="Arrow pointing to project image" />
-                                </button>
-                                <a href="https://tv-show-depot.github.io/tvShowDepot/">
+                                </a>
+                                <a href="https://tv-show-depot.github.io/tvShowDepot/" target="_blank">
                                     <img src="./images/tvShowDepot.jpg" alt="Tv Show Depot landing page">
                                 </a>
                             </div>
@@ -247,7 +246,7 @@
                                 <p>Rest API</p>
                             </li>
                         </ul>
-                        <a class="code" href="https://tv-show-depot.github.io/tvShowDepot/">Code</a>
+                        <a class="code" href="https://github.com/tv-show-depot/tvShowDepot" target="_blank">Code</a>
 
 
                     </div>
@@ -256,11 +255,11 @@
                         <div class="innerCard innerCard">
                             <div class="image">
                                 <p>Live Site</p>
-                                <button><a href="https://daibhidhdwaum.github.io/stickerBook/"></a>
+                                <a href="https://daibhidhdwaum.github.io/stickerBook/" class="arrow" target="_blank">
                                     <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
                                         alt="Arrow pointing to project image" />
-                                </button>
-                                <a href="https://daibhidhdwaum.github.io/stickerBook/">
+                                </a>
+                                <a href="https://daibhidhdwaum.github.io/stickerBook/" target="_blank">
                                     <img src="./images/stickerBook.png" alt="Rick and Morty Sticker Book landing page">
                                 </a>
                             </div>
@@ -301,7 +300,9 @@
                                 <p>Rest API</p>
                             </li>
                         </ul>
-                        <a class="code" href="https://tv-show-depot.github.io/tvShowDepot/">Code</a>
+                        <a class="code"
+                            href="https://github.com/daibhidhdwaum/stickerBookhttps://tv-show-depot.github.io/tvShowDepot/"
+                            target="_blank">Code</a>
 
                     </div>
                 </div>
@@ -352,7 +353,7 @@
                     </li>
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <p><a href="">daviddownie@gmail.com</a></p>
+                        <p><a href="mailto:daviddownie@gmail.com">daviddownie@gmail.com</a></p>
                     </li>
                 </ul>
                 <a href="https://icons8.com/icon/74402/mongodb"></a>
