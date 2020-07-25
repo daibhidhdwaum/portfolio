@@ -1,39 +1,39 @@
-    // font-family: 'Montserrat', sans-serif;
-    // font-family: 'Playfair Display', serif;
-    // blue 2a5aef
-    // grey e6e6e6
-    // green dof54e
-    // black 0f0f0f
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Playfair Display', serif;
+// blue 2a5aef
+// grey e6e6e6
+// green dof54e
+// black 0f0f0f
 
-    $primaryText: #0f0f0f;
-    $secondaryText: #FFFFFF;
-    $secondary: #405E8E;
-    $tertiary: #E6E6E6;
-    $highlight: #C1666B;
+$primaryText: #0f0f0f;
+$secondaryText: #ffffff;
+$secondary: #4f77b9;
+$tertiary: #e6e6e6;
+// $highlight: #c1666b;
+$highlight: #d2898d;
 
-    @mixin headers($color, $fontSize, $textTransform){
-        font-family: "Monserrat", sans-serif;
-        color: $color;
-        font-size: $fontSize;
-        text-transform: $textTransform;
-    }
+@mixin headers($color, $fontSize, $textTransform) {
+  font-family: "Monserrat", sans-serif;
+  color: $color;
+  font-size: $fontSize;
+  text-transform: $textTransform;
+}
 
-    @mixin text($color, $fontSize, $textTransform){
-        font-family: "Playfair Display", serif;
-          color: $color;
-        font-size: $fontSize;
-        text-transform: $textTransform;
+@mixin text($color, $fontSize, $textTransform) {
+  font-family: "Playfair Display", serif;
+  color: $color;
+  font-size: $fontSize;
+  text-transform: $textTransform;
+}
 
-    }
+@mixin altColorTheme {
+  background-color: $secondary;
+  color: $secondaryText;
+}
 
-    @mixin altColorTheme {
-        background-color: $secondary;
-        color: $secondaryText;
-    }
-
-    @mixin flex($display, $flexDirection, $justifyContent, $alignItems){
-        display: $display;
-        flex-direction: $flexDirection;
-        justify-content: $justifyContent;
-        align-items: $alignItems;
-    }
+@mixin flex($display, $flexDirection, $justifyContent, $alignItems) {
+  display: $display;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}

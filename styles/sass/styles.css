@@ -311,7 +311,7 @@ header .upperNav {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   width: 100%;
   padding: 0 8%;
   height: 12rem;
@@ -333,7 +333,7 @@ header ul li a {
   width: 100%;
   display: inline-block;
   padding: 1.5rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 header input[type="checkbox"]:checked + ul.navbar {
@@ -345,12 +345,12 @@ header input[type="checkbox"] {
 }
 
 header ul li {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   width: 100%;
 }
 
 header ul li:hover {
-  border: 1px solid #C1666B;
+  border: 1px solid #d2898d;
 }
 
 @media (min-width: 940px) {
@@ -376,11 +376,11 @@ header ul li:hover {
   }
   header ul.navbar a {
     width: 25%;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     padding: .5rem;
   }
   header ul li {
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
     padding: 1rem;
   }
   header ul li a {
@@ -396,53 +396,18 @@ html {
   scroll-padding-top: 17rem;
 }
 
-.projects {
-  scroll-margin-top: -6rem;
-}
-
-footer {
-  scroll-margin-top: 0;
-}
-
-.bioSection {
-  scroll-margin-top: 30rem;
+body {
+  background-color: #e6e6e6;
 }
 
 .wrapper {
   max-width: 1100px;
   width: 90%;
-  margin: 0 auto;
 }
 
-.relativeContainer {
-  position: relative;
-}
-
-body {
-  background-color: #E6E6E6;
-}
-
-h3,
-.bio h2 {
-  font-family: "Monserrat", sans-serif;
-  color: inherit;
-  font-size: 2.2rem;
-  text-transform: uppercase;
-}
-
-button,
-header i {
-  font-size: 2.2rem;
-}
-
-h3 {
-  letter-spacing: 0.08rem;
-  padding: 0.4rem 0;
-}
-
-p,
-.card h3 {
-  font-weight: 400;
+.underlines {
+  width: 110%;
+  border-bottom: 3px solid #d2898d;
 }
 
 p {
@@ -454,6 +419,64 @@ p {
   letter-spacing: 0.02rem;
 }
 
+h3 {
+  letter-spacing: 0.08rem;
+  padding: 0.4rem 0;
+}
+
+.relativeContainer {
+  position: relative;
+}
+
+.vertical {
+  left: -4.5rem;
+}
+
+button {
+  width: 16rem;
+  background-color: transparent;
+  border: 3px solid #d2898d;
+  font-family: "Monserrat", sans-serif;
+  color: #0f0f0f;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+button,
+.code,
+footer label {
+  letter-spacing: 0.3rem;
+}
+
+.wrapper,
+ul.skills {
+  margin: 0 auto;
+}
+
+.code,
+button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+h3,
+.bio h2 {
+  font-family: "Monserrat", sans-serif;
+  color: inherit;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+header i {
+  font-size: 2.2rem;
+}
+
+p,
+.card h3 {
+  font-weight: 400;
+}
+
 button,
 .card,
 .projects li,
@@ -463,8 +486,13 @@ input {
 }
 
 button,
-.bio h3 {
+.bio h3,
+.code {
   font-weight: 600;
+}
+
+footer label {
+  font-weight: 500;
 }
 
 .vertical,
@@ -479,63 +507,15 @@ button,
   position: absolute;
 }
 
-.vertical {
-  left: -4.5rem;
-}
-
-.skillsSection .vertical {
-  top: -2rem;
-}
-
-.projects .vertical {
-  top: -8rem;
-}
-
-footer .vertical {
-  top: -3.5rem;
-}
-
-button {
-  width: 16rem;
-  background-color: transparent;
-  border: 3px solid #C1666B;
-  font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-}
-
-.underlines {
-  border-bottom: 3px solid #C1666B;
-}
-
 .photo img,
 .image img,
 form,
 input,
-textarea {
+textarea,
+header,
+.photo,
+.logoContainer img {
   width: 100%;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  background-color: #e6e6e6;
 }
 
 header h2,
@@ -556,7 +536,7 @@ input:hover,
 input:focus-within,
 textarea:hover,
 textarea:focus-within {
-  border: 1px solid #C1666B;
+  border: 1px solid #d2898d;
 }
 
 header ul li a,
@@ -568,39 +548,16 @@ header ul li a,
 }
 
 header ul li,
-.skillsSection p {
+.skillsSection p,
+.code,
+.copy {
   text-align: center;
 }
 
 button,
-a {
+a,
+.burger {
   cursor: pointer;
-}
-
-.underlines {
-  width: 110%;
-}
-
-.photo {
-  max-width: 34rem;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.bioContent {
-  bottom: 16rem;
-}
-
-.skillsSection,
-.techUsed {
-  background-color: #FFFFFF;
-}
-
-.photoBackground {
-  background-color: #405E8E;
-  color: #FFFFFF;
-  height: 40rem;
-  padding: 0;
 }
 
 .bio p,
@@ -617,33 +574,31 @@ footer h2 {
   letter-spacing: 0.4rem;
 }
 
-.bio {
-  background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), color-stop(#747272), to(#E6E6E6));
-  background: linear-gradient(to bottom, #E6E6E6, #747272, #E6E6E6);
-  max-height: 100rem;
+.skillsSection,
+.techUsed {
+  background-color: #ffffff;
 }
 
-.bio h3 {
-  font-family: "Monserrat", sans-serif;
-  color: inherit;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-}
-
-.bio .projectUnderline {
-  border: 1px solid #FFFFFF;
-  opacity: 0.2;
+.code:hover,
+.arrow:hover,
+.code:focus-within,
+.arrow:focus-within {
+  border: 3px solid #0f0f0f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #d2898d;
 }
 
 button:hover,
 button:focus-within {
-  border: 3px solid #0f0f0f;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  border: 3px solid #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.skillsSection ul,
-.projects li {
+.projects li,
+.cards,
+.footerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,46 +614,20 @@ button:focus-within {
           align-items: center;
 }
 
-.projects h2,
-.skillsSection h2,
-footer h2 {
-  font-family: "Monserrat", sans-serif;
-  color: inherit;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  padding: 0.5rem 0 0;
-}
-
-.projects ul {
+.skillsSection ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.skillsSection h2 {
-  top: -2rem;
-  padding-top: 3rem;
-}
-
-.skillsSection ul.skills {
-  padding: 3rem 0;
-  gap: 3rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  margin: 0 auto;
-  justify-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .skillsSection li {
@@ -709,33 +638,22 @@ footer h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 5rem auto;
-}
-
-.skillsSection p {
-  margin-top: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.skillsSection i {
-  font-size: 3rem;
-}
-
-.logoContainer {
-  width: 3rem;
-  min-height: 3rem;
-}
-
-.logoContainer img {
-  width: 100%;
+.projects h2,
+.skillsSection h2,
+.contact h2 {
+  font-family: "Monserrat", sans-serif;
+  color: #0f0f0f;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0 0;
 }
 
 .lastChild,
@@ -762,7 +680,6 @@ form {
 }
 
 .card h3,
-input,
 textarea {
   margin-top: 1rem;
 }
@@ -770,6 +687,28 @@ textarea {
 .image .arrow,
 input {
   height: 4rem;
+}
+
+.card i {
+  font-size: 4rem;
+}
+
+.card ul,
+.photo {
+  margin-bottom: 2rem;
+}
+
+.projects ul,
+.skillsSection p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h3,
+button,
+.techUsed {
+  margin: 1rem 0;
 }
 
 .cardWrittenContent {
@@ -788,26 +727,122 @@ input {
           align-items: center;
 }
 
-.cardWrittenContent h3 {
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+.code,
+button {
+  font-family: "Monserrat", sans-serif;
+  color: #0f0f0f;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
-.projects .cards {
+form,
+footer ul,
+.innerCard {
+  max-width: 60rem;
+}
+
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  z-index: 10;
+  background-color: #e6e6e6;
+}
+
+.bioSection {
+  scroll-margin-top: 30rem;
+}
+
+.bio {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), color-stop(#6e6a6a), to(#e6e6e6));
+  background: linear-gradient(to bottom, #e6e6e6, #6e6a6a, #e6e6e6);
+}
+
+.bio h3 {
+  font-family: "Monserrat", sans-serif;
+  color: inherit;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.bio .projectUnderline {
+  border: 1px solid #ffffff;
+  opacity: 0.5;
+}
+
+.bioContent {
+  bottom: 16rem;
+}
+
+.photo {
+  max-width: 34rem;
+}
+
+.photoBackground {
+  background-color: #4f77b9;
+  color: #ffffff;
+  height: 40rem;
+  padding: 0;
+}
+
+.skillsSection .vertical,
+.skillsSection h2 {
+  top: -2rem;
+}
+
+.skillsSection h2 {
+  padding-top: 3rem;
+}
+
+.skillsSection ul.skills {
+  padding: 3rem 0;
+  gap: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.skillsSection li {
+  margin-top: 5rem auto;
+}
+
+.skillsSection p {
+  margin-top: 1rem;
+}
+
+.skillsSection i {
+  font-size: 4rem;
+}
+
+.logoContainer {
+  width: 4rem;
+  min-height: 3rem;
+}
+
+.image .arrow,
+.code:hover {
+  background-color: #d2898d;
+}
+
+.projects .vertical {
+  top: -8rem;
+}
+
+.projects {
+  scroll-margin-top: -6rem;
 }
 
 .projects .image,
@@ -819,15 +854,15 @@ input {
 .projects .image .projectUnderline,
 .projects .cardWrittenContent .projectUnderline {
   border-radius: 1rem;
-  max-width: 30rem;
+  max-width: 34rem;
   width: 80%;
   margin: 0 auto 2rem 0;
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 .projects .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), color-stop(#d3d6d6), to(#E6E6E6));
-  background: linear-gradient(to bottom, #E6E6E6, #d3d6d6, #E6E6E6);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), color-stop(#d3d6d6), to(#e6e6e6));
+  background: linear-gradient(to bottom, #e6e6e6, #d3d6d6, #e6e6e6);
   margin: 6rem auto;
 }
 
@@ -845,7 +880,6 @@ input {
   -webkit-box-align: auto;
       -ms-flex-align: auto;
           align-items: auto;
-  max-width: 60rem;
 }
 
 .projects .card h3 {
@@ -854,7 +888,7 @@ input {
 }
 
 .projects div.colorBanner {
-  background-color: #405E8E;
+  background-color: #4f77b9;
   height: 10rem;
 }
 
@@ -863,23 +897,15 @@ input {
 }
 
 .projects ul {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .projects ul li {
   min-width: 7.5rem;
-}
-
-.projects ul li p {
-  font-size: 1.6rem;
 }
 
 .projects .image {
@@ -895,18 +921,12 @@ input {
   width: 4rem;
   right: -2rem;
   top: 1rem;
-  background-color: #C1666B;
   padding: 0.5rem;
+  border: 3px solid #d2898d;
 }
 
 .projects .image img {
   border-radius: 0.4rem;
-}
-
-.projects h3,
-.projects button,
-.projects .techUsed {
-  margin: 1rem 0;
 }
 
 .projects li p {
@@ -914,15 +934,99 @@ input {
   font-size: 1.6rem;
 }
 
-.card i,
-footer i {
-  font-size: 2rem;
+.projects ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.cardWrittenContent h3 {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.code {
+  background-color: transparent;
+  border: 3px solid #d2898d;
+  width: 16rem;
+  padding: 1rem;
+}
+
+.code:hover {
+  opacity: 0.9;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+footer .vertical {
+  top: -3.5rem;
+}
+
+footer {
+  margin-top: 15rem;
+  scroll-margin-top: 0;
+  background-color: #4f77b9;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+footer h2 {
+  left: -2.5rem;
+  top: 0.5rem;
+}
+
+footer a,
+footer p {
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-size: auto;
+  text-transform: auto;
+}
+
+footer label {
+  font-family: "Monserrat", sans-serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+footer ul {
+  width: 70%;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: auto;
+          flex-direction: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer i {
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+
+footer .copy {
+  margin-top: 6rem;
 }
 
 form {
@@ -935,131 +1039,11 @@ form textarea {
 }
 
 form button {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-form,
-footer ul {
-  max-width: 60rem;
-}
-
-footer {
-  margin-top: 15rem;
-  background-color: #405E8E;
-  color: #FFFFFF;
-  padding: 3rem 0;
-}
-
-footer .footerContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer h2 {
-  font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  padding: 0.5rem 0 0;
-  left: -2.5rem;
-  top: 0.5rem;
-}
-
-footer a,
-footer p {
-  font-family: "Playfair Display", serif;
-  color: #FFFFFF;
-  font-size: auto;
-  text-transform: auto;
-}
-
-footer label {
-  font-family: "Monserrat", sans-serif;
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.3rem;
+form input {
   margin: 0.5rem 0;
-}
-
-footer ul {
-  margin-top: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: auto;
-      -ms-flex-pack: auto;
-          justify-content: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: auto;
-      -ms-flex-pack: auto;
-          justify-content: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0.7rem 0;
-}
-
-footer i {
-  margin-right: 1rem;
-}
-
-footer .copy {
-  text-align: center;
-  margin-top: 6rem;
-}
-
-.code {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background-color: transparent;
-  font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  border: 3px solid #C1666B;
-  width: 16rem;
-  text-align: center;
-  letter-spacing: 0.3rem;
-  font-weight: 600;
-  padding: 1rem;
-}
-
-.code:hover {
-  background-color: #C1666B;
-  opacity: 0.9;
-  border: 3px solid #0f0f0f;
-  -webkit-transition: ease 0.4s;
-  transition: ease 0.4s;
 }
 
 @media (min-width: 650px) {
@@ -1100,9 +1084,6 @@ footer .copy {
   }
   .skillsSection .skills i {
     font-size: 6rem;
-  }
-  .skillsSection li svg {
-    width: 6rem;
   }
   .skillsSection li .logoContainer {
     width: 6rem;

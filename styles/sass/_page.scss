@@ -1,42 +1,27 @@
+// PAGE
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 17rem;
-}
-
-.projects {
-  scroll-margin-top: -6rem;
-}
-
-footer {
-  scroll-margin-top: 0;
-}
-
-.bioSection {
-  scroll-margin-top: 30rem;
-}
-
-.wrapper {
-  max-width: 1100px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.relativeContainer {
-  position: relative;
 }
 
 body {
   background-color: $tertiary;
 }
 
-h3,
-.bio h2 {
-  @include headers(inherit, 2.2rem, uppercase);
+.wrapper {
+  max-width: 1100px;
+  width: 90%;
 }
 
-button,
-header i {
-  font-size: 2.2rem;
+.underlines {
+  width: 110%;
+  border-bottom: 3px solid $highlight;
+}
+
+p {
+  @include text($primaryText, 1.6rem, none);
+  line-height: 2.4rem;
+  letter-spacing: 0.02rem;
 }
 
 h3 {
@@ -44,15 +29,49 @@ h3 {
   padding: 0.4rem 0;
 }
 
+.relativeContainer {
+  position: relative;
+}
+
+.vertical {
+  left: -4.5rem;
+}
+
+button {
+  width: 16rem;
+  background-color: transparent;
+  border: 3px solid $highlight;
+  @include headers($primaryText, 1.4rem, uppercase);
+}
+
+button,
+.code,
+footer label {
+  letter-spacing: 0.3rem;
+}
+
+.wrapper,
+ul.skills {
+  margin: 0 auto;
+}
+
+.code,
+button {
+  align-self: center;
+}
+
+h3,
+.bio h2 {
+  @include headers(inherit, 2.2rem, uppercase);
+}
+
+header i {
+  font-size: 2.2rem;
+}
+
 p,
 .card h3 {
   font-weight: 400;
-}
-
-p {
-  @include text($primaryText, 1.6rem, none);
-  line-height: 2.4rem;
-  letter-spacing: 0.02rem;
 }
 
 button,
@@ -64,8 +83,13 @@ input {
 }
 
 button,
-.bio h3 {
+.bio h3,
+.code {
   font-weight: 600;
+}
+
+footer label {
+  font-weight: 500;
 }
 
 .vertical,
@@ -79,48 +103,15 @@ button,
   position: absolute;
 }
 
-.vertical {
-  left: -4.5rem;
-}
-
-.skillsSection .vertical {
-  top: -2rem;
-}
-
-.projects .vertical {
-  top: -8rem;
-}
-
-footer .vertical {
-  top: -3.5rem;
-}
-
-button {
-  width: 16rem;
-  background-color: transparent;
-  border: 3px solid $highlight;
-  @include headers($primaryText, 1.4rem, uppercase);
-  letter-spacing: 0.3rem;
-}
-
-.underlines {
-  border-bottom: 3px solid $highlight;
-}
-
 .photo img,
 .image img,
 form,
 input,
-textarea {
+textarea,
+header,
+.photo,
+.logoContainer img {
   width: 100%;
-}
-
-header {
-  @include flex(flex, row, space-between, center);
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  background-color: #e6e6e6;
 }
 
 header h2,
@@ -150,39 +141,16 @@ header ul li a,
 }
 
 header ul li,
-.skillsSection p {
+.skillsSection p,
+.code,
+.copy {
   text-align: center;
 }
 
 button,
-a {
+a,
+.burger {
   cursor: pointer;
-}
-
-.underlines {
-  width: 110%;
-}
-
-.photo {
-  max-width: 34rem;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.bioContent {
-  bottom: 16rem;
-}
-
-// ul.navbar li,
-.skillsSection,
-.techUsed {
-  background-color: $secondaryText;
-}
-
-.photoBackground {
-  @include altColorTheme();
-  height: 40rem;
-  padding: 0;
 }
 
 .bio p,
@@ -199,75 +167,47 @@ footer h2 {
   letter-spacing: 0.4rem;
 }
 
-.bio {
-  background: linear-gradient(to bottom, $tertiary, #747272, $tertiary);
-  max-height: 100rem;
-  h3 {
-    @include headers(inherit, 1.6rem, uppercase);
-  }
-  .projectUnderline {
-    border: 1px solid $secondaryText;
-    opacity: 0.2;
-  }
+.skillsSection,
+.techUsed {
+  background-color: $secondaryText;
+}
+
+.code:hover,
+.arrow:hover,
+.code:focus-within,
+.arrow:focus-within {
+  border: 3px solid $primaryText;
+  transition: 0.3s;
+  background-color: $highlight;
 }
 
 button:hover,
 button:focus-within {
-  border: 3px solid $primaryText;
-  transition: 0.5s;
+  border: 3px solid $secondaryText;
+  transition: 0.3s;
 }
 
-.skillsSection ul,
-.projects li {
+.projects li,
+.cards,
+.footerContainer {
   @include flex(flex, column, center, center);
+}
+
+.skillsSection ul {
+  @include flex(flex, column, flex-start, flex-start);
+}
+
+.skillsSection li {
+  @include flex(flex, column, flex-start, center);
 }
 
 .projects,
 .skillsSection,
-footer {
+.contact {
   h2 {
-    @include headers(inherit, 1.4rem, uppercase);
+    @include headers($primaryText, 1.6rem, uppercase);
     padding: 0.5rem 0 0;
   }
-}
-
-.projects ul {
-  @include flex(flex, row, center, center);
-}
-
-.skillsSection {
-  h2 {
-    top: -2rem;
-    padding-top: 3rem;
-  }
-  ul.skills {
-    padding: 3rem 0;
-    gap: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-    justify-items: center;
-  }
-  li {
-    @include flex(flex, column, center, center);
-    margin-top: 5rem auto;
-  }
-  p {
-    margin-top: 1rem;
-    align-items: center;
-  }
-  i {
-    font-size: 3rem;
-  }
-}
-
-.logoContainer {
-  width: 3rem;
-  min-height: 3rem;
-}
-
-.logoContainer img {
-  width: 100%;
 }
 
 .lastChild,
@@ -282,7 +222,6 @@ form {
 }
 
 .card h3,
-input,
 textarea {
   margin-top: 1rem;
 }
@@ -292,26 +231,137 @@ input {
   height: 4rem;
 }
 
+.card i {
+  font-size: 4rem;
+}
+
+.card ul,
+.photo {
+  margin-bottom: 2rem;
+}
+
+.projects ul,
+.skillsSection p {
+  align-items: center;
+}
+
+h3,
+button,
+.techUsed {
+  margin: 1rem 0;
+}
+
 .cardWrittenContent {
   @include flex(flex, column, auto, center);
+}
+
+.code,
+button {
+  @include headers($primaryText, 1.8rem, uppercase);
+}
+
+form,
+footer ul,
+.innerCard {
+  max-width: 60rem;
+}
+
+// HEADER
+
+header {
+  @include flex(flex, row, space-between, center);
+  position: fixed;
+  z-index: 10;
+  background-color: #e6e6e6;
+}
+
+// BIO SECTION
+
+.bioSection {
+  scroll-margin-top: 30rem;
+}
+
+.bio {
+  background: linear-gradient(to bottom, $tertiary, #6e6a6a, $tertiary);
   h3 {
-    align-self: start;
+    @include headers(inherit, 1.6rem, uppercase);
+  }
+  .projectUnderline {
+    border: 1px solid $secondaryText;
+    opacity: 0.5;
   }
 }
 
-.projects {
-  .cards {
-    @include flex(flex, column, center, center);
+.bioContent {
+  bottom: 16rem;
+}
+
+.photo {
+  max-width: 34rem;
+}
+
+.photoBackground {
+  @include altColorTheme();
+  height: 40rem;
+  padding: 0;
+}
+
+// SKILLS SECTION
+
+.skillsSection .vertical,
+.skillsSection h2 {
+  top: -2rem;
+}
+
+.skillsSection {
+  h2 {
+    padding-top: 3rem;
   }
+  ul.skills {
+    padding: 3rem 0;
+    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  li {
+    margin-top: 5rem auto;
+  }
+  p {
+    margin-top: 1rem;
+  }
+  i {
+    font-size: 4rem;
+  }
+}
+
+.logoContainer {
+  width: 4rem;
+  min-height: 3rem;
+}
+
+// PROJECTS SECTION
+
+.image .arrow,
+.code:hover {
+  background-color: $highlight;
+}
+
+.projects .vertical {
+  top: -8rem;
+}
+
+.projects {
+  scroll-margin-top: -6rem;
   .image,
   .cardWrittenContent {
     flex-basis: 50%;
     .projectUnderline {
       border-radius: 1rem;
-      max-width: 30rem;
+      max-width: 34rem;
       width: 80%;
       margin: 0 auto 2rem 0;
-      opacity: 0.4;
+      opacity: 0.7;
     }
   }
   .card {
@@ -319,14 +369,13 @@ input {
     margin: 6rem auto;
     .innerCard {
       @include flex(flex, column, auto, auto);
-
-      max-width: 60rem;
     }
     h3 {
       font-size: 1.8rem;
       max-width: 80%;
     }
   }
+
   div.colorBanner {
     background-color: $secondary;
     height: 10rem;
@@ -336,15 +385,10 @@ input {
   }
 
   ul {
-    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
     li {
       min-width: 7.5rem;
-    }
-    li p {
-      font-size: 1.6rem;
     }
   }
 
@@ -358,40 +402,80 @@ input {
       width: 4rem;
       right: -2rem;
       top: 1rem;
-      background-color: $highlight;
       padding: 0.5rem;
+      border: 3px solid $highlight;
     }
     img {
       border-radius: 0.4rem;
     }
   }
 
-  h3,
-  button,
-  .techUsed {
-    margin: 1rem 0;
-  }
   li p {
     margin: 0.2rem;
     font-size: 1.6rem;
   }
-  // .techUsed {
-  //   color: $primaryText;
-  //   border-radius: 0.3rem;
-  // }
 }
 
-.card i,
-footer i {
-  font-size: 2rem;
+.projects ul {
+  @include flex(flex, row, center, center);
 }
 
-button {
-  align-self: center;
+.cardWrittenContent {
+  h3 {
+    align-self: start;
+  }
+}
+
+.code {
+  background-color: transparent;
+  border: 3px solid $highlight;
+  width: 16rem;
+  padding: 1rem;
+}
+
+.code:hover {
+  opacity: 0.9;
+  transition: ease 0.4s;
+}
+
+// FOOTER
+
+footer .vertical {
+  top: -3.5rem;
+}
+
+footer {
+  margin-top: 15rem;
+  scroll-margin-top: 0;
+  @include altColorTheme();
+  padding: 3rem 0;
+  h2 {
+    left: -2.5rem;
+    top: 0.5rem;
+  }
+  a,
+  p {
+    @include text($secondaryText, auto, auto);
+  }
+  label {
+    @include headers($secondaryText, 1.8rem, uppercase);
+    margin: 0.5rem 0;
+  }
+  ul {
+    width: 70%;
+    margin-top: 4rem;
+    @include flex(flex, auto, space-between, center);
+  }
+  i {
+    margin-right: 1rem;
+    font-size: 3rem;
+  }
+  .copy {
+    margin-top: 6rem;
+  }
 }
 
 form {
-  // max-width: 60rem;
   margin-top: 4.5rem;
   textarea {
     height: 8rem;
@@ -400,68 +484,7 @@ form {
   button {
     color: $secondaryText;
   }
-}
-
-form,
-footer ul {
-  max-width: 60rem;
-}
-
-footer {
-  margin-top: 15rem;
-  .footerContainer {
-    @include flex(flex, column, center, center);
-  }
-  h2 {
-    @include headers($primaryText, 1.4rem, uppercase);
-    padding: 0.5rem 0 0;
-    left: -2.5rem;
-    top: 0.5rem;
-  }
-  @include altColorTheme();
-  padding: 3rem 0;
-  a,
-  p {
-    @include text($secondaryText, auto, auto);
-  }
-  label {
-    @include headers($secondaryText, 1.4rem, uppercase);
-    font-weight: 600;
-    letter-spacing: 0.3rem;
+  input {
     margin: 0.5rem 0;
   }
-  ul {
-    margin-top: 4rem;
-    @include flex(flex, column, auto, center);
-  }
-  li {
-    @include flex(flex, row, auto, center);
-    margin: 0.7rem 0;
-  }
-  i {
-    margin-right: 1rem;
-  }
-  .copy {
-    text-align: center;
-    margin-top: 6rem;
-  }
-}
-
-.code {
-  align-self: center;
-  background-color: transparent;
-  @include headers($primaryText, 1.4rem, uppercase);
-  border: 3px solid $highlight;
-  width: 16rem;
-  text-align: center;
-  letter-spacing: 0.3rem;
-  font-weight: 600;
-  padding: 1rem;
-}
-
-.code:hover {
-  background-color: $highlight;
-  opacity: 0.9;
-  border: 3px solid $primaryText;
-  transition: ease 0.4s;
 }

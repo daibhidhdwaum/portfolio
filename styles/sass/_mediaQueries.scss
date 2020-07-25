@@ -38,9 +38,6 @@
       }
     }
     li {
-      svg {
-        width: 6rem;
-      }
       .logoContainer {
         width: 6rem;
       }
@@ -52,9 +49,6 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-
-  //   PROJECTS SECTION
-
   // FOOTER
   form input {
     min-width: 22rem;
@@ -65,9 +59,9 @@
 }
 
 @media (min-width: 940px) {
-.skillsSection ul.skills{
-  grid-template-columns: repeat(4, 1fr);
-}
+  .skillsSection ul.skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   .projects .card .innerCard {
     flex-direction: row;
