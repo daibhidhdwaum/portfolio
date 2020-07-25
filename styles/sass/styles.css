@@ -1162,6 +1162,7 @@ form input {
             align-items: center;
   }
   footer ul {
-    margin: 0;
+    margin: 0 5%;
+    width: 30%;
   }
 }
