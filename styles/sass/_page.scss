@@ -29,19 +29,24 @@ h3 {
   padding: 0.4rem 0;
 }
 
-.relativeContainer {
-  position: relative;
-}
-
 .vertical {
   left: -4.5rem;
 }
 
 button {
+  @include headers($primaryText, 1.4rem, uppercase);
+}
+
+button,
+.code {
   width: 16rem;
   background-color: transparent;
+}
+
+button,
+.code,
+.image .arrow {
   border: 3px solid $highlight;
-  @include headers($primaryText, 1.4rem, uppercase);
 }
 
 button,
@@ -65,10 +70,6 @@ h3,
   @include headers(inherit, 2.2rem, uppercase);
 }
 
-header i {
-  font-size: 2.2rem;
-}
-
 p,
 .card h3 {
   font-weight: 400;
@@ -86,10 +87,6 @@ button,
 .bio h3,
 .code {
   font-weight: 600;
-}
-
-footer label {
-  font-weight: 500;
 }
 
 .vertical,
@@ -119,6 +116,7 @@ header h2,
   letter-spacing: 0.2rem;
 }
 
+.relativeContainer,
 .bioContent,
 .image,
 .projects,
@@ -136,7 +134,9 @@ textarea:focus-within {
 }
 
 header ul li a,
-.image p {
+.image p,
+.code,
+button {
   @include headers($primaryText, 1.8rem, uppercase);
 }
 
@@ -172,6 +172,7 @@ footer h2 {
   background-color: $secondaryText;
 }
 
+.image .arrow,
 .code:hover,
 .arrow:hover,
 .code:focus-within,
@@ -222,7 +223,8 @@ form {
 }
 
 .card h3,
-textarea {
+textarea,
+.skillsSection p {
   margin-top: 1rem;
 }
 
@@ -231,7 +233,8 @@ input {
   height: 4rem;
 }
 
-.card i {
+.card i,
+.skillsSection i {
   font-size: 4rem;
 }
 
@@ -255,15 +258,15 @@ button,
   @include flex(flex, column, auto, center);
 }
 
-.code,
-button {
-  @include headers($primaryText, 1.8rem, uppercase);
-}
-
 form,
 footer ul,
 .innerCard {
   max-width: 60rem;
+}
+
+.skillsSection ul.skills,
+footer {
+  padding: 3rem 0;
 }
 
 // HEADER
@@ -273,6 +276,10 @@ header {
   position: fixed;
   z-index: 10;
   background-color: #e6e6e6;
+}
+
+header i {
+  font-size: 2.2rem;
 }
 
 // BIO SECTION
@@ -300,8 +307,12 @@ header {
   max-width: 34rem;
 }
 
-.photoBackground {
+.photoBackground,
+footer {
   @include altColorTheme();
+}
+
+.photoBackground {
   height: 40rem;
   padding: 0;
 }
@@ -318,7 +329,6 @@ header {
     padding-top: 3rem;
   }
   ul.skills {
-    padding: 3rem 0;
     gap: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -327,25 +337,18 @@ header {
   li {
     margin-top: 5rem auto;
   }
-  p {
-    margin-top: 1rem;
-  }
-  i {
-    font-size: 4rem;
-  }
+}
+
+.logoContainer,
+.image .arrow {
+  width: 4rem;
 }
 
 .logoContainer {
-  width: 4rem;
   min-height: 3rem;
 }
 
 // PROJECTS SECTION
-
-.image .arrow,
-.code:hover {
-  background-color: $highlight;
-}
 
 .projects .vertical {
   top: -8rem;
@@ -383,7 +386,6 @@ header {
   h2 {
     top: 7.5rem;
   }
-
   ul {
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -399,17 +401,14 @@ header {
       top: 10rem;
     }
     .arrow {
-      width: 4rem;
       right: -2rem;
       top: 1rem;
       padding: 0.5rem;
-      border: 3px solid $highlight;
     }
     img {
       border-radius: 0.4rem;
     }
   }
-
   li p {
     margin: 0.2rem;
     font-size: 1.6rem;
@@ -427,9 +426,6 @@ header {
 }
 
 .code {
-  background-color: transparent;
-  border: 3px solid $highlight;
-  width: 16rem;
   padding: 1rem;
 }
 
@@ -440,15 +436,9 @@ header {
 
 // FOOTER
 
-footer .vertical {
-  top: -3.5rem;
-}
-
 footer {
   margin-top: 15rem;
   scroll-margin-top: 0;
-  @include altColorTheme();
-  padding: 3rem 0;
   h2 {
     left: -2.5rem;
     top: 0.5rem;
@@ -459,7 +449,7 @@ footer {
   }
   label {
     @include headers($secondaryText, 1.8rem, uppercase);
-    margin: 0.5rem 0;
+    font-weight: 500;
   }
   ul {
     width: 70%;
@@ -473,6 +463,14 @@ footer {
   .copy {
     margin-top: 6rem;
   }
+  .vertical {
+    top: -3.5rem;
+  }
+}
+
+footer label,
+form input {
+  margin: 0.5rem 0;
 }
 
 form {
@@ -483,8 +481,5 @@ form {
   }
   button {
     color: $secondaryText;
-  }
-  input {
-    margin: 0.5rem 0;
   }
 }

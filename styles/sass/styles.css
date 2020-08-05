@@ -424,22 +424,27 @@ h3 {
   padding: 0.4rem 0;
 }
 
-.relativeContainer {
-  position: relative;
-}
-
 .vertical {
   left: -4.5rem;
 }
 
 button {
-  width: 16rem;
-  background-color: transparent;
-  border: 3px solid #d2898d;
   font-family: "Monserrat", sans-serif;
   color: #0f0f0f;
   font-size: 1.4rem;
   text-transform: uppercase;
+}
+
+button,
+.code {
+  width: 16rem;
+  background-color: transparent;
+}
+
+button,
+.code,
+.image .arrow {
+  border: 3px solid #d2898d;
 }
 
 button,
@@ -468,10 +473,6 @@ h3,
   text-transform: uppercase;
 }
 
-header i {
-  font-size: 2.2rem;
-}
-
 p,
 .card h3 {
   font-weight: 400;
@@ -489,10 +490,6 @@ button,
 .bio h3,
 .code {
   font-weight: 600;
-}
-
-footer label {
-  font-weight: 500;
 }
 
 .vertical,
@@ -523,6 +520,7 @@ header h2,
   letter-spacing: 0.2rem;
 }
 
+.relativeContainer,
 .bioContent,
 .image,
 .projects,
@@ -540,7 +538,9 @@ textarea:focus-within {
 }
 
 header ul li a,
-.image p {
+.image p,
+.code,
+button {
   font-family: "Monserrat", sans-serif;
   color: #0f0f0f;
   font-size: 1.8rem;
@@ -579,6 +579,7 @@ footer h2 {
   background-color: #ffffff;
 }
 
+.image .arrow,
 .code:hover,
 .arrow:hover,
 .code:focus-within,
@@ -680,7 +681,8 @@ form {
 }
 
 .card h3,
-textarea {
+textarea,
+.skillsSection p {
   margin-top: 1rem;
 }
 
@@ -689,7 +691,8 @@ input {
   height: 4rem;
 }
 
-.card i {
+.card i,
+.skillsSection i {
   font-size: 4rem;
 }
 
@@ -727,18 +730,15 @@ button,
           align-items: center;
 }
 
-.code,
-button {
-  font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-}
-
 form,
 footer ul,
 .innerCard {
   max-width: 60rem;
+}
+
+.skillsSection ul.skills,
+footer {
+  padding: 3rem 0;
 }
 
 header {
@@ -758,6 +758,10 @@ header {
   position: fixed;
   z-index: 10;
   background-color: #e6e6e6;
+}
+
+header i {
+  font-size: 2.2rem;
 }
 
 .bioSection {
@@ -789,9 +793,13 @@ header {
   max-width: 34rem;
 }
 
-.photoBackground {
+.photoBackground,
+footer {
   background-color: #4f77b9;
   color: #ffffff;
+}
+
+.photoBackground {
   height: 40rem;
   padding: 0;
 }
@@ -806,7 +814,6 @@ header {
 }
 
 .skillsSection ul.skills {
-  padding: 3rem 0;
   gap: 3rem;
   display: -ms-grid;
   display: grid;
@@ -819,22 +826,13 @@ header {
   margin-top: 5rem auto;
 }
 
-.skillsSection p {
-  margin-top: 1rem;
-}
-
-.skillsSection i {
-  font-size: 4rem;
+.logoContainer,
+.image .arrow {
+  width: 4rem;
 }
 
 .logoContainer {
-  width: 4rem;
   min-height: 3rem;
-}
-
-.image .arrow,
-.code:hover {
-  background-color: #d2898d;
 }
 
 .projects .vertical {
@@ -918,11 +916,9 @@ header {
 }
 
 .projects .image .arrow {
-  width: 4rem;
   right: -2rem;
   top: 1rem;
   padding: 0.5rem;
-  border: 3px solid #d2898d;
 }
 
 .projects .image img {
@@ -957,9 +953,6 @@ header {
 }
 
 .code {
-  background-color: transparent;
-  border: 3px solid #d2898d;
-  width: 16rem;
   padding: 1rem;
 }
 
@@ -969,16 +962,9 @@ header {
   transition: ease 0.4s;
 }
 
-footer .vertical {
-  top: -3.5rem;
-}
-
 footer {
   margin-top: 15rem;
   scroll-margin-top: 0;
-  background-color: #4f77b9;
-  color: #ffffff;
-  padding: 3rem 0;
 }
 
 footer h2 {
@@ -999,7 +985,7 @@ footer label {
   color: #ffffff;
   font-size: 1.8rem;
   text-transform: uppercase;
-  margin: 0.5rem 0;
+  font-weight: 500;
 }
 
 footer ul {
@@ -1029,6 +1015,15 @@ footer .copy {
   margin-top: 6rem;
 }
 
+footer .vertical {
+  top: -3.5rem;
+}
+
+footer label,
+form input {
+  margin: 0.5rem 0;
+}
+
 form {
   margin-top: 4.5rem;
 }
@@ -1040,10 +1035,6 @@ form textarea {
 
 form button {
   color: #ffffff;
-}
-
-form input {
-  margin: 0.5rem 0;
 }
 
 @media (min-width: 650px) {
