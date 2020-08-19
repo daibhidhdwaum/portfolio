@@ -1,6 +1,6 @@
 // PAGE
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   scroll-padding-top: 17rem;
 }
 
@@ -169,10 +169,9 @@ footer h2 {
 
 .skillsSection,
 .techUsed {
-  background-color: $secondaryText;
+  background-color: $tertiary;
 }
 
-.image .arrow,
 .code:hover,
 .arrow:hover,
 .code:focus-within,
@@ -184,7 +183,7 @@ footer h2 {
 
 button:hover,
 button:focus-within {
-  border: 3px solid $secondaryText;
+  border: 3px solid $tertiary;
   transition: 0.3s;
 }
 
@@ -275,7 +274,7 @@ header {
   @include flex(flex, row, space-between, center);
   position: fixed;
   z-index: 10;
-  background-color: #e6e6e6;
+  background-color: $tertiary;
 }
 
 header i {
@@ -289,7 +288,7 @@ header i {
 }
 
 .bio {
-  background: linear-gradient(to bottom, $tertiary, #6e6a6a, $tertiary);
+  background: linear-gradient(to bottom, $tertiary, #9ea7ac, $tertiary);
   h3 {
     @include headers(inherit, 1.6rem, uppercase);
   }
@@ -319,11 +318,6 @@ footer {
 
 // SKILLS SECTION
 
-.skillsSection .vertical,
-.skillsSection h2 {
-  top: -2rem;
-}
-
 .skillsSection {
   h2 {
     padding-top: 3rem;
@@ -348,9 +342,15 @@ footer {
   min-height: 3rem;
 }
 
+div.colorBanner {
+  background-color: $secondary;
+  height: 10rem;
+}
+
 // PROJECTS SECTION
 
-.projects .vertical {
+.projects .vertical,
+.skillsSection .vertical {
   top: -8rem;
 }
 
@@ -368,7 +368,7 @@ footer {
     }
   }
   .card {
-    background: linear-gradient(to bottom, $tertiary, #d3d6d6, $tertiary);
+    background: linear-gradient(to bottom, $tertiary, #bec8ce, $tertiary);
     margin: 6rem auto;
     .innerCard {
       @include flex(flex, column, auto, auto);
@@ -379,10 +379,6 @@ footer {
     }
   }
 
-  div.colorBanner {
-    background-color: $secondary;
-    height: 10rem;
-  }
   h2 {
     top: 7.5rem;
   }
@@ -404,6 +400,7 @@ footer {
       right: -2rem;
       top: 1rem;
       padding: 0.5rem;
+      background-color: $highlight;
     }
     img {
       border-radius: 0.4rem;
@@ -449,7 +446,7 @@ footer {
   }
   label {
     @include headers($secondaryText, 1.8rem, uppercase);
-    font-weight: 500;
+    font-weight: 600;
   }
   ul {
     width: 70%;

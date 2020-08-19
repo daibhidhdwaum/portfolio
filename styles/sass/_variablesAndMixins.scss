@@ -1,15 +1,7 @@
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Playfair Display', serif;
-// blue 2a5aef
-// grey e6e6e6
-// green dof54e
-// black 0f0f0f
-
 $primaryText: #0f0f0f;
 $secondaryText: #ffffff;
-$secondary: #4f77b9;
-$tertiary: #e6e6e6;
-// $highlight: #c1666b;
+$secondary: #2e86ab;
+$tertiary: #e3f2fd;
 $highlight: #d2898d;
 
 @mixin headers($color, $fontSize, $textTransform) {

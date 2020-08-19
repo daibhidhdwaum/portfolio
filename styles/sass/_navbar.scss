@@ -22,7 +22,6 @@ header {
     height: 12rem;
   }
   ul.navbar {
-    
     left: 0;
     top: -26rem;
     transition: 0.5s;
@@ -31,11 +30,11 @@ header {
   ul.navbar {
     position: fixed;
   }
-    ul li a {
+  ul li a {
     width: 100%;
     display: inline-block;
     padding: 1.5rem;
-    background-color: $secondaryText;
+    background-color: $tertiary;
   }
 
   input[type="checkbox"]:checked + ul.navbar {
@@ -61,19 +60,18 @@ header {
       transition: none;
       @include flex(flex, auto, space-between, center);
       margin: 0 6%;
-
     }
     ul.navbar a {
       width: 25%;
       background-color: $tertiary;
-      padding: .5rem;
+      padding: 0.5rem;
     }
     ul li {
-        border: 1px solid $tertiary;
-        padding: 1rem;
+      border: 1px solid $tertiary;
+      padding: 1rem;
     }
-    ul li a{
-        display: inline;
+    ul li a {
+      display: inline;
     }
     .fa-bars {
       display: none;
