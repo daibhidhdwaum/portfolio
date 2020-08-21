@@ -306,6 +306,10 @@ header i {
   max-width: 34rem;
 }
 
+.photo img {
+  border-radius: 0.5rem;
+}
+
 .photoBackground,
 footer {
   @include altColorTheme();

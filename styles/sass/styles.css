@@ -791,6 +791,10 @@ header i {
   max-width: 34rem;
 }
 
+.photo img {
+  border-radius: 0.5rem;
+}
+
 .photoBackground,
 footer {
   background-color: #2e86ab;
