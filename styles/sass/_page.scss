@@ -263,9 +263,11 @@ footer ul,
   max-width: 60rem;
 }
 
-.skillsSection ul.skills,
 footer {
   padding: 3rem 0;
+}
+.skillsSection ul.skills {
+  padding: 2rem 0;
 }
 
 // HEADER
@@ -327,7 +329,7 @@ footer {
     padding-top: 3rem;
   }
   ul.skills {
-    gap: 3rem;
+    gap: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -463,6 +465,7 @@ footer {
   }
   .copy {
     margin-top: 6rem;
+    font-size: 2rem;
   }
   .vertical {
     top: -3.5rem;

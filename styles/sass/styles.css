@@ -311,7 +311,7 @@ header .upperNav {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10;
-  background-color: #e3f2fd;
+  background-color: #cad2d8;
   width: 100%;
   padding: 0 8%;
   height: 12rem;
@@ -333,7 +333,7 @@ header ul li a {
   width: 100%;
   display: inline-block;
   padding: 1.5rem;
-  background-color: #e3f2fd;
+  background-color: #cad2d8;
 }
 
 header input[type="checkbox"]:checked + ul.navbar {
@@ -376,11 +376,11 @@ header ul li:hover {
   }
   header ul.navbar a {
     width: 25%;
-    background-color: #e3f2fd;
+    background-color: #cad2d8;
     padding: 0.5rem;
   }
   header ul li {
-    border: 1px solid #e3f2fd;
+    border: 1px solid #cad2d8;
     padding: 1rem;
   }
   header ul li a {
@@ -396,7 +396,7 @@ html {
 }
 
 body {
-  background-color: #e3f2fd;
+  background-color: #cad2d8;
 }
 
 .wrapper {
@@ -575,7 +575,7 @@ footer h2 {
 
 .skillsSection,
 .techUsed {
-  background-color: #e3f2fd;
+  background-color: #cad2d8;
 }
 
 .code:hover,
@@ -590,7 +590,7 @@ footer h2 {
 
 button:hover,
 button:focus-within {
-  border: 3px solid #e3f2fd;
+  border: 3px solid #cad2d8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -734,9 +734,12 @@ footer ul,
   max-width: 60rem;
 }
 
-.skillsSection ul.skills,
 footer {
   padding: 3rem 0;
+}
+
+.skillsSection ul.skills {
+  padding: 2rem 0;
 }
 
 header {
@@ -755,7 +758,7 @@ header {
           align-items: center;
   position: fixed;
   z-index: 10;
-  background-color: #e3f2fd;
+  background-color: #cad2d8;
 }
 
 header i {
@@ -767,8 +770,8 @@ header i {
 }
 
 .bio {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e3f2fd), color-stop(#9ea7ac), to(#e3f2fd));
-  background: linear-gradient(to bottom, #e3f2fd, #9ea7ac, #e3f2fd);
+  background: -webkit-gradient(linear, left top, left bottom, from(#cad2d8), color-stop(#9ea7ac), to(#cad2d8));
+  background: linear-gradient(to bottom, #cad2d8, #9ea7ac, #cad2d8);
 }
 
 .bio h3 {
@@ -811,7 +814,7 @@ footer {
 }
 
 .skillsSection ul.skills {
-  gap: 3rem;
+  gap: 2rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -862,8 +865,8 @@ div.colorBanner {
 }
 
 .projects .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e3f2fd), color-stop(#bec8ce), to(#e3f2fd));
-  background: linear-gradient(to bottom, #e3f2fd, #bec8ce, #e3f2fd);
+  background: -webkit-gradient(linear, left top, left bottom, from(#cad2d8), color-stop(#bec8ce), to(#cad2d8));
+  background: linear-gradient(to bottom, #cad2d8, #bec8ce, #cad2d8);
   margin: 6rem auto;
 }
 
@@ -1012,6 +1015,7 @@ footer i {
 
 footer .copy {
   margin-top: 6rem;
+  font-size: 2rem;
 }
 
 footer .vertical {

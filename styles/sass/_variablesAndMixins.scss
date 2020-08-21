@@ -1,8 +1,9 @@
 $primaryText: #0f0f0f;
 $secondaryText: #ffffff;
 $secondary: #2e86ab;
-$tertiary: #e3f2fd;
+// $tertiary: #e3f2fd;
 $highlight: #d2898d;
+$tertiary: #cad2d8;
 
 @mixin headers($color, $fontSize, $textTransform) {
   font-family: "Monserrat", sans-serif;
