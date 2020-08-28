@@ -184,6 +184,7 @@ footer h2 {
 button:hover,
 button:focus-within {
   border: 3px solid $tertiary;
+  background-color: $highlight;
   transition: 0.3s;
 }
 
@@ -290,7 +291,7 @@ header i {
 }
 
 .bio {
-  background: linear-gradient(to bottom, $tertiary, #9ea7ac, $tertiary);
+  background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
   h3 {
     @include headers(inherit, 1.6rem, uppercase);
   }
@@ -374,7 +375,7 @@ div.colorBanner {
     }
   }
   .card {
-    background: linear-gradient(to bottom, $tertiary, #bec8ce, $tertiary);
+    background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
     margin: 6rem auto;
     .innerCard {
       @include flex(flex, column, auto, auto);
@@ -448,11 +449,10 @@ footer {
   }
   a,
   p {
-    @include text($secondaryText, auto, auto);
+    @include text($primaryText, auto, auto);
   }
   label {
-    @include headers($secondaryText, 1.8rem, uppercase);
-    font-weight: 600;
+    @include headers($primaryText, 1.8rem, uppercase);
   }
   ul {
     width: 70%;
@@ -484,6 +484,6 @@ form {
     resize: none;
   }
   button {
-    color: $secondaryText;
+    background-color: $secondaryText;
   }
 }

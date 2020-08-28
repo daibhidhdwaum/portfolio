@@ -311,7 +311,7 @@ header .upperNav {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10;
-  background-color: #cad2d8;
+  background-color: #f1f0eb;
   width: 100%;
   padding: 0 8%;
   height: 12rem;
@@ -333,7 +333,7 @@ header ul li a {
   width: 100%;
   display: inline-block;
   padding: 1.5rem;
-  background-color: #cad2d8;
+  background-color: #f1f0eb;
 }
 
 header input[type="checkbox"]:checked + ul.navbar {
@@ -376,11 +376,11 @@ header ul li:hover {
   }
   header ul.navbar a {
     width: 25%;
-    background-color: #cad2d8;
+    background-color: #f1f0eb;
     padding: 0.5rem;
   }
   header ul li {
-    border: 1px solid #cad2d8;
+    border: 1px solid #f1f0eb;
     padding: 1rem;
   }
   header ul li a {
@@ -396,7 +396,7 @@ html {
 }
 
 body {
-  background-color: #cad2d8;
+  background-color: #f1f0eb;
 }
 
 .wrapper {
@@ -411,7 +411,7 @@ body {
 
 p {
   font-family: "Playfair Display", serif;
-  color: #0f0f0f;
+  color: #111111;
   font-size: 1.6rem;
   text-transform: none;
   line-height: 2.4rem;
@@ -429,7 +429,7 @@ h3 {
 
 button {
   font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
+  color: #111111;
   font-size: 1.4rem;
   text-transform: uppercase;
 }
@@ -541,7 +541,7 @@ header ul li a,
 .code,
 button {
   font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
+  color: #111111;
   font-size: 1.8rem;
   text-transform: uppercase;
 }
@@ -575,14 +575,14 @@ footer h2 {
 
 .skillsSection,
 .techUsed {
-  background-color: #cad2d8;
+  background-color: #f1f0eb;
 }
 
 .code:hover,
 .arrow:hover,
 .code:focus-within,
 .arrow:focus-within {
-  border: 3px solid #0f0f0f;
+  border: 3px solid #111111;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #d2898d;
@@ -590,7 +590,8 @@ footer h2 {
 
 button:hover,
 button:focus-within {
-  border: 3px solid #cad2d8;
+  border: 3px solid #f1f0eb;
+  background-color: #d2898d;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -649,7 +650,7 @@ button:focus-within {
 .skillsSection h2,
 .contact h2 {
   font-family: "Monserrat", sans-serif;
-  color: #0f0f0f;
+  color: #111111;
   font-size: 1.6rem;
   text-transform: uppercase;
   padding: 0.5rem 0 0;
@@ -758,7 +759,7 @@ header {
           align-items: center;
   position: fixed;
   z-index: 10;
-  background-color: #cad2d8;
+  background-color: #f1f0eb;
 }
 
 header i {
@@ -770,8 +771,8 @@ header i {
 }
 
 .bio {
-  background: -webkit-gradient(linear, left top, left bottom, from(#cad2d8), color-stop(#9ea7ac), to(#cad2d8));
-  background: linear-gradient(to bottom, #cad2d8, #9ea7ac, #cad2d8);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1f0eb), color-stop(#dddddd), to(#f1f0eb));
+  background: linear-gradient(to bottom, #f1f0eb, #dddddd, #f1f0eb);
 }
 
 .bio h3 {
@@ -801,7 +802,7 @@ header i {
 .photoBackground,
 footer {
   background-color: #2e86ab;
-  color: #ffffff;
+  color: #111111;
 }
 
 .photoBackground {
@@ -865,8 +866,8 @@ div.colorBanner {
 }
 
 .projects .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(#cad2d8), color-stop(#bec8ce), to(#cad2d8));
-  background: linear-gradient(to bottom, #cad2d8, #bec8ce, #cad2d8);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1f0eb), color-stop(#dddddd), to(#f1f0eb));
+  background: linear-gradient(to bottom, #f1f0eb, #dddddd, #f1f0eb);
   margin: 6rem auto;
 }
 
@@ -977,17 +978,16 @@ footer h2 {
 footer a,
 footer p {
   font-family: "Playfair Display", serif;
-  color: #ffffff;
+  color: #111111;
   font-size: auto;
   text-transform: auto;
 }
 
 footer label {
   font-family: "Monserrat", sans-serif;
-  color: #ffffff;
+  color: #111111;
   font-size: 1.8rem;
   text-transform: uppercase;
-  font-weight: 600;
 }
 
 footer ul {
@@ -1037,7 +1037,7 @@ form textarea {
 }
 
 form button {
-  color: #ffffff;
+  background-color: #ffffff;
 }
 
 @media (min-width: 650px) {
