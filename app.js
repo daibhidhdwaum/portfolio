@@ -46,6 +46,7 @@ portfolio.smoothScroll = () => {
 portfolio.init = () => {
   portfolio.hoverMenu();
   portfolio.smoothScroll();
+  portfolio.sectionFadeIn();
 };
 
 $(() => {
