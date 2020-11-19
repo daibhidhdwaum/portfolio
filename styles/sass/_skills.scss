@@ -1,0 +1,71 @@
+.skills {
+  background-color: $tertiary;
+  &__colorBanner {
+    background-color: $secondary;
+    height: 10rem;
+  }
+  &__wrapper {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  &__container {
+    position: relative;
+  }
+  &__titleContainer {
+    position: absolute;
+    left: 0;
+    transform: rotate(-90deg);
+    left: -4rem;
+    top: -7rem;
+  }
+  &__title {
+    @include headers(inherit, 2.4rem, uppercase);
+    letter-spacing: 0.4rem;
+  }
+  &__underline {
+    width: 120%;
+    border-bottom: 3px solid $highlight;
+    margin: 0.3rem 0 0;
+    border-radius: 0.5rem;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+  }
+  &__skillItem {
+    @include flex(flex, column, flex-start, center);
+    margin: 1.5rem 0;
+  }
+  &__skill {
+    @include text($primaryText, 2rem, auto);
+    margin: 1rem 0;
+    text-align: center;
+  }
+  &__icon {
+    font-size: 4rem;
+  }
+  &__logoContainer {
+    max-width: 4rem;
+  }
+  &__logoImage {
+    width: 100%;
+  }
+  &__learning {
+    @include headers($primaryText, 1.8rem, uppercase);
+  }
+  &__underline--learning {
+    width: 75%;
+    border-bottom: 3px solid $highlight;
+    margin: 0.3rem 0 0;
+    border-radius: 0.5rem;
+  }
+  &__container--learning {
+    margin: 2rem;
+  }
+  &__list--learning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

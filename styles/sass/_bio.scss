@@ -1,0 +1,49 @@
+.bio {
+  &__container {
+    background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
+  }
+  &__photoBackground {
+    @include altColorTheme();
+    height: 30rem;
+    padding: 0;
+  }
+  &__wrapper {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  &__card {
+    position: relative;
+    bottom: 15rem;
+  }
+  &__imageContainer {
+    max-width: 34rem;
+  }
+  &__image {
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  &__writtenContentTitles {
+    margin: 1.5rem 0;
+  }
+  &__name {
+    font-family: "Monserrat", sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+  &__jobTitle {
+    @include headers(inherit, 1.8rem, uppercase);
+  }
+  &__underline {
+    border: 1px solid $secondaryText;
+    opacity: 0.5;
+    margin-top: 2rem;
+  }
+  &__intro {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 1rem 0;
+  }
+}

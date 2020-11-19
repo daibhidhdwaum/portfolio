@@ -1,0 +1,134 @@
+.card {
+  background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
+  margin: 2rem 3%;
+  &__innerCard {
+    margin: 0 3%;
+    padding: 2rem 0;
+    border: 1px dotted red;
+  }
+  &__projectImageContainer {
+    @include flex(flex, row-reverse, center, center);
+    width: calc(100% + 6%);
+  }
+  &__liveSiteButtonContainer {
+    position: relative;
+    top: -3rem;
+    right: 2rem;
+  }
+  &__imageContainer--arrow {
+    background-color: $highlight;
+    padding: 0.6rem;
+    width: 4rem;
+    border: 3px solid $highlight;
+  }
+  &__projectTitle {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin: 1rem 0 0.5rem;
+    @include headers(black, 1.8rem, uppercase);
+    font-weight: normal;
+  }
+  &__projectImage {
+    border-radius: 0.5rem;
+  }
+  &__arrow {
+    width: 100%;
+  }
+  &__liveSite {
+    @include headers(black, 1.8rem, uppercase);
+    letter-spacing: 0.2rem;
+    transform: rotate(-90deg);
+    width: 11rem;
+    position: absolute;
+    top: 8rem;
+    left: -2.2rem;
+  }
+  &__projectUnderline {
+    height: 0.2rem;
+    background-color: $highlight;
+    border-radius: 1rem;
+    max-width: 34rem;
+    width: 80%;
+    margin: 0 auto 2rem 0;
+    opacity: 0.7;
+  }
+  &__projectDescription {
+    @include text($primaryText, 1.8rem, none) font-size: 1.8rem;
+  }
+  &__icon {
+    font-size: 4rem;
+  }
+  &__logoContainer {
+    width: 4rem;
+  }
+  &__techList {
+    @include flex(flex, row, center, center);
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 3rem 0;
+  }
+  &__techUsed {
+    margin: 1.5rem 2rem 0;
+  }
+  &__code {
+    @include headers($primaryText, 1.8rem, uppercase);
+    border: 3px solid $highlight;
+    width: 16rem;
+    background-color: transparent;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  &__writtenContentContainer {
+    @include flex(flex, column, center, center);
+  }
+}
+
+// .card h3 {
+//   font-weight: 400;
+//   letter-spacing: 0.2rem;
+//   margin-top: 1rem;
+// }
+
+// .card {
+//   padding: 1rem;
+//   margin-bottom: 5rem;
+//   @include flex(flex, column, auto, auto);
+//   background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
+//   margin: 6rem auto;
+//   .innerCard {
+//     @include flex(flex, column, auto, auto);
+//   }
+//   h3 {
+//     font-size: 1.8rem;
+//     max-width: 80%;
+//   }
+// }
+
+// .cards {
+//   @include flex(flex, column, center, center);
+// }
+
+// .card i {
+//   font-size: 4rem;
+// }
+
+// .card ul {
+//   margin-bottom: 2rem;
+// }
+
+// .cardWrittenContent {
+//   @include flex(flex, column, auto, center);
+//   flex-basis: 50%;
+//   h3 {
+//     align-self: start;
+//   }
+//   .projectUnderline {
+//     border-radius: 1rem;
+//     max-width: 34rem;
+//     width: 80%;
+//     margin: 0 auto 2rem 0;
+//     opacity: 0.7;
+//   }
+// }

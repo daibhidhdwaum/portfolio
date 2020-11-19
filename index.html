@@ -6,36 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/80d230e595.js" crossorigin="anonymous"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;700&family=Didact+Gothic&family=Stint+Ultra+Expanded&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="./images/favicon-16x16.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="styles/sass/styles.css">
     <title>David Downie</title>
 </head>
-<header>
-    <nav>
-        <div class="upperNav">
-            <div>
-                <h1>David Downie</h1>
-                <div class="projectUnderline"></div>
-                <h2>Front End Developer</h2>
+
+
+
+<header class="header">
+    <nav class="nav">
+        <div class="nav__wrapper">
+            <div class="nav__container">
+                <div class="nav__pageTitle">
+                    <div class="nav__personalInfo animate__animated animate__fadeIn">
+                        <h1 class="nav__name">David Downie</h1>
+                        <div class="nav__underline animate__animated animate__slideInLeft"></div>
+                        <h2 class="nav__jobTitle">Web Developer</h2>
+                    </div>
+                    <label for="toggle">
+                        <i class="fa fa-bars nav__burger"></i>
+                    </label>
+                </div>
+                <input type="checkbox" id="toggle" name="toggle" class="nav__checkbox" />
+                <ul class="nav__navbar">
+                    <li class="nav__navbarItem"><a class="nav__navbarLink" href="#bioSection">Bio</a></li>
+                    <li class="nav__navbarItem"><a class="nav__navbarLink" href="#skills">Skills</a></li>
+                    <li class="nav__navbarItem"><a class="nav__navbarLink projectsAnchor" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav__navbarItem"><a class="nav__navbarLink contactAnchor" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <label for="toggle">
-                <i class="fa fa-bars burger"></i>
-            </label>
         </div>
-        <input type="checkbox" id="toggle" name="toggle" />
-        <ul class="navbar">
-            <li><a href="#bioSection">Bio</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects" class="projectsAnchor">Projects</a></li>
-            <li><a href="#contact" class="contactAnchor">Contact</a></li>
-        </ul>
-        <!-- </div> -->
+    </nav>
 </header>
 <!-- END OF HEADER -->
 <main>
-    <section class="bioSection" id="bioSection">
+    <!-- <section class="bioSection" id="bioSection">
         <div class="bio">
             <div class="photoBackground"></div>
             <div class="wrapper">
@@ -60,9 +70,65 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section class="bio" id="bioSection">
+        <div class="bio__container">
+            <div class="bio__photoBackground"></div>
+            <div class="bio__wrapper">
+                <div class="bio__card">
+                    <div class="bio__imageContainer">
+                        <img src="./images/portrait1recrop.jpg" alt="David Downie" class="bio__image">
+                    </div>
+                    <div class="bio__writtenContentTitles">
+                        <h2 class="bio__name">David Downie</h2>
+                        <h3 class="bio__jobTitle">Web Developer</h3>
+                        <div class="bio__underline"></div>
+                    </div>
+
+                    <div>
+                        <p class="bio__intro">
+                            Hi, I'm David.
+                        </p>
+                        <p class="bio__intro">
+                            I'm a web developer and graduate of Juno College's Immersive Web Development Bootcamp. I'm
+                            passionate about web technologies and love building websites and applications with a strong
+                            design aesthetic, that are responsive and
+                            accessible.
+                        </p>
+                        <p class="bio__intro">
+                            I have a background in visual merchandising and traditional crafts. I love music, both
+                            listening and playing, I'm a huge soccer fan, and I love pretty much all things food related
+                            and you'll see many of these things reflected in my coding projects.
+                        </p>
+                        <p class="bio__intro">
+                            If you're an employer looking to hire, you can get in touch with me via the social links
+                            below.
+                        </p>
+                        <ul class="social">
+                            <li>
+                                <a href="https://github.com/daibhidhdwaum" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/davidjdownie/" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/davidjdownie" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="mailto:daviddownie@gmail.com"><i class="fas fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- END OF BIO SECTION -->
-    <section class="skillsSection skillsAnchor" id="skills">
+    <!-- <section class="skillsSection skillsAnchor" id="skills">
         <div class="colorBanner"></div>
 
         <div class="wrapper">
@@ -72,7 +138,6 @@
                     <div class="underlines"></div>
                 </div>
                 <div>
-
                     <ul class="skills">
                         <li>
                             <i class="fab fa-html5"></i>
@@ -92,8 +157,8 @@
                             </div>
                             <p>Rest API's</p>
                         </li>
-
-                        <li><i class="fab fa-js"></i>
+                        <li>
+                            <i class="fab fa-js"></i>
                             <p>JavaScript</p>
                         </li>
                         <li>
@@ -135,25 +200,59 @@
                             <p>MongoDb</p>
                         </li>
                     </ul>
+                    <h2>What I'm Learning</h2>
+                    <ul>
+                        <li>
+                            <i class="fab fa-wordpress"></i>
+                            <p>WordPress</p>
+                        </li>
+                        <li>
+                            <div class="logoContainer">
+                                <img src="" class="logoImage" alt="Redux Logo" />
+                                <p>Redux</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="skills skillsAnchor" id="skills">
+        <div class="skills__colorBanner"></div>
+
+        <div class="skills__wrapper">
+            <div class="skills__container">
+                <div class="skills__titleContainer">
+                    <h2 class="skills__title">Skills</h2>
+                    <div class="skills__underline"></div>
+                </div>
+                <div>
+                    <ul class="skills__list">
+                        <!-- SKILLS GO HERE -->
+                    </ul>
+
+                    <div class="skills__container--learning">
+                        <h3 class="skills__learning">What I'm Learning</h3>
+                        <div class="skills__underline--learning"></div>
+                    </div>
+                    <ul class="skills__list--learning">
+                        <!-- SKILLS LEARING GO HERE -->
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
     <!-- END OF SKILLS SECTION -->
     <section class="projects" id="projects">
-
         <div class="colorBanner"></div>
-
         <div class="wrapper">
             <div class="relativeContainer">
-
                 <div class="vertical">
                     <h2>Projects</h2>
                     <div class="underlines"></div>
                 </div>
-
                 <div class="cards">
-
                     <div class="card">
                         <div class="innerCard innerCardEven">
                             <div class="image">
@@ -162,8 +261,8 @@
                                     <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
                                         alt="Arrow pointing to project image" />
                                 </a>
-                                <a href="https://www.victoriapanos.com/" target="_blank">
-                                    <img src="./images/VictoriaPanos.png" alt="Victoria Panos Website">
+                                <a href="http://www.victoriapanos.com/" target="_blank">
+                                    <img src="images/VictoriaPanos.png" alt="Victoria Panos">
                                 </a>
                             </div>
                             <div class="cardWrittenContent left">
@@ -188,147 +287,9 @@
                                 </div>
                             </li>
                         </ul>
-                        <a class="code" href="https://github.com/daibhidhdwaum/victoriaPanos" target="_blank">Code</a>
-                    </div>
-
-
-                    <div class="card">
-                        <div class="innerCard">
-                            <div class="image">
-                                <p>Live Site</p>
-                                <a href="https://daibhidhdwaum.github.io/LilDrum/" class="arrow" target="_blank">
-                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
-                                        alt="Arrow pointing to project image" />
-                                </a>
-                                <a href="https://daibhidhdwaum.github.io/LilDrum/" target="_blank">
-                                    <img src="./images/LilDrum.png" alt="Li'l Drum inteface">
-                                </a>
-                            </div>
-                            <div class="cardWrittenContent">
-                                <h3>Li'l Drum</h3>
-                                <div class="projectUnderline"></div>
-                                <p>Li'l Drum is a finger drum machine inspired by both classic hardware drum machines
-                                    lik
-                                    Linn
-                                    Drum
-                                    and
-                                    Roland 808 and their sofware equivalent found on many modern digital audio
-                                    workstations.
-                                </p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <i class="fab fa-html5"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-css3-alt"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-js"></i>
-                            </li>
-                            <li>
-                                <div class="logoContainer">
-                                    <img src="./images/jquery.svg" alt="JQuery Logo" />
-                                </div>
-                            </li>
-                            <li>
-                                <i class="fab fa-sass"></i>
-                            </li>
-                        </ul>
-                        <a class="code" href="https://github.com/daibhidhdwaum/davidDownieProjectThree"
-                            target="_blank">Code</a>
-                    </div>
-
-                    <div class="card">
-                        <div class="innerCard innerCardEven">
-                            <div class="image">
-                                <p>Live Site</p>
-                                <a href="https://tv-show-depot.github.io/tvShowDepot/" class="arrow" target="_blank">
-                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
-                                        alt="Arrow pointing to project image" />
-                                </a>
-                                <a href="https://tv-show-depot.github.io/tvShowDepot/" target="_blank">
-                                    <img src="./images/tvShowDepot.jpg" alt="Tv Show Depot landing page">
-                                </a>
-                            </div>
-                            <div class="cardWrittenContent left">
-                                <h3>TV Show Depot</h3>
-                                <div class="projectUnderline left"></div>
-                                <p>Using the TV Maze APi, TV Show Depot allows the user to search for their next
-                                    favourite tv show or search for random recommendations.</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <i class="fab fa-html5"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-css3-alt"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-js"></i>
-                            </li>
-                            <li>
-                                <div class="logoContainer">
-                                    <img src="./images/jquery.svg" alt="JQuery Logo" />
-                                </div>
-                            </li>
-                            <li>
-                                <i class="fab fa-sass"></i>
-                            </li>
-                            <li>
-                                <div class="logoContainer">
-                                    <img src="./images/API.svg" class="logoImage" alt="API Logo" />
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="code" href="https://github.com/tv-show-depot/tvShowDepot" target="_blank">Code</a>
-                    </div>
-
-                    <div class="card">
-                        <div class="innerCard innerCard">
-                            <div class="image">
-                                <p>Live Site</p>
-                                <a href="https://daibhidhdwaum.github.io/stickerBook/" class="arrow" target="_blank">
-                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
-                                        alt="Arrow pointing to project image" />
-                                </a>
-                                <a href="https://daibhidhdwaum.github.io/stickerBook/" target="_blank">
-                                    <img src="./images/stickerBook.png" alt="Rick and Morty Sticker Book landing page">
-                                </a>
-                            </div>
-                            <div class="cardWrittenContent left">
-                                <h3>Rick & Morty Sticker Book</h3>
-                                <div class="projectUnderline left"></div>
-                                <p>The Rick and Morty Sticker Book is an ongoing project that aims to recreate the
-                                    excitement of collecting and completing a sticker book in an online setting.
-                                    This
-                                    project utilises the Rick and Morty API.</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <i class="fab fa-react"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-css3-alt"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-js"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-sass"></i>
-                            </li>
-                            <li>
-                                <div class="logoContainer">
-                                    <img src="./images/API.svg" class="logoImage" alt="API Logo" />
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="code" href="https://github.com/daibhidhdwaum/stickerBook" target="_blank">Code</a>
-
-                    </div>
+                        <a class="code" href=${codeLink} target="_blank">Code</a>
+                    </div>`;
+                    <!-- PROJECT CARDS DISPLAY HERE -->
                 </div>
             </div>
     </section>
@@ -377,9 +338,6 @@
                         <a href="mailto:daviddownie@gmail.com"><i class="fas fa-envelope"></i></a>
                     </li>
                 </ul>
-                <label>
-                    <a href="https://icons8.com/icon/74402/mongodb"></a>
-                </label>
             </div>
 
             <p class="copy">&copy;copyright 2020</p>
@@ -390,7 +348,7 @@
 
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"
     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-<script src="./app.js"></script>
+<script type="module" src="./app.js"></script>
 </body>
 
 </html>
