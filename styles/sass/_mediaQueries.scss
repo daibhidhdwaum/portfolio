@@ -54,7 +54,7 @@
     min-width: 22rem;
   }
   .inputs {
-    @include flex(flex, auto, space-between, center);
+    @include flex(auto, space-between, center);
   }
 }
 
@@ -88,7 +88,7 @@
   }
 
   footer .footerContainer {
-    @include flex(flex, row, space-between, center);
+    @include flex(row, space-between, center);
   }
   footer ul {
     margin: 0 5%;

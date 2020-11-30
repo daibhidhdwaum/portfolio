@@ -1,0 +1,28 @@
+.footer {
+  background-color: $secondary;
+  margin-top: 8rem;
+  &__wrapper {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  &__container {
+    @include flex(column, space-between, center);
+    height: 15rem;
+    padding: 4rem 0 2rem;
+  }
+  &__socialList {
+    @include flex(row, space-around, center);
+    margin: 0;
+
+    max-width: 35rem;
+    width: 100%;
+  }
+  &__socialIcon {
+    font-size: 4rem;
+    color: $secondaryText;
+  }
+  &__copy {
+    @include text($secondaryText, 2rem, none);
+  }
+}

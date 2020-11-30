@@ -1,25 +1,27 @@
 .card {
   background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
   margin: 2rem 3%;
+  box-shadow: 2px 2px 1px rgba(68, 68, 68, 0.7);
+  border-radius: 0.5rem;
   &__innerCard {
     margin: 0 3%;
     padding: 2rem 0;
-    border: 1px dotted red;
   }
   &__projectImageContainer {
-    @include flex(flex, row-reverse, center, center);
-    width: calc(100% + 6%);
-  }
-  &__liveSiteButtonContainer {
+    @include flex(row-reverse, center, center);
+    // width: calc(100% + 6%);
+    width: 95%;
     position: relative;
-    top: -3rem;
-    right: 2rem;
   }
   &__imageContainer--arrow {
     background-color: $highlight;
     padding: 0.6rem;
     width: 4rem;
     border: 3px solid $highlight;
+  }
+  &__imageContainer--arrow:hover {
+    border: 4px solid $primaryText;
+    transition: 0.4s ease-in-out;
   }
   &__projectTitle {
     text-transform: uppercase;
@@ -34,13 +36,18 @@
   &__arrow {
     width: 100%;
   }
+  &__liveSiteButtonContainer {
+    position: absolute;
+    top: 2rem;
+    right: -2rem;
+  }
   &__liveSite {
     @include headers(black, 1.8rem, uppercase);
     letter-spacing: 0.2rem;
     transform: rotate(-90deg);
     width: 11rem;
     position: absolute;
-    top: 8rem;
+    top: 6rem;
     left: -2.2rem;
   }
   &__projectUnderline {
@@ -53,22 +60,24 @@
     opacity: 0.7;
   }
   &__projectDescription {
-    @include text($primaryText, 1.8rem, none) font-size: 1.8rem;
+    @include text($primaryText, 1.8rem, none);
+    font-size: 1.8rem;
   }
   &__icon {
     font-size: 4rem;
   }
   &__logoContainer {
-    width: 4rem;
+    width: 3.8rem;
+    margin: 0 1rem;
   }
   &__techList {
-    @include flex(flex, row, center, center);
+    @include flex(row, center, center);
     flex-wrap: wrap;
-    width: 100%;
     margin: 3rem 0;
   }
   &__techUsed {
-    margin: 1.5rem 2rem 0;
+    @include flex(row, center, center);
+    margin: 15px;
   }
   &__code {
     @include headers($primaryText, 1.8rem, uppercase);
@@ -80,55 +89,11 @@
     text-align: center;
     padding: 1rem 2rem;
   }
+  &__code:hover,
+  &__code:focus {
+    cursor: pointer;
+  }
   &__writtenContentContainer {
-    @include flex(flex, column, center, center);
+    @include flex(column, center, center);
   }
 }
-
-// .card h3 {
-//   font-weight: 400;
-//   letter-spacing: 0.2rem;
-//   margin-top: 1rem;
-// }
-
-// .card {
-//   padding: 1rem;
-//   margin-bottom: 5rem;
-//   @include flex(flex, column, auto, auto);
-//   background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
-//   margin: 6rem auto;
-//   .innerCard {
-//     @include flex(flex, column, auto, auto);
-//   }
-//   h3 {
-//     font-size: 1.8rem;
-//     max-width: 80%;
-//   }
-// }
-
-// .cards {
-//   @include flex(flex, column, center, center);
-// }
-
-// .card i {
-//   font-size: 4rem;
-// }
-
-// .card ul {
-//   margin-bottom: 2rem;
-// }
-
-// .cardWrittenContent {
-//   @include flex(flex, column, auto, center);
-//   flex-basis: 50%;
-//   h3 {
-//     align-self: start;
-//   }
-//   .projectUnderline {
-//     border-radius: 1rem;
-//     max-width: 34rem;
-//     width: 80%;
-//     margin: 0 auto 2rem 0;
-//     opacity: 0.7;
-//   }
-// }

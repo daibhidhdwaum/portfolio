@@ -7,7 +7,7 @@ $quarternary: #dddddd;
 
 // font-family: "Monserrat", sans-serif;
 @mixin headers($color, $fontSize, $textTransform) {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: $color;
   font-size: $fontSize;
   text-transform: $textTransform;
@@ -26,8 +26,8 @@ $quarternary: #dddddd;
   color: $primaryText;
 }
 
-@mixin flex($flex, $flexDirection, $justifyContent, $alignItems) {
-  display: $flex;
+@mixin flex($flexDirection, $justifyContent, $alignItems) {
+  display: flex;
   flex-direction: $flexDirection;
   justify-content: $justifyContent;
   align-items: $alignItems;

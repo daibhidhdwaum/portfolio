@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/80d230e595.js" crossorigin="anonymous"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;700&family=Didact+Gothic&family=Stint+Ultra+Expanded&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;700&family=Didact+Gothic&family=Stint+Ultra+Expanded&family=Staatliches&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="./images/favicon-16x16.png" type="image/gif" sizes="16x16">
@@ -36,8 +36,6 @@
                     <li class="nav__navbarItem"><a class="nav__navbarLink" href="#skills">Skills</a></li>
                     <li class="nav__navbarItem"><a class="nav__navbarLink projectsAnchor" href="#projects">Projects</a>
                     </li>
-                    <li class="nav__navbarItem"><a class="nav__navbarLink contactAnchor" href="#contact">Contact</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -45,48 +43,24 @@
 </header>
 <!-- END OF HEADER -->
 <main>
-    <!-- <section class="bioSection" id="bioSection">
-        <div class="bio">
-            <div class="photoBackground"></div>
-            <div class="wrapper">
-                <div class="bioContent">
-                    <div class="photo">
-                        <img src="./images/portrait1recrop.jpg" alt="David Downie">
-                    </div>
-                    <div class="writtenContentTitles">
-                        <h2>David Downie</h2>
-                        <h3>Front End Developer</h3>
-                        <div class="projectUnderline"></div>
-                    </div>
-
-                    <div class="blurb">
-                        <p>
-                            I'm a web developer with a background in visual merchandising and traditional crafts. I
-                            provide websites and applications with a strong design aesthetic, that are responsive and
-                            accessible. I love music, both listening and playing, I'm a huge soccer fan, I enjoy cooking
-                            and dressing up for no reason.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="bio" id="bioSection">
         <div class="bio__container">
             <div class="bio__photoBackground"></div>
             <div class="bio__wrapper">
                 <div class="bio__card">
-                    <div class="bio__imageContainer">
-                        <img src="./images/portrait1recrop.jpg" alt="David Downie" class="bio__image">
-                    </div>
-                    <div class="bio__writtenContentTitles">
-                        <h2 class="bio__name">David Downie</h2>
-                        <h3 class="bio__jobTitle">Web Developer</h3>
-                        <div class="bio__underline"></div>
+                    <div class="bio__personalInfo">
+                        <div class="bio__imageContainer">
+                            <img src="./images/portrait1recrop.jpg" alt="David Downie" class="bio__image">
+                        </div>
+                        <div class="bio__writtenContentTitles">
+                            <h2 class="bio__name">David Downie</h2>
+                            <h3 class="bio__jobTitle">Web Developer</h3>
+                            <div class="bio__underline"></div>
+                        </div>
                     </div>
 
-                    <div>
+                    <div class="bio__introContainer">
+
                         <p class="bio__intro">
                             Hi, I'm David.
                         </p>
@@ -105,21 +79,18 @@
                             If you're an employer looking to hire, you can get in touch with me via the social links
                             below.
                         </p>
-                        <ul class="social">
-                            <li>
+                        <ul class="bio__socialList">
+                            <li class="bio__socialIconContainer">
                                 <a href="https://github.com/daibhidhdwaum" target="_blank"><i
-                                        class="fab fa-github"></i></a>
+                                        class="fab fa-github bio__socialIcon"></i></a>
                             </li>
-                            <li>
+                            <li class="bio__socialIconContainer">
                                 <a href="https://www.linkedin.com/in/davidjdownie/" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a>
+                                        class="fab fa-linkedin-in bio__socialIcon"></i></a>
                             </li>
-                            <li>
+                            <li class="bio__socialIconContainer">
                                 <a href="https://twitter.com/davidjdownie" target="_blank"><i
-                                        class="fab fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="mailto:daviddownie@gmail.com"><i class="fas fa-envelope"></i></a>
+                                        class="fab fa-twitter bio__socialIcon"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -128,105 +99,20 @@
         </div>
     </section>
     <!-- END OF BIO SECTION -->
-    <!-- <section class="skillsSection skillsAnchor" id="skills">
-        <div class="colorBanner"></div>
 
-        <div class="wrapper">
-            <div class="relativeContainer">
-                <div class="vertical">
-                    <h2>Skills</h2>
-                    <div class="underlines"></div>
-                </div>
-                <div>
-                    <ul class="skills">
-                        <li>
-                            <i class="fab fa-html5"></i>
-                            <p>HTML 5</p>
-                        </li>
-                        <li>
-                            <i class="fab fa-css3-alt"></i>
-                            <p>CSS 3</p>
-                        </li>
-                        <li>
-                            <i class="fab fa-sass"></i>
-                            <p>Sass</p>
-                        </li>
-                        <li>
-                            <div class="logoContainer">
-                                <img src="./images/API.svg" class="logoImage" alt="API Logo" />
-                            </div>
-                            <p>Rest API's</p>
-                        </li>
-                        <li>
-                            <i class="fab fa-js"></i>
-                            <p>JavaScript</p>
-                        </li>
-                        <li>
-                            <div class="logoContainer">
-                                <img src="./images/jquery.svg" alt="JQuery Logo" />
-                            </div>
-                            <p>jQuery</p>
-                        </li>
-                        <li><i class="fab fa-react"></i>
-                            <p> React</p>
-                        </li>
-
-                        <li>
-                            <div class="logoContainer">
-                                <img src="./images/responsive.svg" alt="responsive design" class="logoImage" />
-                            </div>
-                            <p>Responsive Design</p>
-                        </li>
-
-
-                        <li>
-                            <i class="fas fa-code-branch"></i>
-                            <p>Git</p>
-                        </li>
-                        <li>
-                            <i class="fab fa-github"></i>
-                            <p>Github</p>
-                        </li>
-                        <li>
-                            <div class="logoContainer">
-                                <img src="./images/firebase.png" class="logoImage" alt="Firebase Logo" />
-                            </div>
-                            <p>Firebase</p>
-                        </li>
-                        <li>
-                            <div class="logoContainer">
-                                <img src="./images/mongodb.svg" class="logoImage" alt="MongoDB Logo" />
-                            </div>
-                            <p>MongoDb</p>
-                        </li>
-                    </ul>
-                    <h2>What I'm Learning</h2>
-                    <ul>
-                        <li>
-                            <i class="fab fa-wordpress"></i>
-                            <p>WordPress</p>
-                        </li>
-                        <li>
-                            <div class="logoContainer">
-                                <img src="" class="logoImage" alt="Redux Logo" />
-                                <p>Redux</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section class="skills skillsAnchor" id="skills">
-        <div class="skills__colorBanner"></div>
-
-        <div class="skills__wrapper">
-            <div class="skills__container">
+        <div class="skills__colorBanner">
+            <div class="skills__titleWrapper">
                 <div class="skills__titleContainer">
                     <h2 class="skills__title">Skills</h2>
                     <div class="skills__underline"></div>
                 </div>
+            </div>
+        </div>
+
+        <div class="skills__wrapper">
+            <div class="skills__container">
                 <div>
                     <ul class="skills__list">
                         <!-- SKILLS GO HERE -->
@@ -245,102 +131,42 @@
     </section>
     <!-- END OF SKILLS SECTION -->
     <section class="projects" id="projects">
-        <div class="colorBanner"></div>
-        <div class="wrapper">
-            <div class="relativeContainer">
-                <div class="vertical">
-                    <h2>Projects</h2>
-                    <div class="underlines"></div>
-                </div>
-                <div class="cards">
-                    <div class="card">
-                        <div class="innerCard innerCardEven">
-                            <div class="image">
-                                <p>Live Site</p>
-                                <a href="http://www.victoriapanos.com/" class="arrow" target="_blank">
-                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png"
-                                        alt="Arrow pointing to project image" />
-                                </a>
-                                <a href="http://www.victoriapanos.com/" target="_blank">
-                                    <img src="images/VictoriaPanos.png" alt="Victoria Panos">
-                                </a>
-                            </div>
-                            <div class="cardWrittenContent left">
-                                <h3>Victoria Panos</h3>
-                                <div class="projectUnderline left"></div>
-                                <p>A portfolio site build for Canadian graphic designer Victoria Panos.</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <i class="fab fa-html5"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-css3-alt"></i>
-                            </li>
-                            <li>
-                                <i class="fab fa-js"></i>
-                            </li>
-                            <li>
-                                <div class="logoContainer">
-                                    <img src="./images/jquery.svg" alt="JQuery Logo" />
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="code" href=${codeLink} target="_blank">Code</a>
-                    </div>`;
-                    <!-- PROJECT CARDS DISPLAY HERE -->
+        <div class="projects__colorBanner">
+            <div class="projects__titleWrapper">
+                <div class="projects__titleContainer">
+                    <h2 class="projects__title">Projects</h2>
+                    <div class="projects__underline"></div>
                 </div>
             </div>
+        </div>
+        <div class="projects__container">
+            <div class="cards">
+                <!-- PROJECT CARDS DISPLAY HERE -->
+            </div>
+        </div>
     </section>
     <!-- END OF PROJECTS SECTION -->
 </main>
 <!-- END OF MAIN CONTENT -->
 
-<footer id="contact" class="contact">
-    <div class="wrapper">
-        <div class="relativeContainer">
-            <div class="vertical">
-                <h2>Contact</h2>
-                <div class="underlines"></div>
-            </div>
-            <div class="footerContainer">
-                <form action="https://formspree.io/xeqrrpzl" method="POST">
-                    <div class="inputs">
-                        <label>
-                            Name
-                            <input type="text" placeholder="Name" required />
-                        </label>
-                        <label>
-                            Email
-                            <input type="text" name="_replyto" placeholder="Email" required />
-                        </label>
-                    </div>
-                    <label>
-                        Message
-                        <textarea name="message" placeholder="Tell me a thing..." required></textarea>
-                    </label>
-                    <button type="submit">Send</button>
-                </form>
-                <ul class="social">
-
-                    <li>
-                        <a href="https://github.com/daibhidhdwaum" target="_blank"><i class="fab fa-github"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/davidjdownie/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/davidjdownie" target="_blank"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="mailto:daviddownie@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-            <p class="copy">&copy;copyright 2020</p>
+<footer class="footer">
+    <div class="footer__wrapper">
+        <div class="footer__container">
+            <ul class="footer__socialList">
+                <li class="footer__socialIconContainer">
+                    <a href="https://github.com/daibhidhdwaum" target="_blank"><i
+                            class="fab fa-github footer__socialIcon"></i></a>
+                </li>
+                <li class="footer__socialIconContainer">
+                    <a href="https://www.linkedin.com/in/davidjdownie/" target="_blank"><i
+                            class="fab fa-linkedin-in footer__socialIcon"></i></a>
+                </li>
+                <li class="footer__socialIconContainer">
+                    <a href="https://twitter.com/davidjdownie" target="_blank"><i
+                            class="fab fa-twitter footer__socialIcon"></i></a>
+                </li>
+            </ul>
+            <p class="footer__copy">&copy;copyright 2020</p>
         </div>
     </div>
 </footer>

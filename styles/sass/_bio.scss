@@ -4,7 +4,7 @@
   }
   &__photoBackground {
     @include altColorTheme();
-    height: 30rem;
+    height: 35rem;
     padding: 0;
   }
   &__wrapper {
@@ -15,9 +15,12 @@
   &__card {
     position: relative;
     bottom: 15rem;
+    @include flex(column, center, flex-start);
+    max-width: 70rem;
+    margin: 0 auto;
   }
   &__imageContainer {
-    max-width: 34rem;
+    max-width: 32.5rem;
   }
   &__image {
     border-radius: 0.5rem;
@@ -27,23 +30,53 @@
     margin: 1.5rem 0;
   }
   &__name {
-    font-family: "Monserrat", sans-serif;
-    font-size: 2.2rem;
-    text-transform: uppercase;
+    @include headers($primaryText, 3rem, auto);
+    letter-spacing: 0.1rem;
     margin: 1rem 0;
   }
   &__jobTitle {
-    @include headers(inherit, 1.8rem, uppercase);
+    @include headers(inherit, 2rem, uppercase);
+    letter-spacing: 0.2rem;
   }
   &__underline {
     border: 1px solid $secondaryText;
     opacity: 0.5;
     margin-top: 2rem;
   }
+  &__introContainer {
+    @include flex(column, center, flex-start);
+  }
   &__intro {
-    font-family: "Playfair Display", serif;
-    font-size: 1.8rem;
+    @include text($primaryText, 1.8rem, auto);
     line-height: 2.4rem;
     margin: 1rem 0;
+  }
+  &__socialList {
+    @include flex(row, space-around, center);
+    margin-top: 4rem;
+    max-width: 30rem;
+    width: 100%;
+    align-self: center;
+  }
+  &__socialIcon {
+    font-size: 4rem;
+    color: $primaryText;
+  }
+}
+
+@media (min-width: 650px) {
+  .bio {
+    &__personalInfo {
+      @include flex(row, flex-start, flex-end);
+      width: 100%;
+    }
+
+    &__writtenContentTitles {
+      margin: 4rem auto;
+      width: 40%;
+    }
+    &__introContainer {
+      margin-top: 2rem;
+    }
   }
 }

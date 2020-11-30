@@ -7,13 +7,13 @@
   }
   &__pageTitle {
     position: relative;
-    @include flex(flex, row, space-between, center);
+    @include flex(row, space-between, center);
     background-color: $tertiary;
     height: 17vh;
     z-index: 20;
   }
   &__name {
-    @include headers($primaryText, 2.2rem, uppercase);
+    @include headers($primaryText, 3rem, uppercase);
   }
   &__underline {
     width: 100%;
@@ -22,7 +22,7 @@
     border-radius: 0.5rem;
   }
   &__jobTitle {
-    @include headers($primaryText, 1.6rem, uppercase);
+    @include headers($primaryText, 2rem, uppercase);
     letter-spacing: 0.2rem;
   }
   &__burger {
@@ -69,13 +69,13 @@
 @media (min-width: 940px) {
   .nav {
     &__container {
-      @include flex(flex, row, space-between, center);
+      @include flex(row, space-between, center);
     }
     &__navbar {
       width: 40%;
       position: static;
       transition: none;
-      @include flex(flex, auto, flex-end, flex-end);
+      @include flex(auto, flex-end, flex-end);
       z-index: 20;
     }
     &__burger {

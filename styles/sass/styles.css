@@ -268,6 +268,7 @@ img {
   position: fixed;
   width: 100%;
   background-color: #f1f0eb;
+  z-index: 30;
 }
 
 .nav {
@@ -301,9 +302,9 @@ img {
 }
 
 .nav__name {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: #111111;
-  font-size: 2.2rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
@@ -315,9 +316,9 @@ img {
 }
 
 .nav__jobTitle {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: #111111;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
@@ -415,11 +416,6 @@ img {
   }
 }
 
-main {
-  position: relative;
-  z-index: -1;
-}
-
 .bio__container {
   background: -webkit-gradient(linear, left top, left bottom, from(#f1f0eb), color-stop(#dddddd), to(#f1f0eb));
   background: linear-gradient(to bottom, #f1f0eb, #dddddd, #f1f0eb);
@@ -428,7 +424,7 @@ main {
 .bio__photoBackground {
   background-color: #2e86ab;
   color: #111111;
-  height: 30rem;
+  height: 35rem;
   padding: 0;
 }
 
@@ -441,10 +437,25 @@ main {
 .bio__card {
   position: relative;
   bottom: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
 .bio__imageContainer {
-  max-width: 34rem;
+  max-width: 32.5rem;
 }
 
 .bio__image {
@@ -457,17 +468,20 @@ main {
 }
 
 .bio__name {
-  font-family: "Monserrat", sans-serif;
-  font-size: 2.2rem;
-  text-transform: uppercase;
+  font-family: "Staatliches", sans-serif;
+  color: #111111;
+  font-size: 3rem;
+  text-transform: auto;
+  letter-spacing: 0.1rem;
   margin: 1rem 0;
 }
 
 .bio__jobTitle {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: inherit;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 .bio__underline {
@@ -476,11 +490,80 @@ main {
   margin-top: 2rem;
 }
 
+.bio__introContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .bio__intro {
-  font-family: "Playfair Display", serif;
+  font-family: "Didact Gothic", sans-serif;
+  color: #111111;
   font-size: 1.8rem;
+  text-transform: auto;
   line-height: 2.4rem;
   margin: 1rem 0;
+}
+
+.bio__socialList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4rem;
+  max-width: 30rem;
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.bio__socialIcon {
+  font-size: 4rem;
+  color: #111111;
+}
+
+@media (min-width: 650px) {
+  .bio__personalInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100%;
+  }
+  .bio__writtenContentTitles {
+    margin: 4rem auto;
+    width: 40%;
+  }
+  .bio__introContainer {
+    margin-top: 2rem;
+  }
 }
 
 .skills {
@@ -492,27 +575,27 @@ main {
   height: 10rem;
 }
 
-.skills__wrapper {
+.skills__wrapper, .skills__titleWrapper {
   max-width: 1100px;
   width: 90%;
   margin: 0 auto;
 }
 
-.skills__container {
+.skills__titleWrapper {
+  height: 10rem;
   position: relative;
 }
 
 .skills__titleContainer {
   position: absolute;
-  left: 0;
+  left: -3rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  left: -4rem;
-  top: -7rem;
+  bottom: -1.5rem;
 }
 
 .skills__title {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: inherit;
   font-size: 2.4rem;
   text-transform: uppercase;
@@ -560,6 +643,13 @@ main {
   text-align: center;
 }
 
+.skills__skillItem:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
 .skills__icon {
   font-size: 4rem;
 }
@@ -573,7 +663,7 @@ main {
 }
 
 .skills__learning {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: #111111;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -597,16 +687,58 @@ main {
       grid-template-columns: 1fr 1fr;
 }
 
+.projects__colorBanner {
+  background-color: #2e86ab;
+  height: 10rem;
+  margin-bottom: 8rem;
+}
+
+.projects__titleWrapper {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.projects__titleWrapper {
+  height: 10rem;
+  position: relative;
+}
+
+.projects__titleContainer {
+  position: absolute;
+  left: -4.8rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  bottom: -1.8rem;
+}
+
+.projects__title {
+  font-family: "Staatliches", sans-serif;
+  color: inherit;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.projects__underline {
+  width: 120%;
+  border-bottom: 3px solid #d2898d;
+  margin: 0.3rem 0 0;
+  border-radius: 0.5rem;
+}
+
 .card {
   background: -webkit-gradient(linear, left top, left bottom, from(#f1f0eb), color-stop(#dddddd), to(#f1f0eb));
   background: linear-gradient(to bottom, #f1f0eb, #dddddd, #f1f0eb);
   margin: 2rem 3%;
+  -webkit-box-shadow: 2px 2px 1px rgba(68, 68, 68, 0.7);
+          box-shadow: 2px 2px 1px rgba(68, 68, 68, 0.7);
+  border-radius: 0.5rem;
 }
 
 .card__innerCard {
   margin: 0 3%;
   padding: 2rem 0;
-  border: 1px dotted red;
 }
 
 .card__projectImageContainer {
@@ -623,13 +755,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: calc(100% + 6%);
-}
-
-.card__liveSiteButtonContainer {
+  width: 95%;
   position: relative;
-  top: -3rem;
-  right: 2rem;
 }
 
 .card__imageContainer--arrow {
@@ -639,11 +766,17 @@ main {
   border: 3px solid #d2898d;
 }
 
+.card__imageContainer--arrow:hover {
+  border: 4px solid #111111;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
 .card__projectTitle {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin: 1rem 0 0.5rem;
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: black;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -658,8 +791,14 @@ main {
   width: 100%;
 }
 
+.card__liveSiteButtonContainer {
+  position: absolute;
+  top: 2rem;
+  right: -2rem;
+}
+
 .card__liveSite {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: black;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -668,7 +807,7 @@ main {
           transform: rotate(-90deg);
   width: 11rem;
   position: absolute;
-  top: 8rem;
+  top: 6rem;
   left: -2.2rem;
 }
 
@@ -695,7 +834,8 @@ main {
 }
 
 .card__logoContainer {
-  width: 4rem;
+  width: 3.8rem;
+  margin: 0 1rem;
 }
 
 .card__techList {
@@ -714,16 +854,28 @@ main {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
   margin: 3rem 0;
 }
 
 .card__techUsed {
-  margin: 1.5rem 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
 }
 
 .card__code {
-  font-family: "Stint Ultra Expanded", cursive;
+  font-family: "Staatliches", sans-serif;
   color: #111111;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -734,6 +886,10 @@ main {
   font-weight: 600;
   text-align: center;
   padding: 1rem 2rem;
+}
+
+.card__code:hover, .card__code:focus {
+  cursor: pointer;
 }
 
 .card__writtenContentContainer {
@@ -750,6 +906,65 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer {
+  background-color: #2e86ab;
+  margin-top: 8rem;
+}
+
+.footer__wrapper {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15rem;
+  padding: 4rem 0 2rem;
+}
+
+.footer__socialList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  max-width: 35rem;
+  width: 100%;
+}
+
+.footer__socialIcon {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.footer__copy {
+  font-family: "Didact Gothic", sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  text-transform: none;
 }
 
 @media (min-width: 650px) {
