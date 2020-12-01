@@ -129,38 +129,39 @@ portfolio.displayProjectCard = () => {
 
     return `
           <div class="card">
-            <div class="card__innerCard innerCardEven">
-              <div class="card__projectImageContainer">
-                <div class="card__liveSiteButtonContainer">
-                  <a href=${siteLink} class="card__siteLink" target="_blank">
-                    <div class="card__imageContainer--arrow">
-                     <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" class="card__arrow" alt="Arrow pointing to project image" />
-                    </div>
-                  </a>
-                  <p class="card__liveSite">Live Site</p>
+            <div class="card__container">
+                <div class="card__projectImageContainer">
+                  <div class="card__liveSiteButtonContainer">
+                    <a href=${siteLink} class="card__siteLink" target="_blank">
+                      <div class="card__imageContainer--arrow">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" class="card__arrow" alt="Arrow pointing to project image" />
+                      </div>
+                    </a>
+                    <p class="card__liveSite">Live Site</p>
+                  </div>
+                  <div class="card__imageContainer">
+                    <a href=${siteLink} target="_blank">
+                      <img src=${projectImage} alt=${alt} class="card__projectImage">
+                    </a>
+                  </div>
                 </div>
-                <div class="card__imageContainer">
-                  <a href=${siteLink} target="_blank">
-                    <img src=${projectImage} alt=${alt} class="card__projectImage">
-                  </a>
-                </div>
-              </div>
-              <div class="card__writtenContentContainer">
-                <div class="card__writtenContent left">
-                 <h3 class="card__projectTitle">${title}</h3>
-                  <div class="card__projectUnderline left"></div>
-                  <p class="card__projectDescription">${description}</p>
-                </div>
-                <ul class="card__techList">
-                ${projectTech}
-                </ul>
-                <a class="card__code" href=${codeLink} target="_blank">Code</a>
-              </div>
+           
+                <div class="card__writtenContentContainer">
+                  <div class="card__writtenContent left">
+                    <h3 class="card__projectTitle">${title}</h3>
+                      <div class="card__projectUnderline left"></div>
+                      <p class="card__projectDescription">${description}</p>
+                  </div>
+                  <ul class="card__techList">
+                    ${projectTech}
+                  </ul>
+                  <a class="card__code" href=${codeLink} target="_blank">Code</a>
+                 </div>
             </div>
           </div>
             `;
   });
-  $(".cards").append(cardToDisplay);
+  $(".projects__cards").append(cardToDisplay);
 };
 
 portfolio.init = () => {

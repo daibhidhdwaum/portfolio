@@ -1,15 +1,14 @@
 .card {
   background: linear-gradient(to bottom, $tertiary, $quarternary, $tertiary);
   margin: 2rem 3%;
-  box-shadow: 2px 2px 1px rgba(68, 68, 68, 0.7);
   border-radius: 0.5rem;
-  &__innerCard {
+  // border: 1px solid #ccc;
+  &__container {
     margin: 0 3%;
     padding: 2rem 0;
   }
   &__projectImageContainer {
     @include flex(row-reverse, center, center);
-    // width: calc(100% + 6%);
     width: 95%;
     position: relative;
   }
@@ -26,7 +25,7 @@
   &__projectTitle {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    margin: 1rem 0 0.5rem;
+    margin: 1rem 0 0.5rem 0;
     @include headers(black, 1.8rem, uppercase);
     font-weight: normal;
   }
@@ -86,8 +85,8 @@
     background-color: transparent;
     letter-spacing: 0.3rem;
     font-weight: 600;
-    text-align: center;
     padding: 1rem 2rem;
+    text-align: center;
   }
   &__code:hover,
   &__code:focus {
@@ -96,4 +95,30 @@
   &__writtenContentContainer {
     @include flex(column, center, center);
   }
+}
+
+@media (min-width: 940px) {
+  .card {
+    width: 100%;
+    margin: 4rem 0;
+    &__container {
+      @include flex(row, center, flex-start);
+      padding: 3rem 0 5rem;
+    }
+    &__projectImageContainer {
+      width: 50%;
+    }
+    &__writtenContentContainer {
+      width: 45%;
+      margin-left: 5%;
+    }
+  }
+}
+
+.card:nth-child(even) > .card__container {
+  flex-direction: row-reverse;
+}
+
+.card:nth-child(even) > .card__container > .card__writtenContentContainer {
+  margin: 0 3% 0 0;
 }

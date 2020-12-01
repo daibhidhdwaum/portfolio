@@ -264,6 +264,10 @@ img {
   width: 100%;
 }
 
+body {
+  background-color: #f1f0eb;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -568,6 +572,7 @@ img {
 
 .skills {
   background-color: #f1f0eb;
+  padding-bottom: 2rem;
 }
 
 .skills__colorBanner {
@@ -576,7 +581,7 @@ img {
 }
 
 .skills__wrapper, .skills__titleWrapper {
-  max-width: 1100px;
+  max-width: 1000px;
   width: 90%;
   margin: 0 auto;
 }
@@ -670,7 +675,8 @@ img {
 }
 
 .skills__underline--learning {
-  width: 75%;
+  width: 100%;
+  max-width: 40rem;
   border-bottom: 3px solid #d2898d;
   margin: 0.3rem 0 0;
   border-radius: 0.5rem;
@@ -678,6 +684,19 @@ img {
 
 .skills__container--learning {
   margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .skills__list--learning {
@@ -685,6 +704,47 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+@media (min-width: 650px) {
+  .skills__icon {
+    font-size: 6rem;
+  }
+  .skills__logoContainer {
+    max-width: 6rem;
+  }
+  .skills__list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .skills__skillItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2.5rem 0;
+  }
+  .skills__learning {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 940px) {
+  .skills__list {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .projects__colorBanner {
@@ -693,8 +753,8 @@ img {
   margin-bottom: 8rem;
 }
 
-.projects__titleWrapper {
-  max-width: 1100px;
+.projects__wrapper, .projects__titleWrapper {
+  max-width: 1000px;
   width: 90%;
   margin: 0 auto;
 }
@@ -727,16 +787,30 @@ img {
   border-radius: 0.5rem;
 }
 
+.projects__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .card {
   background: -webkit-gradient(linear, left top, left bottom, from(#f1f0eb), color-stop(#dddddd), to(#f1f0eb));
   background: linear-gradient(to bottom, #f1f0eb, #dddddd, #f1f0eb);
   margin: 2rem 3%;
-  -webkit-box-shadow: 2px 2px 1px rgba(68, 68, 68, 0.7);
-          box-shadow: 2px 2px 1px rgba(68, 68, 68, 0.7);
   border-radius: 0.5rem;
 }
 
-.card__innerCard {
+.card__container {
   margin: 0 3%;
   padding: 2rem 0;
 }
@@ -775,7 +849,7 @@ img {
 .card__projectTitle {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 0.5rem 0;
   font-family: "Staatliches", sans-serif;
   color: black;
   font-size: 1.8rem;
@@ -884,8 +958,8 @@ img {
   background-color: transparent;
   letter-spacing: 0.3rem;
   font-weight: 600;
-  text-align: center;
   padding: 1rem 2rem;
+  text-align: center;
 }
 
 .card__code:hover, .card__code:focus {
@@ -906,6 +980,47 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 940px) {
+  .card {
+    width: 100%;
+    margin: 4rem 0;
+  }
+  .card__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 3rem 0 5rem;
+  }
+  .card__projectImageContainer {
+    width: 50%;
+  }
+  .card__writtenContentContainer {
+    width: 45%;
+    margin-left: 5%;
+  }
+}
+
+.card:nth-child(even) > .card__container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.card:nth-child(even) > .card__container > .card__writtenContentContainer {
+  margin: 0 3% 0 0;
 }
 
 .footer {
@@ -965,125 +1080,4 @@ img {
   color: #ffffff;
   font-size: 2rem;
   text-transform: none;
-}
-
-@media (min-width: 650px) {
-  .bioContent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    max-width: 70rem;
-    margin: 0 auto;
-  }
-  .photo {
-    width: 50%;
-  }
-  .writtenContentTitles {
-    width: calc(50% - 8rem);
-    margin: 0 4rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    position: relative;
-    top: 8.5rem;
-  }
-  .blurb {
-    max-width: 100%;
-    margin: 0;
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
-  }
-  .skillsSection .skills li {
-    margin: 2rem;
-    width: calc(50% - 4rem);
-  }
-  .skillsSection .skills i {
-    font-size: 6rem;
-  }
-  .skillsSection li .logoContainer {
-    width: 6rem;
-  }
-  .skillsSection p {
-    font-size: 2rem;
-  }
-  .skillsSection ul.skills {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-  form input {
-    min-width: 22rem;
-  }
-  .inputs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: auto;
-            flex-direction: auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media (min-width: 940px) {
-  .skillsSection ul.skills {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-  }
-  .projects .card .innerCard {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    max-width: 90rem;
-  }
-  .image {
-    margin-right: 4rem;
-  }
-  .innerCardEven .image {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .innerCardEven .cardWrittenContent {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .cardWrittenContent {
-    margin: 0 2rem;
-  }
-  .projects .card h3 {
-    font-size: 2.2rem;
-  }
-  footer .footerContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer ul {
-    margin: 0 5%;
-    width: 30%;
-  }
 }

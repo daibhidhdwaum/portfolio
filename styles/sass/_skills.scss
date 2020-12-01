@@ -1,12 +1,13 @@
 .skills {
   background-color: $tertiary;
+  padding-bottom: 2rem;
   &__colorBanner {
     background-color: $secondary;
     height: 10rem;
   }
   &__wrapper,
   &__titleWrapper {
-    max-width: 1100px;
+    max-width: 1000px;
     width: 90%;
     margin: 0 auto;
   }
@@ -61,16 +62,49 @@
     @include headers($primaryText, 1.8rem, uppercase);
   }
   &__underline--learning {
-    width: 75%;
+    width: 100%;
+    max-width: 40rem;
     border-bottom: 3px solid $highlight;
     margin: 0.3rem 0 0;
     border-radius: 0.5rem;
   }
   &__container--learning {
     margin: 2rem;
+    @include flex(column, center, center);
   }
   &__list--learning {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 650px) {
+  .skills {
+    &__icon {
+      font-size: 6rem;
+    }
+    &__logoContainer {
+      max-width: 6rem;
+    }
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__skillItem {
+      @include flex(column, flex-start, center);
+      margin: 2.5rem 0;
+    }
+    &__learning {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+@media (min-width: 940px) {
+  .skills {
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 }
