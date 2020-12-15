@@ -1,5 +1,25 @@
 export const projectCard = [
   {
+    siteLink: "http://www.vintagelove.ca/",
+    projectImage: "./images/vintagelove.png",
+    alt: "vintagelove Website",
+    title: "vintagelove",
+    techUsed: [
+      {
+        skill: "React",
+        icon: "fab fa-react",
+        iconType: "icon",
+        alt: null,
+      },
+      { skill: "Javascript", icon: "fab fa-js", iconType: "icon", alt: null },
+      { skill: "CSS 3", icon: "fab fa-css3-alt", iconType: "icon", alt: null },
+      { skill: "Sass", icon: "fab fa-sass", iconType: "icon", alt: null },
+    ],
+    codeLink: "https://github.com/daibhidhdwaum/vintageLoveReact",
+    description:
+      "A site for Canadian company, vintagelove, is a collection of fabulous fifties light switch plates lovingly cooked up by Toronto artist Adrianne Kulling. Built using React, this site displays and links to vintagelove's bestselling products on Etsy and offers a means to contact the company directly.",
+  },
+  {
     siteLink: "http://www.victoriapanos.com/",
     projectImage: "./images/VictoriaPanos.png",
     alt: "Victoria Panos Website",
@@ -17,7 +37,7 @@ export const projectCard = [
     ],
     codeLink: "https://github.com/daibhidhdwaum/victoriaPanos",
     description:
-      "A portfolio site build for Canadian graphic designer Victoria Panos.",
+      "A portfolio site build for Canadian graphic designer Victoria Panos. Built using jQuery, this site offers a way to view Victoria's work and contact her directly.",
   },
   {
     siteLink: "https://daibhidhdwaum.github.io/LilDrum/",
