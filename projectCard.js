@@ -1,5 +1,25 @@
 export const projectCard = [
   {
+    siteLink: "https://daibhidhdwaum.github.io/skull-collector/",
+    projectImage: "./images/crystalSkullCollector.png",
+    alt: "Crystal Skull Collector Game",
+    title: "Crystal Skull Collector",
+    techUsed: [
+      {
+        skill: "React",
+        icon: "fab fa-react",
+        iconType: "icon",
+        alt: null,
+      },
+      { skill: "Javascript", icon: "fab fa-js", iconType: "icon", alt: null },
+      { skill: "CSS 3", icon: "fab fa-css3-alt", iconType: "icon", alt: null },
+      { skill: "Sass", icon: "fab fa-sass", iconType: "icon", alt: null },
+    ],
+    codeLink: "https://github.com/daibhidhdwaum/skull-collector",
+    description:
+      "Crystal Skull Collector is a web application that allows users to play a game where they gain points by clicking different crystals skulls. The goal is to match the presented score exactly without going over.",
+  },
+  {
     siteLink: "http://www.vintagelove.ca/",
     projectImage: "./images/vintagelove.png",
     alt: "vintagelove Website",
