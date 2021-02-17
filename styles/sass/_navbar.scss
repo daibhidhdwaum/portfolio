@@ -1,7 +1,7 @@
 .nav {
   background-color: $tertiary;
   &__wrapper {
-    max-width: 1300px;
+    max-width: 1000px;
     width: 90%;
     margin: 0 auto;
   }
@@ -35,7 +35,7 @@
     display: inline-block;
     width: 100%;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     font-size: 1.8rem;
     font-family: "Monserrat", sans-serif;
     color: $primaryText;

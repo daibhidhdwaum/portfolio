@@ -13,11 +13,37 @@ export const projectCard = [
       },
       { skill: "Javascript", icon: "fab fa-js", iconType: "icon", alt: null },
       { skill: "CSS 3", icon: "fab fa-css3-alt", iconType: "icon", alt: null },
-      { skill: "Sass", icon: "fab fa-sass", iconType: "icon", alt: null },
+      {
+        skill: "CSS Modules",
+        icon: "./images/cssModulesLogo.png",
+        iconType: "img",
+        alt: "CSS Modules Logo",
+      },
     ],
     codeLink: "https://github.com/daibhidhdwaum/skull-collector",
     description:
       "Crystal Skull Collector is a web application that allows users to play a game where they gain points by clicking different crystals skulls. The goal is to match the presented score exactly without going over.",
+  },
+  {
+    siteLink: "https://daibhidhdwaum.github.io/LilDrum/",
+    projectImage: "./images/LilDrum.png",
+    alt: "Li'l Drum interface",
+    title: "Li'l Drum",
+    description:
+      "Li'l Drum is a finger drum machine inspired by both classic hardware drum machines like Linn Drum and Roland 808 and their software equivalent found on many modern digital audio workstations.",
+    techUsed: [
+      { skill: "HTML 5", icon: "fab fa-html5", iconType: "icon", alt: null },
+      { skill: "CSS 3", icon: "fab fa-css3-alt", iconType: "icon", alt: null },
+      { skill: "Javascript", icon: "fab fa-js", iconType: "icon", alt: null },
+      {
+        skill: "jQuery",
+        icon: "./images/jquery.svg",
+        iconType: "img",
+        alt: "jQuery Logo",
+      },
+      { skill: "Sass", icon: "fab fa-sass", iconType: "icon", alt: null },
+    ],
+    codeLink: "https://github.com/daibhidhdwaum/davidDownieProjectThree",
   },
   {
     siteLink: "http://www.vintagelove.ca/",
@@ -59,27 +85,7 @@ export const projectCard = [
     description:
       "A portfolio site build for Canadian graphic designer Victoria Panos. Built using jQuery, this site offers a way to view Victoria's work and contact her directly.",
   },
-  {
-    siteLink: "https://daibhidhdwaum.github.io/LilDrum/",
-    projectImage: "./images/LilDrum.png",
-    alt: "Li'l Drum interface",
-    title: "Li'l Drum",
-    description:
-      "Li'l Drum is a finger drum machine inspired by both classic hardware drum machines like Linn Drum and Roland 808 and their software equivalent found on many modern digital audio workstations.",
-    techUsed: [
-      { skill: "HTML 5", icon: "fab fa-html5", iconType: "icon", alt: null },
-      { skill: "CSS 3", icon: "fab fa-css3-alt", iconType: "icon", alt: null },
-      { skill: "Javascript", icon: "fab fa-js", iconType: "icon", alt: null },
-      {
-        skill: "jQuery",
-        icon: "./images/jquery.svg",
-        iconType: "img",
-        alt: "jQuery Logo",
-      },
-      { skill: "Sass", icon: "fab fa-sass", iconType: "icon", alt: null },
-    ],
-    codeLink: "https://github.com/daibhidhdwaum/davidDownieProjectThree",
-  },
+
   {
     siteLink: "https://tv-show-depot.github.io/tvShowDepot/",
     projectImage: "./images/tvShowDepot.jpg",
