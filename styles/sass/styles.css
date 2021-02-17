@@ -1035,7 +1035,6 @@ body {
 }
 
 .footer__container {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
