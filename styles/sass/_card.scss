@@ -35,20 +35,20 @@
   &__arrow {
     width: 100%;
   }
-  &__liveSiteButtonContainer {
-    position: absolute;
-    top: 2rem;
-    right: -2rem;
-  }
-  &__liveSite {
-    @include headers(black, 1.8rem, uppercase);
-    letter-spacing: 0.2rem;
-    transform: rotate(-90deg);
-    width: 11rem;
-    position: absolute;
-    top: 6rem;
-    left: -2.2rem;
-  }
+  // &__liveSiteButtonContainer {
+  //   position: absolute;
+  //   top: 2rem;
+  //   right: -2rem;
+  // }
+  // &__liveSite {
+  //   @include headers(black, 1.8rem, uppercase);
+  //   letter-spacing: 0.2rem;
+  //   transform: rotate(-90deg);
+  //   width: 11rem;
+  //   position: absolute;
+  //   top: 6rem;
+  //   left: -2.2rem;
+  // }
   &__projectUnderline {
     height: 0.2rem;
     background-color: $highlight;
@@ -78,15 +78,20 @@
     @include flex(row, center, center);
     margin: 15px;
   }
+  &__buttonContainer {
+    @include flex(column, center, center);
+  }
   &__code {
     @include headers($primaryText, 1.8rem, uppercase);
     border: 3px solid $highlight;
     width: 16rem;
+    margin: 1rem 0;
     background-color: transparent;
     letter-spacing: 0.3rem;
     font-weight: 600;
     padding: 1rem 2rem;
     text-align: center;
+    display: block;
   }
   &__code:hover,
   &__code:focus {
@@ -94,6 +99,20 @@
   }
   &__writtenContentContainer {
     @include flex(column, center, center);
+  }
+  &__buttonContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 500px) {
+  .card {
+    &__buttonContainer {
+      @include flex(row, center, center);
+    }
+    &__code {
+      margin: 1rem 1rem;
+    }
   }
 }
 

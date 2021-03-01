@@ -22,7 +22,7 @@ export const projectCard = [
     ],
     codeLink: "https://github.com/daibhidhdwaum/skull-collector",
     description:
-      "Crystal Skull Collector is a web application that allows users to play a game where they gain points by clicking different crystals skulls. The goal is to match the presented score exactly without going over.",
+      "A web application built with React and styled with CSS Modules, allows users to play a game where they gain points by clicking different crystals skulls that have been randomly assigned numbers using JavaScript. The goal is to match the presented score exactly without going over.",
   },
   {
     siteLink: "https://daibhidhdwaum.github.io/LilDrum/",
@@ -30,7 +30,7 @@ export const projectCard = [
     alt: "Li'l Drum interface",
     title: "Li'l Drum",
     description:
-      "Li'l Drum is a finger drum machine inspired by both classic hardware drum machines like Linn Drum and Roland 808 and their software equivalent found on many modern digital audio workstations.",
+      "Li'l Drum is styled with SASS and utilizes JQuery to create a finger drum machine inspired by both classic hardware drum machines like Linn Drum and Roland 808 and their software equivalent found on many modern digital audio workstations. Li'l Drum uses JavaScript click events to trigger sound files saved as an array of objects.",
     techUsed: [
       { skill: "HTML 5", icon: "fab fa-html5", iconType: "icon", alt: null },
       { skill: "CSS 3", icon: "fab fa-css3-alt", iconType: "icon", alt: null },

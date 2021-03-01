@@ -2,7 +2,7 @@
   background-color: $secondary;
   margin-top: 8rem;
   &__wrapper {
-    max-width: 1000px;
+    max-width: 900px;
     width: 90%;
     margin: 0 auto;
   }
@@ -14,7 +14,6 @@
   &__socialList {
     @include flex(row, space-around, center);
     margin: 1rem 0;
-
     max-width: 35rem;
     width: 100%;
   }

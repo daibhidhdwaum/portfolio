@@ -95,6 +95,75 @@ portfolio.displayLearning = () => {
   $(".skills__list--learning").append(learningToDisplay);
 };
 
+// portfolio.displayProjectCard = () => {
+//   const cardToDisplay = projectCard.map((project) => {
+//     const {
+//       siteLink,
+//       projectImage,
+//       alt,
+//       title,
+//       description,
+//       codeLink,
+//       techUsed,
+//     } = project;
+
+//     const projectTech = techUsed
+//       .map((tech) => {
+//         if (tech.iconType === "icon") {
+//           return `
+//         <li class="card__techUsed">
+//           <i class="${tech.icon} card__icon"></i>
+//         </li>
+//         `;
+//         } else {
+//           return `
+//         <li card__techUsed>
+//           <div class="card__logoContainer">
+//             <img src=${tech.icon} alt=${tech.alt} />
+//           </div>
+//         </li>
+//         `;
+//         }
+//       })
+//       .join("");
+
+//     return `
+//           <div class="card">
+//             <div class="card__container">
+//                 <div class="card__projectImageContainer">
+//                   <div class="card__liveSiteButtonContainer">
+//                     <a href=${siteLink} class="card__siteLink" target="_blank">
+//                       <div class="card__imageContainer--arrow">
+//                         <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" class="card__arrow" alt="Arrow pointing to project image" />
+//                       </div>
+//                     </a>
+//                     <p class="card__liveSite">Live Site</p>
+//                   </div>
+//                   <div class="card__imageContainer">
+//                     <a href=${siteLink} target="_blank">
+//                       <img src=${projectImage} alt=${alt} class="card__projectImage">
+//                     </a>
+//                   </div>
+//                 </div>
+
+//                 <div class="card__writtenContentContainer">
+//                   <div class="card__writtenContent left">
+//                     <h3 class="card__projectTitle">${title}</h3>
+//                       <div class="card__projectUnderline left"></div>
+//                       <p class="card__projectDescription">${description}</p>
+//                   </div>
+//                   <ul class="card__techList">
+//                     ${projectTech}
+//                   </ul>
+//                   <a class="card__code" href=${codeLink} target="_blank">Code</a>
+//                  </div>
+//             </div>
+//           </div>
+//             `;
+//   });
+//   $(".projects__cards").append(cardToDisplay);
+// };
+
 portfolio.displayProjectCard = () => {
   const cardToDisplay = projectCard.map((project) => {
     const {
@@ -131,14 +200,6 @@ portfolio.displayProjectCard = () => {
           <div class="card">
             <div class="card__container">
                 <div class="card__projectImageContainer">
-                  <div class="card__liveSiteButtonContainer">
-                    <a href=${siteLink} class="card__siteLink" target="_blank">
-                      <div class="card__imageContainer--arrow">
-                        <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left--v2.png" class="card__arrow" alt="Arrow pointing to project image" />
-                      </div>
-                    </a>
-                    <p class="card__liveSite">Live Site</p>
-                  </div>
                   <div class="card__imageContainer">
                     <a href=${siteLink} target="_blank">
                       <img src=${projectImage} alt=${alt} class="card__projectImage">
@@ -155,7 +216,10 @@ portfolio.displayProjectCard = () => {
                   <ul class="card__techList">
                     ${projectTech}
                   </ul>
+                  <div class="card__buttonContainer">
+                  <a class="card__code" href=${siteLink} target="_blank">Live</a>
                   <a class="card__code" href=${codeLink} target="_blank">Code</a>
+                  </div>
                  </div>
             </div>
           </div>

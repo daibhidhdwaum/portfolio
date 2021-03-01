@@ -7,7 +7,7 @@
   }
   &__wrapper,
   &__titleWrapper {
-    max-width: 1000px;
+    max-width: 900px;
     width: 90%;
     margin: 0 auto;
   }
@@ -105,6 +105,9 @@
   .skills {
     &__list {
       grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &__skillItem {
+      margin: 5rem 0;
     }
   }
 }
